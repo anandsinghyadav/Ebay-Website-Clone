@@ -1,0 +1,27 @@
+#mcontainer{
+    display: flex;
+}
+#msidebar{
+
+}
+#mmain{
+
+}
+.mcategory{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+#msidebar > div > div:nth-child(1){
+    width: 175px;
+}
+#pmitemImages{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.mcategoryul{
+    display: none;
+}
+.mcategory:hover .mcategoryul{
+    display: block;
+}
