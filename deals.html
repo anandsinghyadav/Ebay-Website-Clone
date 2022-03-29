@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      /* position: relative; */
+      background-color: #f6f6f6;
+    }
+    #deals_head {
+      height: 40px;
+      width: 96%;
+      /* border: 2px solid red; */
+      /* background-color: white; */
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    #h1 {
+      text-align: left;
+    }
+    #h2 {
+      display: flex;
+      gap: 30px;
+      border-bottom: 1px solid rgb(206, 206, 206);
+    }
+    .p {
+      font-size: 18px;
+      cursor: context-menu;
+    }
+    /* #drop_down {
+      border: 1px solid red;
+      width: 28%;
+      margin-left: 46.5%;
+      height: auto;
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      z-index: 1;
+    } */
+    #deal1 {
+      width: 96%;
+      height: 450px;
+      border: 1px solid rgb(206, 206, 206);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 2%;
+      background-color: white;
+    }
+    .spot {
+      height: 9%;
+      width: 100%;
+      text-align: center;
+      font-size: 23px;
+      border-bottom: 1px solid rgb(206, 206, 206);
+    }
+    .spot > p {
+      margin-top: 4px;
+    }
+    #chappal {
+      display: flex;
+      justify-content: space-around;
+      /* gap: 50px; */
+    }
+    #chappal > div:nth-child(1) {
+      height: 350px;
+      margin-top: 30px;
+      width: 30%;
+      /* border: 1px solid red; */
+    }
+    #chappal > div:nth-child(2) {
+      height: 350px;
+      width: 60%;
+      margin-top: 30px;
+      /* border: 1px solid red; */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    #chappal > div:nth-child(2) > p:nth-of-type(1) {
+      font-size: 30px;
+    }
+
+    #chappal > div:nth-child(2) > p:nth-of-type(2) {
+      font-size: 20px;
+      font-weight: 1000;
+    }
+
+    #chappal > div:nth-child(2) > p:nth-of-type(3) {
+      font-weight: 1000;
+      color: red;
+      margin-top: 24%;
+    }
+
+    #featured_deals {
+      height: 40px;
+      width: 96%;
+      border: 1px solid rgb(206, 206, 206);
+      margin: auto;
+      margin-top: 1%;
+      background-color: white;
+    }
+    #watches {
+      width: 96%;
+      margin: auto;
+      margin-top: 1%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 180px);
+      grid-gap: 10px;
+    }
+    #watches > div > div > img {
+      width: 100%;
+      height: 100%;
+    }
+    #watches > div {
+      border: 1px solid rgb(206, 206, 206);
+      background-color: white;
+    }
+
+    #watches > div > div:nth-of-type(1) {
+      width: 100%;
+      height: 90%;
+      margin-top: 2%;
+    }
+    #watches > div > div:nth-of-type(2) {
+      margin-left: 6%;
+    }
+    #watches > div > div:nth-of-type(2) > p,
+    #clothe_1 > div > div:nth-of-type(2) > p {
+      margin-top: 4px;
+    }
+    #watches > div > div:nth-of-type(2) > h3,
+    #clothe_1 > div > div:nth-of-type(2) > h3 {
+      margin-top: -8px;
+    }
+    #watches > div > div:nth-of-type(2) > div,
+    #clothe_1 > div > div:nth-of-type(2) > div > {
+      margin-top: -15px;
+      /* display: inline-block; */
+    }
+    #watches > div > div:nth-of-type(2) > div {
+      display: flex;
+    }
+    #watches > div > div:nth-of-type(2) > div > h4 {
+      margin-top: 0px;
+    }
+    /* #watches > div > div:nth-of-type(2) > div > h4 {
+      margin-top: -111px;
+      display: inline-block;
+    } */
+    #clothe_ {
+      font-size: 1.5rem;
+      margin-left: 2%;
+    }
+    #clothe_1 {
+      display: grid;
+      height: 400px;
+      width: 96%;
+      margin: auto;
+      grid-template-areas:
+        "a b c"
+        "d b e";
+    }
+    #clothe_1 > div {
+      border: 1px solid rgb(206, 206, 206);
+      display: flex;
+      justify-content: space-around;
+      background-color: white;
+    }
+    /* #clothe_1 > div > div {
+      border: 1px solid yellow;
+      height: 100%;
+      width: 50%;
+    } */
+    /* #clothe_1 > div > div:nth-of-type(1) > img {
+      border: 1px solid green;
+      height: 80%;
+      width: 100%;
+    } */
+    #clothe_1 > div:nth-of-type(1) {
+      grid-area: a;
+      /* width: 80%; */
+    }
+    #clothe_1 > div:nth-of-type(2) {
+      grid-area: b;
+    }
+    #clothe_1 > div:nth-of-type(3) {
+      grid-area: c;
+    }
+    #clothe_1 > div:nth-of-type(4) {
+      grid-area: d;
+    }
+    #clothe_1 > div:nth-of-type(5) {
+      grid-area: e;
+    }
+    .imgD {
+      height: 150px;
+      width: 30%;
+      margin-top: 5%;
+    }
+    #B_div {
+      display: flex;
+      flex-direction: column;
+    }
+    /* #B_div > div:nth-of-type(1) {
+      height: 50%;
+      width: 100%;
+      border: 3px solid;
+    } */
+    /* #B_div > div:nth-of-type(2) {
+      height: 300px;
+      width: 100%;
+      border: 3px solid;
+    } */
+    .content {
+      height: 150px;
+      width: 50%;
+      margin-top: 5%;
+    }
+    .B_img_div {
+      width: 65%;
+      height: 200px;
+      margin: auto;
+    }
+    .B_content_div {
+      height: 200px;
+      width: 100%;
+    }
+    #clothe_1 > div > div:nth-of-type(2) > div > h4 {
+      margin-top: 0px;
+    }
+  </style>
+  <body>
+    <h1>deals_head</h1>
+    <div id="deals_head">
+      <div id="h1"><h2>Deals</h2></div>
+      <div id="h2">
+        <div><p class="p" id="featured">Featured</p></div>
+        <div><p class="p">Tech</p></div>
+        <div><p class="p">Fashion</p></div>
+        <div><p class="p">Home</p></div>
+        <div><p class="p">More</p></div>
+      </div>
+    </div>
+    <!-- <div id="drop_down">
+      <div>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+      </div>
+      <div>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+        <p>Clothing & accessiories</p>
+      </div>
+    </div> -->
+    <div id="deal1">
+      <div class="spot"><p>SPOTLIGHT DEALS</p></div>
+      <div id="chappal">
+        <div>
+          <img
+            src="https://i.ebayimg.com/images/g/30EAAOSw1e1hnL7k/s-l400.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <p>
+            Under Armour Men's UA Ignite VI Slide Athletic Flip-Flop Sandals -
+            3022711
+          </p>
+          <p>US $20.99</p>
+          <p>Almost gone</p>
+        </div>
+      </div>
+    </div>
+    <div class="spot" id="featured_deals"><p>FEATURED DEALS</p></div>
+    <div id="watches"></div>
+    <p id="clothe_">Clothing & Accesories</p>
+    <div id="clothe_1">
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/vAAAAOSwBIxgDv6~/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div id="B_div">
+        <div class="B_img_div">
+          <img
+            src="https://i.ebayimg.com/images/g/BAcAAOSwXeZdCVqV/s-l300.jpg"
+            alt=""
+          />
+        </div>
+        <div class="B_content_div">
+          <p>Alexander Swiss Made Stainless Bracelet Ladies Quartz Sapphire</p>
+          <h3>US $139.99</h3>
+          <div style="display: flex">
+            <strike>US $799.00 |</strike>
+            <h4>82% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/Z~UAAOSw0LldiPUa/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Invicta 23084 Men's Chron</p>
+          <h3>US $78.99</h3>
+          <div style="display: flex">
+            <strike>US $695.00 |</strike>
+            <h4>89% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/Pq4AAOSw8p9hZzaf/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Invicta Men's Watch Pro</p>
+          <h3>US $97.66</h3>
+          <div style="display: flex">
+            <strike>US $495.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div style="display: block">
+        <h2 style="text-align: center">Shop all 141</h2>
+        <p style="text-align: center">Clothing & Accesories</p>
+        <div style="margin: auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=""
+            height="35"
+            fill="Blue"
+            class="bi bi-chevron-right"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p id="clothe_">Fashion for Men</p>
+    <div id="clothe_1">
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/Ac4AAOSw0GliHwLD/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div id="B_div">
+        <div class="B_img_div">
+          <img
+            src="https://i.ebayimg.com/images/g/C6IAAOSw1FtiHwHv/s-l300.jpg"
+            alt=""
+          />
+        </div>
+        <div class="B_content_div">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/VKoAAOSwiMhiHwEm/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/tUcAAOSwy5xiIwrI/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div style="display: block">
+        <h2 style="text-align: center">Shop all 141</h2>
+        <p style="text-align: center">Clothing & Accesories</p>
+        <div style="margin: auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=""
+            height="35"
+            fill="Blue"
+            class="bi bi-chevron-right"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p id="clothe_">Fashion for Women</p>
+    <div id="clothe_1">
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/XSUAAOSwrdZiIcDR/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div id="B_div">
+        <div class="B_img_div">
+          <img
+            src="https://i.ebayimg.com/images/g/OEQAAOSwqyBiIGMW/s-l300.jpg"
+            alt=""
+          />
+        </div>
+        <div class="B_content_div">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/-6EAAOSwD2xiIwpl/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/urgAAOSwgB1iHwOE/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div style="display: block">
+        <h2 style="text-align: center">Shop all 141</h2>
+        <p style="text-align: center">Clothing & Accesories</p>
+        <div style="margin: auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=""
+            height="35"
+            fill="Blue"
+            class="bi bi-chevron-right"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p id="clothe_">Toys and Collectibles</p>
+    <div id="clothe_1">
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/b8sAAOSwq0diGn8R/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div id="B_div">
+        <div class="B_img_div">
+          <img
+            src="https://i.ebayimg.com/images/g/zfEAAOSwH5Zgj~Ek/s-l300.jpg"
+            alt=""
+          />
+        </div>
+        <div class="B_content_div">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/8PMAAOSwgg5iHAqw/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/EHwAAOSwQ9ViHCAM/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div style="display: block">
+        <h2 style="text-align: center">Shop all 141</h2>
+        <p style="text-align: center">Clothing & Accesories</p>
+        <div style="margin: auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=""
+            height="35"
+            fill="Blue"
+            class="bi bi-chevron-right"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <p id="clothe_">Health & Beauty</p>
+    <div id="clothe_1">
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/R8sAAOSwqYhh8Yzi/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div id="B_div">
+        <div class="B_img_div">
+          <img
+            src="https://i.ebayimg.com/images/g/jOUAAOSwmlZfKF-7/s-l300.jpg"
+            alt=""
+          />
+        </div>
+        <div class="B_content_div">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/wNcAAOSwP79cdqJE/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="imgD">
+          <img
+            src="https://i.ebayimg.com/images/g/2~4AAOSwgYpdJzua/s-l225.jpg"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <h3>US $299.99</h3>
+          <div style="display: flex">
+            <strike>US $725.00 |</strike>
+            <h4>59% OFF</h4>
+          </div>
+        </div>
+      </div>
+      <div style="display: block">
+        <h2 style="text-align: center">Shop all 141</h2>
+        <p style="text-align: center">Clothing & Accesories</p>
+        <div style="margin: auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width=""
+            height="35"
+            fill="Blue"
+            class="bi bi-chevron-right"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //   let featured = document.getElementById("featured");
+  //   let drop_down = document.getElementById("drop_down");
+  //   featured.addEventListener("mouseover", () => {
+  //     // console.log("abc");
+  //     drop_down.style.height = "300px";
+  //   });
+
+  let watches = [
+    {
+      Image: "https://i.ebayimg.com/images/g/gjcAAOSwwFxg2jEs/s-l225.jpg",
+      info: "Invicta Men's Watch Pro Diver Quartz Dive Blue Dial Silver Tone Bracelet 9204OB",
+      price: "US $51.99",
+      strike: "US $395.00 |",
+      off: "87% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/WMQAAOSwTxhfyOqH/s-l225.jpg",
+      info: "Invicta Men's Watch Pro Diver Black Dial Automatic Stainless Steel Bracelet 8926",
+      price: "US $89.91",
+      strike: "US $315.00 |",
+      off: "71% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/zxMAAOSwoyZg~~ws/s-l225.jpg",
+      info: "Invicta Men's Watch Pro Diver Scuba Chronograph Gold Tone and Black Dial 17566",
+      price: "US $89.65",
+      strike: "US $1,295.00 | ",
+      off: "93% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/6akAAOSwdoZhOhDv/s-l225.jpg",
+      info: "Invicta Men's Watch Pro Diver Yellow Gold Plated Stainless Steel Bracelet 30613",
+      price: "US $53.99",
+      strike: "US 595.00",
+      off: "91% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/cT8AAOSwciZiM5Ju/s-l225.jpg",
+      info: "Dickies Men's 874 Original Fit Classic Work School Uniform Straight Leg Pants",
+      price: "US $33.88",
+      strike: "US $395.00",
+      off: "87% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/mYAAAOSw-vZfbNPP/s-l225.jpg",
+      info: "Levis 501 Jeans Button Fly Mens Denim Stonewashed W30 W32 W34 W36 W38",
+      price: "US $68.99",
+      strike: "US $395.00",
+      off: "87% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/03AAAOSwTzxh~PK5/s-l225.jpg",
+      info: "Levis Mens 501 Original Shrink to Fit Denim Button Fly Classic Rise Jeans",
+      price: "US $47.13",
+      strike: "US $395.00",
+      off: "87% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/GZ0AAOSwtHphmwJE/s-l225.jpg",
+      info: "Mens Sweatshirt Pullover Hoodie Embroidered Bear Long Sleeve Pocket Sweater",
+      price: "US $22.88",
+      strike: "US $395.00",
+      off: "87% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/7pcAAOSwX0BhVSyL/s-l225.jpg",
+      info: "Michael Kors Ladies 552527 Hamilton Lock Leather Belt Bag",
+      price: "US $55.45",
+      strike: "US $108.00 | ",
+      off: "49% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/kJEAAOSwNgtgx2n7/s-l225.jpg",
+      info: "Michael Kors Regina Medium Signature PVC Leather Flap Shoulder Bag Handbag Purse",
+      price: "US $145.00",
+      strike: "US $398.00 |",
+      off: " 64% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/W6wAAOSw7OVhOO~i/s-l225.jpg",
+      info: "Michael Kors Jet Set Travel Medium Leather X Cross Dome Bag Crossbody Handbag",
+      price: "US $115.00",
+      strike: "US $328.00 | ",
+      off: " 65% OFF",
+    },
+    {
+      Image: "https://i.ebayimg.com/images/g/YpUAAOSw-UxggupA/s-l225.jpg",
+      info: "Coach Katy Signature Coated Canvas Leather Dome Satchel Crossbody Handbag Purse",
+      price: "US $165.00",
+      strike: "US $350.00",
+      off: "53% OFF",
+    },
+  ];
+
+  let watches_div = document.getElementById("watches");
+
+  let append_watches_data = (data) => {
+    data.forEach(({ Image, info, price, strike, off }) => {
+      let div = document.createElement("div");
+
+      div.style.display = "flex";
+
+      let Img_div = document.createElement("div");
+
+      let img = document.createElement("img");
+
+      img.src = Image;
+
+      Img_div.append(img);
+
+      let content_div = document.createElement("div");
+
+      let p_info = document.createElement("p");
+
+      p_info.innerText = info;
+
+      let h3_price = document.createElement("h3");
+
+      h3_price.innerText = price;
+
+      let div_strick_off = document.createElement("div");
+
+      let strike_ = document.createElement("strike");
+
+      strike_.innerText = strike;
+
+      let h4_off = document.createElement("h4");
+
+      h4_off.innerText = off;
+
+      div_strick_off.append(strike_, h4_off);
+
+      //   div_strick_off.innerHTML = `<strike>${strike}<strike/><br><h4>${off}<h4/>`;
+
+      content_div.append(p_info, h3_price, div_strick_off);
+
+      div.append(Img_div, content_div);
+
+      watches_div.append(div);
+
+      //   let p_strike = document.createElement("strick");
+
+      //   let h4_off = document.createElement("h4")
+
+      //   h4_off.innerText =
+    });
+  };
+  append_watches_data(watches);
+</script>
