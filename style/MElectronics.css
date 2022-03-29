@@ -1,6 +1,10 @@
 #mcontainer{
     display: flex;
 }
+#pmcontainer{
+    margin: auto;
+    max-width: 1260px;
+}
 #msidebar{
 
 }
@@ -24,4 +28,15 @@
 }
 .mcategory:hover .mcategoryul{
     display: block;
+}
+.mitemImages{
+    text-align: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    height: 182px;
+}
+.mitemImages>img{
+    max-width: 138px;
+    display: block;
+    margin: auto;
 }
