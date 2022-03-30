@@ -20589,7 +20589,7 @@ thumbnail: "https://i.ebayimg.com/thumbs/images/g/YXgAAOSwY9xh8cJf/s-l225.jpg"
         },
 ];
 
-// localStorage.setItem("search_term","mobile")
+
 
 
 // localStorage.setItem("EbayDatabase", JSON.stringify(data))
