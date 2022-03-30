@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics Page</title>
+    <link rel="stylesheet" href="collectiblesAndArt.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h2 id="headLine">Comics Books, Manga & Memorabilia</h2>
+    <div id="comicsContainer">
+
+        <div id="comicsFilter">
+            <h3 id="comicH">Shop by Category</h3>
+            <p id="comicCol">Collectibles</p>
+            <div id="cFil">
+                <p>Comic Books & Memorabilia</p>
+                <p><a href="">Comics</a></p>
+                <p><a href="">Franco-Belgian & European Comics</a></p>
+                <p><a href="">Manga & Asian Comics</a></p>
+                <p><a href="">Other Comic Book Traditions</a></p>
+                <p><a href="">Original Comic Art</a></p>
+                <p><a href="">Artbooks</a></p>
+                <p><a href="">Magazines</a></p>
+                <p><a href="">Fan Clubs & Zines</a></p>
+                <p><a href="">Merchandise & Memorabilia</a></p>
+                <p><a href="">Comic Book Supplies & Accs</a></p>
+                <p><a href="">Price & Buyers Guides</a></p>
+                <p><a href="">Other Comics</a></p>
+            </div>
+
+        </div>
+
+        <div id="comicsShop">
+            <h2 id="chslide">Shop by Category</h2>
+            <div id="comicSlider">
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/RsoAAOSwoytgnYGr/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/l2YAAOSwKxZhg-UD/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/JwgAAOSw3M5gnXXA/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/LcMAAOSwB4NW0u~v/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/3jEAAOSw1DtXHhV3/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/phsAAOSw30JeTNPk/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/3uYAAOSwR8heTXTp/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/o2MAAOSwYIxX3l~Z/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/o2MAAOSwYIxX3l~Z/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/y8AAAOxyA7tSXrH-/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/y8AAAOxyA7tSXrH-/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+                <div>
+                    <img src="https://i.ebayimg.com/thumbs/images/g/vzkAAOSwO0xhg-Oj/s-l225.webp" alt="">
+                    <p><a href="">Comics</a></p>
+                </div>
+            </div>
+
+            <div id="proGrader">
+                <h2>Shop by Professional Grader</h2>
+                <div>
+                    <p>Certified Guranty..</p>
+                    <p>Comic Book Certification..</p>
+                    <p>Professional Grading Experts..</p>
+                </div>
+            </div>
+
+            <div id="comicData">
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script type="module">
+    var comic = document.getElementById("comicData");
+
+    import { comicFunction, appendData } from "./components/Amain.js";
+
+    let data = await comicFunction("http://localhost:3000/posts/?q=entertainment");
+
+    console.log(data);
+
+    appendData(data, comic);
+
+</script>

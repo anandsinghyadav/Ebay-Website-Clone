@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collectibles and Art</title>
+    <link rel="stylesheet" href="collectiblesAndArt.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- banner part -->
+    <div id="cabDiv">
+        <img id="caBanner" src="https://i.ebayimg.com/images/g/3tcAAOSwZxNfPOU~/s-l1600.webp"
+            alt="Collectibles and Arts">
+    </div>
+
+    <!-- main container for shop by category and side filter -->
+
+    <div id="caContainer">
+
+
+        <!-- left filter creation -->
+
+        <div id="caFilter">
+
+            <p>Categories</p>
+            <div><a href="">Stamps</a></div>
+            <div><a href="">Collectible Comics</a></div>
+            <div><a href="">Coins & Paper Money</a></div>
+            <div><a href="">Vintage Record Players</a></div>
+            <div><a href="">Antiques</a></div>
+            <div><a href="">Vintage Clothing Shoes & Accessories</a></div>
+            <div><a href="">Collectible Postcards</a></div>
+            <div><a href="">Action Figures</a></div>
+            <div><a href="">Entertainment Memorabilia</a></div>
+
+
+
+
+            <div id="shopByCat">
+                <p id="sbCatP">Shop by Category</p>
+                <div id="sbCat" onclick="openSomething('anti')">
+                    <p>Antiques</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="anti">
+                    <li>See all in Antiques</li>
+                    <li>Antique Furniture</li>
+                    <li>Antique Manuscripts</li>
+                    <li>Antique Maps, Atlases & Globes</li>
+                    <li>Antique Musical Instruments</li>
+                    <li>Antique Primitives</li>
+                    <li>Antique Rugs & Carpets</li>
+                    <li>Antique Tapestries </li>
+                    <li>Antiques Restoration</li>
+                    <li>Architectural & Garden Antiques</li>
+                    <li>Asian Antiques</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('art')">
+                    <p> <a href="art.html">Art</a></p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="art">
+                    <li>See all in art</li>
+                    <li>Art Drawing</li>
+                    <li>Art NFTs</li>
+                    <li>Art Paintings</li>
+                    <li>Art Photographs</li>
+                    <li>Art Posters</li>
+                    <li>Art Prints</li>
+                    <li>Art Sculputers</li>
+                    <li>Textile Art & Fiber Art</li>
+                </ul>
+
+                <div id="sbCat" onclick="openSomething('artAndCraft')">
+                    <p>Art & Craft Supplies</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="artAndCraft">
+                    <li>See all in Art & Craft Supplies</li>
+                    <li>Art Supplies</li>
+                    <li>Beads & Jewelry Making Supplies</li>
+                    <li>Craft Glass & Mosaics</li>
+                    <li>Craft Stamping & Embossing Supplies</li>
+                    <li>Crafts Wholesale Lots</li>
+                    <li>Fabric</li>
+                    <li>Fabric Painting & Decorating Supplies</li>
+                    <li>Handcrafted & Finished Pieces</li>
+                    <li>Home Arts & Crafts</li>
+                    <li>Kids' Crafts</li>
+                    <li>Leathercraft Tools & Supplies</li>
+                    <li>Other Craft Supplies</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('coins')">
+                    <p>Coins & Paper Money</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="coins">
+                    <li>See all in Coins & Paper Money</li>
+                    <li>Ancient Coins</li>
+                    <li>Bullion</li>
+                    <li>Canadian Coins</li>
+                    <li>Exonumia</li>
+                    <li>Medieval Coins</li>
+                    <li>Other Coins & Paper Money</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('collectibles')">
+                    <p>Collectibles</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="collectibles">
+                    <li>See all in Collectibles</li>
+                    <li>Animal Collectible</li>
+                    <li>Antique Linens & Textiles</li>
+                    <li>Arcade, Jukebox & Pinball</li>
+                    <li>Autographs</li>
+                    <li>Bank,Register & Vending Collectible</li>
+                    <li>Bobbles, Pinbacks & Lunchboxes</li>
+                    <li>Casino Collectibles</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('dollsAndTeddy')">
+                    <p>Dolls & Teddy Bears</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="dollsAndTeddy">
+                    <li>See all in Dolls & Teddy Bears</li>
+                    <li>Dollhouse & dollhouse Miniatures</li>
+                    <li>Dolls, Clothing & Accessories</li>
+
+                </ul>
+                <div id="sbCat" onclick="openSomething('entertainment')">
+                    <p>Entertainment Memorabilia</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="entertainment">
+                    <li>See all in Entertainment</li>
+                    <li>Movie Collectibles</li>
+                    <li>Music Memorabilia</li>
+                    <li>Tv Memorabilia</li>
+                    <li>Reprinted Autographed</li>
+                    <li>Theater Memorabilia</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('pottery')">
+                    <p>Pottery & Glass</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="pottery">
+                    <li>See all in Pottery & Glasses</li>
+                    <li>Decorative Cookware, Dinneware</li>
+                    <li>Decorative Pottery & Glasess</li>
+                    <li>Pottery & Glasses Lamps, Lighting</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('stamps')">
+                    <p> Stamps</p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <ul id="stamps">
+                    <li>See all in stamps</li>
+                    <li>African Stamps</li>
+                    <li>Asian Stamps</li>
+                    <li>Australian & Oceanian Stamps</li>
+                    <li>British Stamps</li>
+                    <li>Canadian Stamps</li>
+                    <li>Carabbean stamps</li>
+                    <li>European Stamps</li>
+                    <li>Latin American Stamps</li>
+                    <li>Other Postel Stamps</li>
+                </ul>
+                <div id="sbCat" onclick="openSomething('vintage')">
+                    <p> Vintage & Antique Jewelry </p>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+
+                <ul id="vintage">
+                    <li>See all in Vintage & Antique Jewelry</li>
+                    <li>Other Vintage & Antique Jewelry</li>
+                    <li>Vintage & Antique Anklets</li>
+                    <li>Vintage & Antique Bolo Ties</li>
+                    <li>Vintage & Antique Brooches & Pins</li>
+                    <li>Other Vintage</li>
+                </ul>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+        <!-- right part for showing data creation -->
+        <div id="caItem">
+            <h2>Shop by Category</h2>
+
+            <div id="one">
+                <div onclick="goFun('stamps')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/SPoAAOSwWg5fPOYO/s-l640.webp" alt="">
+                </div>
+                <div onclick="goFun('comics')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/gXUAAOSwOQ9fPirb/s-l640.webp" alt="">
+                </div>
+            </div>
+            <div id="two">
+                <div onclick="goFun('coinsAndPaperMoney')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/wukAAOSwmoNfPObX/s-l640.webp" alt="">
+                </div>
+                <div onclick="goFun('recordandPlayer')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/vI4AAOSwGUJfPir9/s-l640.webp" alt="">
+                </div>
+                <div onclick="goFun('antiques')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/WpAAAOSwfdVfPObh/s-l640.webp" alt="">
+                </div>
+            </div>
+
+            <div id="three">
+                <div onclick="goFun('vintage')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/m9EAAOSwtQBfPixc/s-l1200.webp" alt="">
+                </div>
+            </div>
+            <div id="four">
+                <div onclick="goFun('collectibles')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/0HoAAOSwE8RhctGm/s-l640.webp" alt="">
+                </div>
+                <div onclick="goFun('actionAndFigure')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/TSoAAOSwjFVfPOeY/s-l640.webp" alt="">
+                </div>
+
+                <div onclick="goFun('entertainment')">
+                    <img src="https://i.ebayimg.com/thumbs/images/g/hpUAAOSw9bRfPOeU/s-l640.webp" alt="">
+                </div>
+
+            </div>
+
+
+            <!-- Text Area Creation  -->
+            <div id="main">
+                <h2 id="textOne">Collectibles & Art</h2>
+                <div>
+                    <h4>Perfect the Art of Collecting</h4>
+                    <p>Whether you collect <a href="">antiques</a>, rare coins, art, <a href="">sports memorabilia</a>
+                        or toys, eBay offers an extensive and ever-evolving selection. Snag that rare pinball machine or
+                        Montblanc fountain pen without leaving the comfort of your couch.</p>
+                </div>
+
+                <div>
+                    <h4>Browse eBay's Online Art Collection</h4>
+                    <p>If you consider yourself an art collector, eBay has a wide variety of collectible art, <a
+                            href="">paintings</a> , originals and reprints to peruse. On a budget? Browse more
+                        affordable art collections including <a href="">art posters</a> from film, television and
+                        popular culture. With so many art collections online, it's easy to find the perfect piece for
+                        your own art collection, no matter what style of collector art you prefer.</p>
+                </div>
+
+                <div>
+                    <h4>Shop for Rare Stamps and Coins</h4>
+                    <p>Collectible <a href="">stamps</a> and <a href="">coin collecting</a> are two of the most seasoned
+                        pastimes of collectors. Whether you're adding to your coin collection, getting all 50 <a
+                            href="">U.S. quarters</a> , or just starting your stamp book, eBay has you covered. With
+                        listings of some of the most coveted items in the world, you're sure to find the next big
+                        addition to your set.</p>
+                </div>
+
+                <div>
+                    <h4>Embrace the Fun with Sports Memorabilia and Toys</h4>
+                    <p>Who says collecting has to be serious? <a href="">Autographed baseball cards</a> and baseball
+                        memorabilia are sure to inspire nostalgia. But the selection doesn't end there: football,
+                        hockey, basketball, soccer and other popular sports are represented, too.</p>
+                </div>
+
+                <div>
+                    <h4>The Perfect Items for Any Collection</h4>
+                    <p>Looking for something a little out-of-the-box? Can't find what you want in antique stores or
+                        hobby shops? Browse eBay for action figures, shot glasses, sterling silver spoons, <a
+                            href="">glass pottery</a> or any other niche collector's item you can imagine.</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+<script src="collectiblesAndArt.js"></script>
+
+</html>
