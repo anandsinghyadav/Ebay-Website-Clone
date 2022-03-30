@@ -1,0 +1,10 @@
+    color: var(--color-text-primary,#111820);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    font-weight: initial;
+    font-family: "Market Sans", Arial, sans-serif;
+    box-sizing: inherit;
+    z-index: 0;
+    width: 100%;
+    text-align: center;
