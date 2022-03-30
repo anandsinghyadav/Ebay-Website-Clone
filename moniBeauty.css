@@ -1,0 +1,157 @@
+#pagediv {
+    /* border: 3px solid blue; */
+    width: 90%;
+    font-family: "Market Sans", Arial, sans-serif;
+    margin: auto;
+}
+
+#div {
+    width: 100%;
+    height: 150px;
+    /* border: 1px solid black; */
+}
+
+#center {
+    display: flex;
+
+}
+
+.image {
+    width: 50%;
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 25px;
+
+}
+
+#right {
+    /* border: 1px solid red; */
+
+}
+
+.img {
+    width: 100%;
+}
+
+h2 {
+    margin-left: 5%;
+}
+
+#one,
+#two {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 5%
+}
+
+#bottom {
+    /* border: 1px solid black; */
+}
+
+#b2 {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 5%;
+    justify-content: space-evenly;
+}
+
+.Image {
+    /* border: 1px solid yellow; */
+    width: 15%;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+.img {
+    /* border: 1px solid red; */
+    height: 60%;
+}
+
+#b1 {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+
+#b1>div {
+    /* border: 1px solid red; */
+    width: 25%;
+    color: rgb(197, 229, 251);
+    background-color: rgb(18, 18, 88);
+    box-sizing: border-box;
+    padding: 2%;
+}
+
+#last {
+    width: 70%;
+    height: 50%;
+}
+
+#topdiv {
+    /* border: 3px solid yellow; */
+    height: 200px;
+    background-image: url('https://i.ebayimg.com/images/g/5N0AAOSwyDpb0zCc/s-l1600.webp');
+}
+
+#footer {
+    /* border: 1px solid green; */
+    height: 400px
+}
+
+.hov:hover {
+    text-decoration: underline;
+}
+
+#cat {
+    display: grid;
+}
+
+#footerOne,
+#footerTwo {
+    margin-left: 10%;
+    display: flex;
+    font-size: 14px;
+    gap: 1%;
+    color: rgb(125, 125, 141);
+}
+
+#footerdiv {
+    margin-top: 3%;
+    /* border: 1px solid rgb(125,125,141); */
+}
+
+a {
+    color: rgb(125, 125, 141);
+}
+
+#line {
+    border: 0.5px solid rgb(125, 125, 141);
+    width: 100%;
+    margin-top: 3%;
+}
+
+h1 {
+    padding-left: 2%;
+    padding-top: 1%;
+
+}
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    padding-bottom: 4%;
+    color: rgb(29, 36, 43);
+    font-family: "Market Sans", Arial, sans-serif;
+}
