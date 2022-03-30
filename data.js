@@ -20588,7 +20588,28 @@ thumbnail: "https://i.ebayimg.com/thumbs/images/g/YXgAAOSwY9xh8cJf/s-l225.jpg"
         thumbnail: "https://i.ebayimg.com/thumbs/images/g/c5cAAOSwP8VhG87p/s-l225.jpg"
         },
 ];
-localStorage.setItem("EbayDatabase", JSON.stringify(data))
+
+localStorage.setItem("search_term","mobile")
+
+
+// localStorage.setItem("EbayDatabase", JSON.stringify(data))
+
+
+let keyword = localStorage.getItem("search_term")
+
+
+
+TakeData(keyword);
+
+
+function TakeData(value) {
+  var searchData = data.filter(function (elem) {
+    return (elem.title + "")
+      .toUpperCase()
+      .includes((value + "").toUpperCase());
+  });
+  localStorage.setItem("items",JSON.stringify(searchData))
+}
 
 
 

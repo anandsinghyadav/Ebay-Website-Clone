@@ -238,9 +238,12 @@
     #clothe_1 > div > div:nth-of-type(2) > div > h4 {
       margin-top: 0px;
     }
+    p:hover {
+      text-decoration: underline;
+      cursor: context-menu;
+    }
   </style>
   <body>
-    <h1>deals_head</h1>
     <div id="deals_head">
       <div id="h1"><h2>Deals</h2></div>
       <div id="h2">
@@ -721,152 +724,176 @@
   </body>
 </html>
 <script>
-  //   let featured = document.getElementById("featured");
-  //   let drop_down = document.getElementById("drop_down");
-  //   featured.addEventListener("mouseover", () => {
-  //     // console.log("abc");
-  //     drop_down.style.height = "300px";
-  //   });
+    //   let featured = document.getElementById("featured");
+    //   let drop_down = document.getElementById("drop_down");
+    //   featured.addEventListener("mouseover", () => {
+    //     // console.log("abc");
+    //     drop_down.style.height = "300px";
+    //   });
 
-  let watches = [
-    {
-      Image: "https://i.ebayimg.com/images/g/gjcAAOSwwFxg2jEs/s-l225.jpg",
-      info: "Invicta Men's Watch Pro Diver Quartz Dive Blue Dial Silver Tone Bracelet 9204OB",
-      price: "US $51.99",
-      strike: "US $395.00 |",
-      off: "87% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/WMQAAOSwTxhfyOqH/s-l225.jpg",
-      info: "Invicta Men's Watch Pro Diver Black Dial Automatic Stainless Steel Bracelet 8926",
-      price: "US $89.91",
-      strike: "US $315.00 |",
-      off: "71% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/zxMAAOSwoyZg~~ws/s-l225.jpg",
-      info: "Invicta Men's Watch Pro Diver Scuba Chronograph Gold Tone and Black Dial 17566",
-      price: "US $89.65",
-      strike: "US $1,295.00 | ",
-      off: "93% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/6akAAOSwdoZhOhDv/s-l225.jpg",
-      info: "Invicta Men's Watch Pro Diver Yellow Gold Plated Stainless Steel Bracelet 30613",
-      price: "US $53.99",
-      strike: "US 595.00",
-      off: "91% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/cT8AAOSwciZiM5Ju/s-l225.jpg",
-      info: "Dickies Men's 874 Original Fit Classic Work School Uniform Straight Leg Pants",
-      price: "US $33.88",
-      strike: "US $395.00",
-      off: "87% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/mYAAAOSw-vZfbNPP/s-l225.jpg",
-      info: "Levis 501 Jeans Button Fly Mens Denim Stonewashed W30 W32 W34 W36 W38",
-      price: "US $68.99",
-      strike: "US $395.00",
-      off: "87% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/03AAAOSwTzxh~PK5/s-l225.jpg",
-      info: "Levis Mens 501 Original Shrink to Fit Denim Button Fly Classic Rise Jeans",
-      price: "US $47.13",
-      strike: "US $395.00",
-      off: "87% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/GZ0AAOSwtHphmwJE/s-l225.jpg",
-      info: "Mens Sweatshirt Pullover Hoodie Embroidered Bear Long Sleeve Pocket Sweater",
-      price: "US $22.88",
-      strike: "US $395.00",
-      off: "87% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/7pcAAOSwX0BhVSyL/s-l225.jpg",
-      info: "Michael Kors Ladies 552527 Hamilton Lock Leather Belt Bag",
-      price: "US $55.45",
-      strike: "US $108.00 | ",
-      off: "49% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/kJEAAOSwNgtgx2n7/s-l225.jpg",
-      info: "Michael Kors Regina Medium Signature PVC Leather Flap Shoulder Bag Handbag Purse",
-      price: "US $145.00",
-      strike: "US $398.00 |",
-      off: " 64% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/W6wAAOSw7OVhOO~i/s-l225.jpg",
-      info: "Michael Kors Jet Set Travel Medium Leather X Cross Dome Bag Crossbody Handbag",
-      price: "US $115.00",
-      strike: "US $328.00 | ",
-      off: " 65% OFF",
-    },
-    {
-      Image: "https://i.ebayimg.com/images/g/YpUAAOSw-UxggupA/s-l225.jpg",
-      info: "Coach Katy Signature Coated Canvas Leather Dome Satchel Crossbody Handbag Purse",
-      price: "US $165.00",
-      strike: "US $350.00",
-      off: "53% OFF",
-    },
-  ];
+    let watches = [
+      {
+        Image: "https://i.ebayimg.com/images/g/gjcAAOSwwFxg2jEs/s-l225.jpg",
+        info: "Invicta Men's Watch Pro Diver Quartz Dive Blue Dial Silver Tone Bracelet 9204OB",
+        price: "US $51.99",
+        strike: "US $395.00 |",
+        off: "87% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/WMQAAOSwTxhfyOqH/s-l225.jpg",
+        info: "Invicta Men's Watch Pro Diver Black Dial Automatic Stainless Steel Bracelet 8926",
+        price: "US $89.91",
+        strike: "US $315.00 |",
+        off: "71% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/zxMAAOSwoyZg~~ws/s-l225.jpg",
+        info: "Invicta Men's Watch Pro Diver Scuba Chronograph Gold Tone and Black Dial 17566",
+        price: "US $89.65",
+        strike: "US $1,295.00 | ",
+        off: "93% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/6akAAOSwdoZhOhDv/s-l225.jpg",
+        info: "Invicta Men's Watch Pro Diver Yellow Gold Plated Stainless Steel Bracelet 30613",
+        price: "US $53.99",
+        strike: "US 595.00",
+        off: "91% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/cT8AAOSwciZiM5Ju/s-l225.jpg",
+        info: "Dickies Men's 874 Original Fit Classic Work School Uniform Straight Leg Pants",
+        price: "US $33.88",
+        strike: "US $395.00",
+        off: "87% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/mYAAAOSw-vZfbNPP/s-l225.jpg",
+        info: "Levis 501 Jeans Button Fly Mens Denim Stonewashed W30 W32 W34 W36 W38",
+        price: "US $68.99",
+        strike: "US $395.00",
+        off: "87% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/03AAAOSwTzxh~PK5/s-l225.jpg",
+        info: "Levis Mens 501 Original Shrink to Fit Denim Button Fly Classic Rise Jeans",
+        price: "US $47.13",
+        strike: "US $395.00",
+        off: "87% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/GZ0AAOSwtHphmwJE/s-l225.jpg",
+        info: "Mens Sweatshirt Pullover Hoodie Embroidered Bear Long Sleeve Pocket Sweater",
+        price: "US $22.88",
+        strike: "US $395.00",
+        off: "87% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/7pcAAOSwX0BhVSyL/s-l225.jpg",
+        info: "Michael Kors Ladies 552527 Hamilton Lock Leather Belt Bag",
+        price: "US $55.45",
+        strike: "US $108.00 | ",
+        off: "49% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/kJEAAOSwNgtgx2n7/s-l225.jpg",
+        info: "Michael Kors Regina Medium Signature PVC Leather Flap Shoulder Bag Handbag Purse",
+        price: "US $145.00",
+        strike: "US $398.00 |",
+        off: " 64% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/W6wAAOSw7OVhOO~i/s-l225.jpg",
+        info: "Michael Kors Jet Set Travel Medium Leather X Cross Dome Bag Crossbody Handbag",
+        price: "US $115.00",
+        strike: "US $328.00 | ",
+        off: " 65% OFF",
+      },
+      {
+        Image: "https://i.ebayimg.com/images/g/YpUAAOSw-UxggupA/s-l225.jpg",
+        info: "Coach Katy Signature Coated Canvas Leather Dome Satchel Crossbody Handbag Purse",
+        price: "US $165.00",
+        strike: "US $350.00",
+        off: "53% OFF",
+      },
+    ];
 
-  let watches_div = document.getElementById("watches");
+    let watches_div = document.getElementById("watches");
 
-  let append_watches_data = (data) => {
-    data.forEach(({ Image, info, price, strike, off }) => {
-      let div = document.createElement("div");
+    let append_watches_data = (data) => {
+      data.forEach((elem) => {
+        let div = document.createElement("div");
 
-      div.style.display = "flex";
+        div.addEventListener("click", () => {
+          storeData(elem);
+        });
 
-      let Img_div = document.createElement("div");
+        div.style.display = "flex";
 
-      let img = document.createElement("img");
+        let Img_div = document.createElement("div");
 
-      img.src = Image;
+        let img = document.createElement("img");
 
-      Img_div.append(img);
+        img.src = elem.Image;
 
-      let content_div = document.createElement("div");
+        Img_div.append(img);
 
-      let p_info = document.createElement("p");
+        let content_div = document.createElement("div");
 
-      p_info.innerText = info;
+        let p_info = document.createElement("p");
 
-      let h3_price = document.createElement("h3");
+        p_info.innerText = elem.info;
 
-      h3_price.innerText = price;
+        let h3_price = document.createElement("h3");
 
-      let div_strick_off = document.createElement("div");
+        h3_price.innerText = elem.price;
 
-      let strike_ = document.createElement("strike");
+        let div_strick_off = document.createElement("div");
 
-      strike_.innerText = strike;
+        let strike_ = document.createElement("strike");
 
-      let h4_off = document.createElement("h4");
+        strike_.innerText = elem.strike;
 
-      h4_off.innerText = off;
+        let h4_off = document.createElement("h4");
 
-      div_strick_off.append(strike_, h4_off);
+        h4_off.innerText = elem.off;
 
-      //   div_strick_off.innerHTML = `<strike>${strike}<strike/><br><h4>${off}<h4/>`;
+        div_strick_off.append(strike_, h4_off);
 
-      content_div.append(p_info, h3_price, div_strick_off);
+        //   div_strick_off.innerHTML = `<strike>${strike}<strike/><br><h4>${off}<h4/>`;
 
-      div.append(Img_div, content_div);
+        content_div.append(p_info, h3_price, div_strick_off);
 
-      watches_div.append(div);
+        div.append(Img_div, content_div);
 
-      //   let p_strike = document.createElement("strick");
+        watches_div.append(div);
 
-      //   let h4_off = document.createElement("h4")
+        //   let p_strike = document.createElement("strick");
 
-      //   h4_off.innerText =
-    });
-  };
-  append_watches_data(watches);
+        //   let h4_off = document.createElement("h4")
+
+        //   h4_off.innerText =
+      });
+    };
+    append_watches_data(watches);
+    let data = [];
+    let storeData = (elem) => {
+      data.push(elem);
+      localStorage.setItem("dealsData", JSON.stringify(data));
+    };
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
 </script>
