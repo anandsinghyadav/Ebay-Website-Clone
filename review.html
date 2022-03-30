@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="collectiblesAndArt.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+    <div id="reviewContainer">
+
+        <div id="picDiv">
+
+
+        </div>
+        <div id="bigPicDiv">
+
+
+            <div id="rightAr"><i class="fas fa-angle-right"></i></div>
+            <div id="leftAr"><i class="fas fa-angle-left"></i></div>
+
+        </div>
+        <div id="detailDiv">
+            <div id="addTitle"></div>
+            <div id="condition"></div>
+
+            <div id="priceDiv">
+                <div>
+                    <div>Price: <span id="p"> US $ 18.00</span></div>
+                    <div id="cutP">US $60.00</div>
+                </div>
+                <div>
+                    <div> <button id="buyit">Buy It Now</button></div>
+                    <div> <button id="acart">Add to cart</button></div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="shopConDiv">
+
+        </div>
+
+    </div>
+
+
+</body>
+
+
+<script>
+
+    let condition = document.getElementById("condition");
+    let p = document.getElementById("p");
+
+    let addTitle = document.getElementById("addTitle");
+    let visitData = JSON.parse(localStorage.getItem("Database")) || [];
+
+    const display = (visitData) => {
+
+        let bigPic = document.getElementById("bigPicDiv");
+
+        let imgDiv = document.createElement("div");
+        imgDiv.id = "appDiv";
+        let image = document.createElement("img");
+        image.src = visitData[0].thumbnail;
+        image.id = "bigI";
+
+      
+
+        addTitle.innerText = visitData[0].title;
+
+        let pDiv = document.createElement("div");
+
+        condition.innerText = "Condition:" + visitData[0].condition;
+
+        p.innerText = "US" + " " + visitData[0].price.raw;
+
+        imgDiv.append(image);
+        bigPic.append(imgDiv);
+      
+
+    }
+
+
+    display(visitData);
+
+</script>
+
+</html>

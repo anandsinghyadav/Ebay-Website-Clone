@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#cabDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+#caBanner{
+    width: 120%;
+    height: 18%;
+}
+#caContainer
+{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+#caFilter
+{
+    width: 20%;
+    height: auto;
+    line-height: 160%;
+    
+
+}
+#caFilter p{
+    font-family: Arial,sans-serif;
+    font-size: 110%;
+    color: black;
+}
+#caFilter>div a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    color: black;
+    font-weight: 500;
+}
+#caFilter>div a:hover{
+    text-decoration: underline;
+}
+#caItem{
+    width: 80%;
+    height: 90%;
+    
+}
+#shopByCat{
+    border-top: 1px dashed rgb(165, 163, 163);
+    border-bottom: 1px dashed rgb(165, 160, 160);
+    width: 80%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+}
+#sbCat{
+    display: flex;
+    justify-content: space-between;
+}
+#sbCat>p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+}
+#sbCat>p:hover{
+    text-decoration: underline;
+}
+#sbCatP{
+    margin-top: 10%;
+    font-family: 'Poppins', sans-serif;
+}
+#sbCat>i{
+    color: rgb(75, 75, 214);
+    font-size: 140%;
+}
+/* #anti{
+   list-style: none;
+   margin-left: 30%;
+} */
+#anti,#art,#artAndCraft,#coins,#collectibles,#dollsAndTeddy,#entertainment,#pottery,#stamps,#vintage{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80%;
+   margin-left: 30%;
+    display: none;
+}
+li:hover{
+    text-decoration: underline;
+}
+#one{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+#caItem h2{
+    margin-top: 1%;
+    font-family: 'Poppins', sans-serif;
+}
+#two{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+#three{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+#four{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+}
+.f>img{
+    width: 100%;
+}
+#main>div{
+    margin-top: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+}
+#main>div h4{
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+#textOne{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* style for comics page */
+
+#comicsContainer{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+}
+#comicsFilter{
+    width: 20%;
+    height: auto;
+}
+#headLine{
+    padding-left: 2.5%;
+    margin-top: 2%;
+    font-size: 170%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+#comicsShop{
+    width: 80%;
+    height: 500px;
+   
+    
+}
+
+#cFil{
+    margin-left: 8%;
+    margin-top: .5%;
+    line-height: 170%;
+}
+#cFil>p a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80%;
+    color: black;
+    font-weight: 500;
+}
+#cFil>p a:hover{
+    text-decoration: underline;
+}
+#comicH
+{
+    margin-top: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%; 
+}
+#comicCol
+{
+    margin-top: 2%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+}
+#comicSlider
+{
+    margin-top: 2%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+   overflow-x: scroll;
+   border-bottom: 1px solid #808080;
+}
+#chslide{
+    margin-top: .5%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+}
+#proGrader{
+    border-top: 1px solid #b6b4b4;
+    border-bottom: 1px solid #ccc5c5;
+    margin-top: 2%;
+}
+#proGrader>div{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin-top:1.5%;
+}
+#proGrader>h2{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1%;
+}
+#proGrader>div>p:hover{
+    text-decoration: underline;
+}
+#proGrader>div>p:nth-child(1)
+{
+    padding: 2.5% 3%;
+    border: 1px solid #808080;
+    margin-bottom: 1.5%;
+    
+
+}
+#proGrader>div>p:nth-child(2)
+{
+    padding: 2.5% 1%;
+    border: 1px solid #808080;
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+}
+#proGrader>div>p:nth-child(3)
+{
+    padding: 2.5% 1%;
+    border: 1px solid #808080;
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+}
+
+#comicData{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 400px;
+    grid-gap: 20px;
+    margin-top: 1%;
+    
+}
+#comicData>div{
+    border: 1px solid rgb(228, 228, 228);
+    height: 100%;
+    border-radius: 2%;
+}
+
+#mainImageDiv{
+    background-color:#f3f2f2;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+#raw{
+    margin-top: 5%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+}
+#ship{
+    color: #808080;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+#titleP{
+    
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+
+/* style for css review page */
+
+#reviewContainer{
+       width: 98%;
+       height: 500px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: auto;
+       margin-top: 3%;
+}
+#picDiv
+{
+    
+    width:7%;
+    border: 1px solid #808080;
+    height: 100%;
+}
+#bigPicDiv
+{
+    width:35%;
+    border: 1px solid red;
+    height: 100%;
+    position: relative;
+   
+}
+#detailDiv
+{
+    width:30%;
+    height: 100%;
+}
+#shopConDiv{
+    width:25%;
+    border: 1px solid green;
+    height: 100%;
+}
+#bigI{
+    width: 80%;
+    height: 90%;
+}
+#appDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+#leftAr{
+     position: absolute;
+     left: 0;
+     top: 40%;
+     padding: 7% 2.5%;
+     border:1px solid #808080;
+
+}
+#rightAr{
+       position: absolute;
+         right: 0;
+         top: 40%;
+         padding: 7% 2.5%;
+         border:1px solid #808080;
+}
+#addTitle{
+      margin: 0% 0% 2% 0%;
+        border-bottom: 1px solid #e0dddd;
+      width: 100%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      font-size: 20px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 600;
+}
+#condition{
+    margin: 2% 0% 2% 0%;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 17px;
+}
+
+#buyit{
+     padding: 10px 70px;
+     border-radius: 30px;
+     margin: 5px 0px 5px 0px;
+     background-color: #2B0EAF;
+     color: white;
+     border: none;
+    
+}
+#acart{
+    padding: 10px 70px;
+    border-radius: 30px;
+    margin: 5px 0px 5px 0px;
+    background-color: #1db7ff;
+    color: white;
+    border: none;
+}
+#p{
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#priceDiv{
+      display: flex;
+      justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid #cfcece;
+        border-bottom: 1px solid #d4d4d4;
+
+}
