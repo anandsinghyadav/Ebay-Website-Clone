@@ -5,124 +5,189 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comics Page</title>
-    <link rel="stylesheet" href="collectiblesAndArt.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Document</title>
 </head>
+<link rel="stylesheet" href="moniCat.css">
+<style>
+    
+</style>
 
 <body>
+    <div id="pagediv">
+        <div id="div">abc</div>
 
-    <h2 id="headLine">Comics Books, Manga & Memorabilia</h2>
-    <div id="comicsContainer">
+        <h1 id="name"></h1>
+        <div id="center">
 
-        <div id="comicsFilter">
-            <h3 id="comicH">Shop by Category</h3>
-            <p id="comicCol">Collectibles</p>
-            <div id="cFil">
-                <p>Comic Books & Memorabilia</p>
-                <p><a href="">Comics</a></p>
-                <p><a href="">Franco-Belgian & European Comics</a></p>
-                <p><a href="">Manga & Asian Comics</a></p>
-                <p><a href="">Other Comic Book Traditions</a></p>
-                <p><a href="">Original Comic Art</a></p>
-                <p><a href="">Artbooks</a></p>
-                <p><a href="">Magazines</a></p>
-                <p><a href="">Fan Clubs & Zines</a></p>
-                <p><a href="">Merchandise & Memorabilia</a></p>
-                <p><a href="">Comic Book Supplies & Accs</a></p>
-                <p><a href="">Price & Buyers Guides</a></p>
-                <p><a href="">Other Comics</a></p>
+            <div id="left">
+                <h1>Art Supplies</h1>
+                <h4>Shop by Category</h4>
+                <p>Crafts</p>
+                <!-- dropdown menu -->
+
+                <div id="cat">
+
+
+                    <ul>
+                        <li class="hov">Art Supplies</li>
+                        <li class="hov">Art Supplies</li>
+                        <li class="hov">Painting Supplies</li>
+                        <li class="hov">Drawing & Lettering</li>
+                        <li class="hov">Printmaking</li>
+                        <li class="hov">Collage supplies</li>
+                        <li class="hov">Art instruction books and media</li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <h2>Shop By Category</h2>
+                <div id="one">
+
+
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/jIMAAOSwuTxV-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Painting Supplies</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/G1AAAOSw9r1V-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Drawing & Lettering</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/piQAAOSwNP5dU~2R/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Printmaking</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/0vMAAOSwEetV-ohV/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Collage Supplies</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/eOUAAOSwQPlV-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Instruction Books and Media</p>
+                    </div>
+
+
+
+                </div>
+
+                <div id="bottom">
+                    
+                    <h2>Shop by Brand</h2>
+
+                    <div id="b1">
+
+                                <div id="sizeDiv">
+                                    <div><p class="hov">Unbranded</p></div>
+                                    <div><p class="hov">Winsor & Newton</p></div>
+                                    <div><p class="hov">Copic</p></div>
+                                    <div><p class="hov">Iwata</p></div>
+                                </div>
+
+                    </div>
+                    <div id="b2">
+                        
+                        <h1>for showing producs</h1>
+
+                    </div>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
-
-        <div id="comicsShop">
-            <h2 id="chslide">Shop by Category</h2>
-            <div id="comicSlider">
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/RsoAAOSwoytgnYGr/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/l2YAAOSwKxZhg-UD/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/JwgAAOSw3M5gnXXA/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/LcMAAOSwB4NW0u~v/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/3jEAAOSw1DtXHhV3/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/phsAAOSw30JeTNPk/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/3uYAAOSwR8heTXTp/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/o2MAAOSwYIxX3l~Z/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/o2MAAOSwYIxX3l~Z/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/y8AAAOxyA7tSXrH-/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/y8AAAOxyA7tSXrH-/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-                <div>
-                    <img src="https://i.ebayimg.com/thumbs/images/g/vzkAAOSwO0xhg-Oj/s-l225.webp" alt="">
-                    <p><a href="">Comics</a></p>
-                </div>
-            </div>
-
-            <div id="proGrader">
-                <h2>Shop by Professional Grader</h2>
-                <div>
-                    <p>Certified Guranty..</p>
-                    <p>Comic Book Certification..</p>
-                    <p>Professional Grading Experts..</p>
-                </div>
-            </div>
-
-            <div id="comicData">
-
-
-            </div>
-
-        </div>
-
-
 
     </div>
 
+    <div id="footerpart"></div>
+
 </body>
+
 
 </html>
 
 <script type="module">
-    var comic = document.getElementById("comicData");
 
-    import { comicFunction, appendData } from "./components/Amain.js";
 
-    let data = await comicFunction("http://localhost:3000/posts/?q=art");
 
-    console.log(data);
+import { footer } from "./footer/footer.js"
 
-    appendData(data, comic);
+    var x = footer()
 
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+
+
+        
+
+<script>
+
+            
+
+    function addFun(value) {
+        
+        if (value == '1') {
+            localStorage.setItem("category", "Painting Supplies");
+
+            window.location.href = "CatArt.html";
+        }
+        else if(value=='2')
+        {
+            localStorage.setItem("category", "Drawing & Lettering");
+            window.location.href = "CatArt.html";
+        }
+        else if(value=='3')
+        {
+            localStorage.setItem("category", "Printmaking");
+            window.location.href = "CatArt.html";
+        }
+        else if(value=='4')
+        {
+            localStorage.setItem("category", "Collage Supplies");
+            window.location.href = "CatArt.html";
+        }
+        
+        else if(value=='5')
+        {
+            localStorage.setItem("category", "Instruction Books and Media");
+            window.location.href = "CatArt.html";
+        }
+
+    }
+
+
+var arr = []
+
+data = {
+    name : "xyz",
+    price : "9000"
+
+}
+
+arr.push(data)
+
+localStorage.setItem("artdata",JSON.stringify(data))
+
+
+    var artData = JSON.parse(localStorage.getItem("artdata"))
+
+
+    console.log(artData)
+    console.log("xyz")
 </script>
