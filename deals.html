@@ -296,6 +296,7 @@
       position: absolute;
       background-color: #f3f3f3;
       /* margin-right: 500px; */
+      right: 0;
       min-width: 400px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
@@ -318,6 +319,9 @@
 
     .dropdown:hover .dropdown-content {
       display: block;
+    }
+    .dropdown:hover {
+      border: 1px solid red ;
     }
   </style>
   <body>
@@ -434,7 +438,7 @@
 
     <div id="deal1">
       <div class="spot"><p>SPOTLIGHT DEALS</p></div>
-      <div id="chappal" onclick="storeData1()">
+      <div id="chappal" class="hardCodedPayment" onclick="storeData1()">
         <div>
           <img
             src="https://i.ebayimg.com/images/g/30EAAOSw1e1hnL7k/s-l400.jpg"
@@ -455,7 +459,7 @@
     <div id="watches"></div>
     <p id="clothe_">Clothing & Accesories</p>
     <div id="clothe_1">
-      <div>
+      <div class="hardCodedPayment">
         <div class="imgD">
           <img
             src="https://i.ebayimg.com/images/g/vAAAAOSwBIxgDv6~/s-l225.jpg"
@@ -471,7 +475,7 @@
           </div>
         </div>
       </div>
-      <div id="B_div">
+      <div id="B_div" class="hardCodedPayment">
         <div class="B_img_div">
           <img
             src="https://i.ebayimg.com/images/g/BAcAAOSwXeZdCVqV/s-l300.jpg"
@@ -487,7 +491,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="hardCodedPayment">
         <div class="imgD">
           <img
             src="https://i.ebayimg.com/images/g/Z~UAAOSw0LldiPUa/s-l225.jpg"
@@ -1073,11 +1077,52 @@
     localStorage.setItem("Database", JSON.stringify(data));
   };
 
-  let storeData1 = (src) => {
-    let obj = {
-      thumbnail: src,
-    };
-    data.push(obj);
-    localStorage.setItem("Database", JSON.stringify(data));
-  };
+  // let storeData1 = (src) => {
+  //   let obj = {
+  //     thumbnail: src,
+  //   };
+  //   data.push(obj);
+  //   localStorage.setItem("Database", JSON.stringify(data));
+  // };
+
+  let obj = {
+        title: "VGA 6FT Monitor SVGA Projector Cable Computer Extension 1080P Full HD",
+        link: "https://www.ebay.com/itm/234144237084?hash=item368415861c:g:c5cAAOSwP8VhG87p",
+        condition: "Pre-Owned",
+        price: {
+        raw: "$3.45",
+        extracted: 3.45
+        },
+        top_rated: true,
+        returns: "Free returns",
+        extensions: [
+        "Buy It Now"
+        ],
+        thumbnail: "https://i.ebayimg.com/thumbs/images/g/c5cAAOSwP8VhG87p/s-l225.jpg"
+        }
+
+
+ let hardCodedPayment = document.querySelectorAll(".hardCodedPayment");
+
+ for(let i in hardCodedPayment){
+   hardCodedPayment[i].addEventListener("click",function(){
+       let str = hardCodedPayment[i].innerHTML
+       obj.price.raw =  str.split("$")[1].substring(0,4)
+      let str2 =  str.split(`src="`)[1].split(`.jpg`)[0]+`.jpg` //.substring(0,str.trim(`src="`)[1].indexOf(`"`))
+      obj.thumbnail = str2 ;
+
+      let str3 = str.split(`src="`)[1].split(`<p>`)[1].split(`</p>`)[0]
+
+      obj.title = str3 ;
+
+     
+      localStorage.setItem("Database",JSON.stringify(obj))
+      // console.log('str2:', str2)
+
+   })
+ }
+  
+
+
+
 </script>
