@@ -16,6 +16,7 @@
       width: 96%;
       /* border: 2px solid red; */
       /* background-color: white; */
+
       margin: auto;
       display: flex;
       justify-content: space-between;
@@ -23,25 +24,37 @@
     #h1 {
       text-align: left;
     }
-    #h2 {
+    /* #h2 {
       display: flex;
       gap: 30px;
       border-bottom: 1px solid rgb(206, 206, 206);
-    }
+      position: relative;
+      border: 1px solid red;
+      width: 50%;
+      justify-content: right;
+      
+    } */
     .p {
       font-size: 18px;
       cursor: context-menu;
     }
-    /* #drop_down {
+    /* .dropdown-content {
       border: 1px solid red;
-      width: 28%;
-      margin-left: 46.5%;
+      width: 50%;
+    
+      margin-right: 50%;
+      margin-top: 7%;
       height: auto;
       position: absolute;
-      display: flex;
+      display: none;
+    
       justify-content: space-around;
       gap: 10px;
+      background-color: white;
       z-index: 1;
+    }
+    #featured .dropdown-content {
+      display: block;
     } */
     #deal1 {
       width: 96%;
@@ -242,34 +255,183 @@
       text-decoration: underline;
       cursor: context-menu;
     }
+    /* body{
+      position: relative;
+    } */
+    #normal {
+      display: flex;
+    
+      height: 50px;
+      width: 96%;
+      margin: auto;
+      justify-content: space-between;
+    }
+    .dropbtn {
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      margin: auto;
+    }
+    #drop {
+      width: 50%;
+    }
+    #drop > div:nth-child(1) {
+      margin-left: 200px;
+    }
+    #drop > div:nth-child(1) > div {
+      width: 250px;
+    }
+    #normal > div:nth-child(1) > h2 {
+      margin-top: 8px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+ 
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f3f3f3;
+      /* margin-right: 500px; */
+      min-width: 400px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
   </style>
   <body>
-    <div id="deals_head">
-      <div id="h1"><h2>Deals</h2></div>
-      <div id="h2">
-        <div><p class="p" id="featured">Featured</p></div>
-        <div><p class="p">Tech</p></div>
-        <div><p class="p">Fashion</p></div>
-        <div><p class="p">Home</p></div>
-        <div><p class="p">More</p></div>
+    <div id="normal">
+      <div><h2>Deals</h2></div>
+      <div id="drop">
+        <div class="dropdown">
+          <p class="dropbtn">Featured</p>
+          <div class="dropdown-content">
+            <div class="dropdown-flex">
+              <div>
+                <a href="#">Exclusive Top Graded Cards</a>
+                <a href="#">Clothing</a> & Accesories
+                <a href="#">SmartPhones ,SmartWatches & Headphones</a> </a>
+                <a href="#">Videogames and consoles</a>
+                <a href="#">Fashion For Men</a>
+              </div>
+              <div>
+                <a href="#">Fashion for Women</a>
+                <a href="#">Toys for Collectibles</a>
+                <a href="#">Home and Garden</a>
+                <a href="#">Laptops, computers & Tablets</a>
+                <a href="#">Health & Beauty</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">Tech</p>
+          <div class="dropdown-content">
+            <div class="dropdown-flex">
+              <div>
+                <a href="#">Cell Phones</a>
+                <a href="#">Laptops & Netbooks</a>
+                <a href="#">Cameras & Photo</a>
+                <a href="#">TV,Video & Home Audio</a>
+                <a href="#">iPads,Tablets &eReaders</a>
+              </div>
+              <div>
+                <a href="#">Video Games & Consoles</a>
+                <a href="#">Phone Cases & Accessories</a>
+                <a href="#">Vehicle Electronics & GPS</a>
+                <a href="#">Memory Drives &Storage</a>
+                <a href="#">Printers & Printer Supplies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">Fashion</p>
+          <div class="dropdown-content">
+            <div class="dropdown-flex">
+              <div>
+                <a href="#">Fine Jewelry</a>
+                <a href="#">Fashion Jewelry</a>
+                <a href="#">Beauty</a>
+                <a href="#">Health</a>
+                <a href="#">Men's Shoes & Accessories</a>
+
+              </div>
+              <div>
+                <a href="#">Women's Shoes &Accessories</a>
+                <a href="#">Handbags and Accessories</a>
+                <a href="#">Men's Clothing</a>
+                <a href="#">Women's Clothing</a>
+                <a href="#">Kid's Stuff</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">Home</p>
+          <div class="dropdown-content">
+            <div class="dropdown-flex">
+              <div>
+                <a href="#">Bedding</a>
+                <a href="#">Sporting Goods</a>
+                <a href="#">Major Appliances</a>
+                <a href="#">Yard,Garden & Outdoor Living</a>
+                <a href="#">Cycling</a>
+              </div>
+              <div>
+                <a href="#">Home Improvement</a>
+                <a href="#">Kitchen,Dining & Bar</a>
+                <a href="#">Toys</a>
+                <a href="#">Outdoor Sports</a>
+                <a href="#">Tools</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">More</p>
+          <div class="dropdown-content">
+            <div class="dropdown-flex">
+              <div>
+                <a href="#">Coins</a>
+                <a href="#">Collectibles</a>
+                <a href="#">Toys</a>
+                <a href="#">Musical Instruments & Gear</a>
+                <a href="#">Travel</a>
+              </div>
+              <div>
+                <a href="#">Sports Fan Shop</a>
+                <a href="#">Office Furniture & Supplies</a>
+                <a href="#">Automotive</a>
+                <a href="#">Business & Industrial</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- <div id="drop_down">
-      <div>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-      </div>
-      <div>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-        <p>Clothing & accessiories</p>
-      </div>
-    </div> -->
+
     <div id="deal1">
       <div class="spot"><p>SPOTLIGHT DEALS</p></div>
       <div id="chappal" onclick="storeData1()">
@@ -358,7 +520,7 @@
         </div>
       </div>
       <div style="display: block">
-        <h2 style="text-align: center">Shop all 141</h2>
+        <h2 style="text-align: center">Shop all 5.280</h2>
         <p style="text-align: center">Clothing & Accesories</p>
         <div style="margin: auto" onclick="watchData()">
           <svg
@@ -387,8 +549,8 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Nike Men's Hoodie Sportswear Club Fleece.</p>
+          <h3>US $46.88</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
             <h4>59% OFF</h4>
@@ -403,8 +565,8 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Adidias Men's Sweatshirt Original Trefoil Logo Warm</p>
+          <h3>US $43.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
             <h4>59% OFF</h4>
@@ -419,8 +581,8 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Adidas Men's Sweatshirt Adicolor Classic 3-Stripes Crew Casual Pullover Sweater</p>
+          <h3>US $99.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
             <h4>59% OFF</h4>
@@ -435,8 +597,8 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Adidas Men's Sweatshirt Adicolor Classic 3-Stripes Crew Casual Pullover Sweater</p>
+          <h3>US $79.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
             <h4>59% OFF</h4>
@@ -473,8 +635,8 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Adidas Women's Sweatshirt Soft French Terry Ribbed</p>
+          <h3>US $99.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
             <h4>59% OFF</h4>
@@ -489,11 +651,11 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Adidas Women's Sweatshirt Adicolor Essentials Fleece Casual Pullover Sweater</p>
+          <h3>US $79.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
-            <h4>59% OFF</h4>
+            <h4>39% OFF</h4>
           </div>
         </div>
       </div>
@@ -521,16 +683,16 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Nike Women's Sweatshirt Essential Swoosh Athletic</p>
+          <h3>US $59.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
-            <h4>59% OFF</h4>
+            <h4>89% OFF</h4>
           </div>
         </div>
       </div>
       <div style="display: block">
-        <h2 style="text-align: center">Shop all 141</h2>
+        <h2 style="text-align: center">Shop all 780</h2>
         <p style="text-align: center">Clothing & Accesories</p>
         <div style="margin: auto" onclick="womensData()">
           <svg
@@ -559,11 +721,11 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Mega Construx Mercenary Combat Unit Halo Infinite</p>
+          <h3>US $29.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
-            <h4>59% OFF</h4>
+            <strike>US $75.00 |</strike>
+            <h4>9% OFF</h4>
           </div>
         </div>
       </div>
@@ -575,10 +737,10 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Booba Plush Doll Night Light Cartoon Character Huggable Kids Toy CHOP</p>
+          <h3>US $39.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
+            <strike>US $65.00 |</strike>
             <h4>59% OFF</h4>
           </div>
         </div>
@@ -591,10 +753,10 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>MEGA Construx UNSC Combat Unit Halo Infinite</p>
+          <h3>US $69.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
+            <strike>US $85.00 |</strike>
             <h4>59% OFF</h4>
           </div>
         </div>
@@ -607,16 +769,16 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>MEGA Construx UNSC Combat Unit Halo Infinite</p>
+          <h3>US $99.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
-            <h4>59% OFF</h4>
+            <strike>US $75.00 |</strike>
+            <h4>50% OFF</h4>
           </div>
         </div>
       </div>
       <div style="display: block">
-        <h2 style="text-align: center">Shop all 141</h2>
+        <h2 style="text-align: center">Shop all 401</h2>
         <p style="text-align: center">Clothing & Accesories</p>
         <div style="margin: auto" onclick="ToysData()">
           <svg
@@ -645,11 +807,11 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>KT Tape Performance+ Chafe Safe Anti-Chafing </p>
+          <h3>US $99.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
-            <h4>59% OFF</h4>
+            <strike>US $105.00 |</strike>
+            <h4>19% OFF</h4>
           </div>
         </div>
       </div>
@@ -661,10 +823,10 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>Performa Daily Pill Container Case - Dishwasher safe and BPA-free</p>
+          <h3>US $9.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
+            <strike>US $25.00 |</strike>
             <h4>59% OFF</h4>
           </div>
         </div>
@@ -677,7 +839,7 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
+          <p>Performa Daily Pill Container Case - Dishwasher safe and BPA-free</p>
           <h3>US $299.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
@@ -693,16 +855,16 @@
           />
         </div>
         <div class="content">
-          <p>Victorinox Swiss Army Men's Watch I.N.O.X.</p>
-          <h3>US $299.99</h3>
+          <p>KT Tape Performance+ Chafe Safe Anti-Chafing</p>
+          <h3>US $29.99</h3>
           <div style="display: flex">
-            <strike>US $725.00 |</strike>
-            <h4>59% OFF</h4>
+            <strike>US $75.00 |</strike>
+            <h4>49% OFF</h4>
           </div>
         </div>
       </div>
       <div style="display: block">
-        <h2 style="text-align: center">Shop all 141</h2>
+        <h2 style="text-align: center">Shop all 784</h2>
         <p style="text-align: center">Clothing & Accesories</p>
         <div style="margin: auto" onclick="HealthAndBeautyData()">
           <svg
