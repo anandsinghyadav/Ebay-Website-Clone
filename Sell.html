@@ -74,10 +74,44 @@
 
 
         }
-        #part2{
+
+        #part2 {
             padding-left: 30px;
 
         }
+
+        #navbar {
+            height: 70px;
+        }
+        #part3{
+            display: flex;
+            /* grid-template-columns: repeat(4,1fr); */
+            overflow-x:scroll;
+            gap: 50px;
+        }
+        #part3>div{
+            width:60%;
+
+            border: 1px solid black;
+        }
+        #part4{
+           height: 350px;
+           width: 100%;
+           background-color: bisque;
+           display: grid;
+           grid-template-columns: repeat(2,1fr);
+        }
+        #part4 >div{
+         
+            width: 70%;
+            margin: auto;
+            border: 1px solid black;
+        }
+      img{
+          width:550px;
+          height: 250px;
+      }
+    
     </style>
 
 </head>
@@ -106,6 +140,50 @@
 
         <h2>Learn the basics</h2>
         <p>Here's what you need to know to start selling.</p>
+    </div>
+
+    <div id="part3">
+        <div>
+            
+            <h1 id="no"> 1</h1>
+            <h2>List your item</h2>
+            <p>You can list new or used items and pay a final value fee only when it sells.`
+            <a href="">Learn more about fees .</a></p>
+
+
+        </div>
+        <div>
+            <h1 id="no"> 2</h1>
+            <h2>Get seller protection</h2>
+            <p>You’re protected by policies, monitoring, and our customer service team.</p>
+        </div>
+        <div>
+            <h1 id="no"> 3</h1>
+            <h2>Choose when you get paid</h2>
+            You can schedule either daily or weekly payouts, and we'll deposit your earnings directly into your bank account.
+        </div>
+
+
+    </div>
+    <div id="part4">
+        <div>
+            <h1>Selling as a business? We make it easy</h1>
+            <p>We’ve got powerful tools to help you manage your inventory and orders, track your sales, and build your brand.</p>
+            <button>Learn more</button>
+
+        </div>
+        <div id="part4img">
+
+            <img src="https://i.ebayimg.com/00/s/NjY3WDE2MDA=/z/74IAAOSw7K9gY8N0/$_57.JPG" alt="">
+
+        </div>
+
+
+    </div>
+    <div id="part5">
+
+        <h1>Create a great listing</h1>
+        <p>Here’s five ways to set yourself up for success.</p>
     </div>
 
 </body>
