@@ -9,6 +9,46 @@
 </head>
 <link rel="stylesheet" href="moniCat.css">
 <style>
+    #appendhere{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px; 
+        width: 100%; 
+    }
+    #sold{
+        color:red
+    }
+    #artimage{
+        width: 100%;
+        height: 250px;
+        
+    }
+    #b2{
+        width: 90%;
+        /* border: 1px solid red; */
+    }
+    #div1{
+        /* border: 0.01px solid rgb(125, 125, 141); */
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        box-sizing: border-box;
+        padding: 3%;
+    }
+    #price{
+        font-weight: bold;
+
+    }
+    #sprice{
+        color: rgb(100, 96, 96)
+    }
+    #spn{
+        font-size: 10px;
+        font-family: "Market Sans", Arial, sans-serif;
+    }
+    #name{
+        height: 120px;
+        font-size: 20px;
+    }
     
 </style>
 
@@ -100,8 +140,10 @@
 
                     </div>
                     <div id="b2">
+
+                            <div id ="appendhere"></div>
                         
-                        <h1>for showing producs</h1>
+                
 
                     </div>
                     </div>
@@ -143,29 +185,29 @@ import { footer } from "./footer/footer.js"
     function addFun(value) {
         
         if (value == '1') {
-            localStorage.setItem("category", "Painting Supplies");
+            localStorage.setItem("search-term", "Painting Supplies");
 
             window.location.href = "CatArt.html";
         }
         else if(value=='2')
         {
-            localStorage.setItem("category", "Drawing & Lettering");
+            localStorage.setItem("search-term", "Drawing & Lettering");
             window.location.href = "CatArt.html";
         }
         else if(value=='3')
         {
-            localStorage.setItem("category", "Printmaking");
+            localStorage.setItem("search-term", "Printmaking");
             window.location.href = "CatArt.html";
         }
         else if(value=='4')
         {
-            localStorage.setItem("category", "Collage Supplies");
+            localStorage.setItem("search-term", "Collage Supplies");
             window.location.href = "CatArt.html";
         }
         
         else if(value=='5')
         {
-            localStorage.setItem("category", "Instruction Books and Media");
+            localStorage.setItem("search-term", "Instruction Books and Media");
             window.location.href = "CatArt.html";
         }
 
@@ -174,20 +216,166 @@ import { footer } from "./footer/footer.js"
 
 var arr = []
 
-data = {
-    name : "xyz",
-    price : "9000"
+data = [{
+    img : "https://i.ebayimg.com/thumbs/images/g/wAIAAOSwxmJf5~HB/s-l300.webp",
+    spn : "SPONSORED",
+    name : "XDT#2815 Hake Paint Brush Painting Brushes 3Pc Hog Bristle 0.75in+1in+1.5in",
+    price : "$19.99",
+    sprice : "$8.00 shipping",
+    sold : "65 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/Z3EAAOSwFhNhUN0I/s-l300.webp",
+    spn : "SPONSORED",
+    name : "XDT#2815 Hake Paint Brush Painting Brushes 3Pc Hog Bristle 0.75in+1in+1.5ink",
+    price : "$18.99",
+    sprice : "$8.00 shipping",
+    sold : "600 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/OjUAAOSwrL9hg8QF/s-l300.webp",
+    spn : "SPONSORED",
+    name : "LOT Spray Paint Can CAPS! Mixed Nozzle Tips NY Thins Outline Rusto Dots",
+    price : "$199.99",
+    sprice : "$8.00 shipping",
+    sold : "66 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/PAAAAOSwMTZWQ~UI/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Rippler Airbrush Stencil Template Airsick",
+    price : "$15.99",
+    sprice : "$8.00 shipping",
+    sold : "666 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/TroAAOSwG2Rh95QV/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Angelus Acrylic Leather Paint Waterproof Sneaker Paint 1oz - 82 Colors Available",
+    price : "$18.99",
+    sprice : "$12.00 shipping",
+    sold : "655 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/PAAAAOSwMTZWQ~UI/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Createx Airbrush Colors 2oz Water Based Airbrush Paint Choose Your Color",
+    price : "$19.99",
+    sprice : "$8.00 shipping",
+    sold : "65 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/UJYAAOSwcTlboJ7w/s-l300.webp",
+    spn : "SPONSORED",
+    name : "COPIC Sketch Marker Pen Color Series Double-Ended Markers! NEW! Various!",
+    price : "$15.99",
+    sprice : "$9.00 shipping",
+    sold : "1 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/A9QAAOSwOMpiRKK5/s-l300.webp",
+    spn : "SPONSORED",
+    name : "SPEEDBALL Brayer, Cutter & Ink Lot, Huge SPEEDBALL Lot! Linoleum, Block Printing",
+    price : "$16.99",
+    sprice : "$9.00 shipping",
+    sold : "33 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/djMAAOSw9HtiNmIN/s-l300.webp",
+    spn : "SPONSORED",
+    name : "12 Color Metallic Ready to Pour Acrylic Pouring Paint Set High Flow 2oz Bottles",
+    price : "$155.99",
+    sprice : "$5.00 shipping",
+    sold : "67 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/gAoAAOSwn-VhCr53/s-l300.webp",
+    spn : "SPONSORED",
+    name : "AMMO by MIG Acrylic Real Colors Paint",
+    price : "$14.99",
+    sprice : "$44.00 shipping",
+    sold : "677 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/wzUAAOSwHhRb9aG3/s-l300.webp",
+    spn : "SPONSORED",
+    name : "American Crafts Color Pour Art 8oz Pre-Mixed Gray Pouring Fluid Paint Bottle",
+    price : "$15.99",
+    sprice : "$66.00 shipping",
+    sold : "655 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/kUIAAOSwsINiJlRC/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Pouring Masters Midnight Black Metallic Pearl 32oz (Quart) Acrylic Pouring Paint",
+    price : "$16.99",
+    sprice : "$55.00 shipping",
+    sold : "555 sold"
 
 }
 
+
+]
+
+// console.log(data)
+
 arr.push(data)
 
-localStorage.setItem("artdata",JSON.stringify(data))
+var dataArr = (arr[0])
+
+console.log(dataArr)
 
 
-    var artData = JSON.parse(localStorage.getItem("artdata"))
+dataArr.forEach(function(el){
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("id","div1")
 
 
-    console.log(artData)
-    console.log("xyz")
+            let image = document.createElement("img")
+            image.src = el.img
+            image.setAttribute("id","artimage")
+
+            let spn = document.createElement("p")
+            spn.innerText = el.spn;
+            spn.setAttribute("id","spn")
+
+            let name = document.createElement("p")
+            name.innerText = el.name;
+            name.setAttribute("id","name")
+
+            price = document.createElement("p")
+            price.innerText = el.price
+            price.setAttribute("id","price")
+
+            sprice = document.createElement("p")
+            sprice.innerText = el.sprice
+            sprice.setAttribute("id","sprice")
+
+            sold = document.createElement("p")
+            sold.innerText = el.sold
+            sold.setAttribute("id","sold")
+            
+
+            div1.append(image,spn,name,price,sprice,sold)
+
+            document.getElementById("appendhere").append(div1)
+
+
+        });
+
+
+
 </script>
+

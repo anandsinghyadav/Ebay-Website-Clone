@@ -29,7 +29,12 @@ const footer=()=>{
         <p><a href="https://www.ebay.com/adchoice/ccpa">Do not sell my personal information </a></p>
         <p>and</p>
         <p><a href="https://www.ebay.com/adchoice">AdChoice</a></p>
-       
+
+    </div>
+
+    <div id="nortan">
+    <img src="https://www.websecurity.digicert.com/content/dam/websitesecurity/icontextandtitle/Desktop/images/NortonSeal_PoweredbyDigiCert_80x40-02.png"
+    alt="" />
     </div>
 </div>
 
@@ -41,15 +46,4 @@ const footer=()=>{
 export {footer}
 
 
-function addFun(value) {
-    console.log("done");
-    // localStorage.setItem("category",JSON.stringify(value))
 
-    // window.location.href=`${value}.html`;
-    if (value == '1') {
-        localStorage.setItem("category", "fragrances for women");
-
-        window.location.href = "FragrancesforWomen.html";
-    }
-
-}
