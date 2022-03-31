@@ -132,7 +132,6 @@ a {
 
 ul {
     list-style: none;
-
 }
 
 li {
@@ -153,4 +152,23 @@ li {
 }
 #namehere{
     font-weight: bold;
+}
+.nortan{
+    width: 10%;
+    height: 10%;
+}
+
+#nortan{
+    width: 10%;
+    /* border: 1px solid green; */
+    margin-left: 85%;
+
+}
+#nortan>img{
+    width: 60%;
+    text-align: left;
+
+}
+#cat > ul{
+    width: 200px;
 }
