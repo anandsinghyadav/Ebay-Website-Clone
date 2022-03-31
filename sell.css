@@ -82,15 +82,25 @@ button {
 #part4{
    height: 350px;
    width: 100%;
-   background-color: bisque;
+   background-color: white;
    display: grid;
    grid-template-columns: repeat(2,1fr);
+   box-sizing: border-box;
+  gap: 5px;
+  margin: auto;
 }
 #part4 >div{
  
     width: 70%;
+    height: 60%;
     margin: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+#a4{
+   background-color: transparent;
+   color: blue;
+   border: 1px solid blue;
+   width: 30%;
 }
 /* img{
   width:550px;
