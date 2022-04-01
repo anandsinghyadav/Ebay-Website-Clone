@@ -9,12 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="style/MElectronics.css">
+    <link rel="stylesheet" href="style/MSmartwatch.css">
 </head>
 
 <body>
     <div></div>
     <div id="pmcontainer">
-        <h1>Electronics</h1>
+        <h1>phones &smart watches</h1>
         <div id="mcontainer">
             <div id="msidebar">
                 <!-- <div class="mcategory" onclick="mcategoryclicked(0)">
@@ -332,34 +333,11 @@
             </div>
         </div>
         <div>
-            <footer>
-                <div></div>
-                <h2></h2>
-                <div>
 
-                </div>
-                <div id="pfooterdiv">
-                    <div id="footerdiv">
-                        <div>About</div>
-                        <div>eBay</div>
-                        <div>Announcements</div>
-                        <div>Community</div>
-                        <div>Security</div>
-                        <div>CenterSeller</div>
-                        <div>Information</div>
-                        <div>CenterPolicies</div>
-                        <div>AffiliatesHelp &
-                            ContactSite Map</div>
-                    </div>
-                    <div>
-                        <a href="">Copyright ©</a> 1995-2022 eBay Inc. All Rights Reserved. <a
-                            href="">Accessibility,</a>
-                        <a href="">User</a><a href="">Agreement,</a><a href="">Privacy,</a><a href="">Cookies,</a>
-                        <a href="">Do not sell my personal information and AdChoice</a>
-                    </div>
-                </div>
-            </footer>
         </div>
+    </div>
+    <div id="footerpart">
+
     </div>
 
 </body>
@@ -371,6 +349,16 @@
         mcategoryul[a].style.display = "block";
         i = a;
     }
+</script>
+<script type="module">
+
+
+
+    import { footer } from "./footer2/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
 </script>
 
 </html>

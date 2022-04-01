@@ -7,10 +7,10 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="style/MElectronics.css">
-    <link rel="stylesheet" href="style/MSmartwatch.css">
+
+    <link rel="stylesheet" href="style/MSmartWatches.css">
 </head>
+<link rel="stylesheet" href="style/MSmartwatch.css">
 
 <body>
     <div></div>
@@ -265,21 +265,19 @@
                 <div>
                     <h2>Shop By Category</h2>
                 </div>
+                <div id="mscrollleft">left</div>
+                <div id="mscrollright">right</div>
+
+
                 <div id="pmitemImages">
-                    <a href="MCellPhonesSmartWatchesAccessories.html">
-                        <div class="mitemImages">
-                            <img src="https://i.ebayimg.com/thumbs/images/g/vIMAAOSw8KJb0x0n/s-l225.webp" alt="">
-                            Cell Phones, Smart Watches & Accessories
-                        </div>
-                    </a>
-
-                    <a href="MSmartWatches2.html">
-                        <div class="mitemImages">
-                            <img src="https://i.ebayimg.com/thumbs/images/g/EVMAAOSwCnVb0x1D/s-l225.webp" alt="">
-                            Smart Watches
-                        </div>
-                    </a>
-
+                    <div class="mitemImages">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/vIMAAOSw8KJb0x0n/s-l225.webp" alt="">
+                        Cell Phones, Smart Watches & Accessories
+                    </div>
+                    <div class="mitemImages">
+                        <img src="https://i.ebayimg.com/thumbs/images/g/EVMAAOSwCnVb0x1D/s-l225.webp" alt="">
+                        Smart Watches
+                    </div>
                     <div class="mitemImages">
                         <img src="https://i.ebayimg.com/thumbs/images/g/C9IAAOSwv-xb0x1g/s-l225.webp" alt="">
                         Video Games & Consoles
@@ -441,16 +439,16 @@
                 <div></div>
             </div>
         </div>
-        <div>
 
-        </div>
     </div>
     <div id="footerpart">
 
     </div>
-
 </body>
 <script>
+
+
+
     let mcategoryul = document.querySelectorAll(".mcategoryul");
     let i = 0;
     function mcategoryclicked(a) {
@@ -458,6 +456,30 @@
         mcategoryul[a].style.display = "block";
         i = a;
     }
+    let eee;
+    let slider = document.querySelector("#pmitemImages");
+    document.querySelector("#mscrollright").addEventListener("click", function () {
+        //document.querySelector("#pmitemImages").scrollBy(100, 0);
+        eee = 250;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(3, 0);
+        }, 5);
+    });
+    document.querySelector("#mscrollleft").addEventListener("click", function () {
+        //document.querySelector("#pmitemImages").scrollBy(-100, 0);
+        eee = 250;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(-3, 0);
+        }, 5);
+    });
 </script>
 <script type="module">
 
