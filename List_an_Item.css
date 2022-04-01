@@ -1,0 +1,108 @@
+
+        * {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #header {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            padding-top: 8px;
+            justify-content: space-between;
+        }
+
+        #hrs {
+            padding-top: 5px;
+        }
+
+        #ipad {
+            padding-top: 8px;
+        }
+
+        #bottom {
+            width: 70%;
+            /* border: 1px solid black; */
+            height: 550px;
+            margin: auto;
+        }
+
+        #indata {
+            width: 90%;
+            border-radius: 10px;
+            height: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: 0px;
+            font-size: 15px;
+        }
+
+        button {
+            height: 40px;
+            width: 80px;
+            border-radius: 25px;
+            border: 0px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        }
+
+        #boxdata {
+            display: grid;
+            margin-top: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            /* border:1px solid black; */
+            padding: auto;
+            gap: 5px;
+
+        }
+
+        #boxdata>div {
+            /* border: 1px solid red; */
+            height: 300px;
+        }
+
+        #a {
+            background-color: crimson;
+            color: white;
+        }
+
+        #b {
+            background-color: paleturquoise;
+            color: midnightblue;
+        }
+
+        #c {
+            background-color: gold;
+            color: rgb(80, 39, 10);
+        }
+
+        #boxdata>div {
+            font-size: 23px;
+            border-radius: 15px;
+        }
+
+        #im1 {
+            padding-left: 150px;
+            height: 30%;
+        }
+
+        #im2 {
+            padding-left: 180px;
+
+            height: 50%;
+        }
+
+        #im3 {
+            padding-left: 140px;
+            height: 50%;
+        }
+
+        h3 {
+            padding-left: 10px;
+        }
+        #flast{
+            display: flex;
+            padding-top:10px;
+            justify-content: space-between;
+        }
+    
+   
