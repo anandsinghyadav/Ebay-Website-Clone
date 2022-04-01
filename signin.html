@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin page</title>
+    <script src="https://kit.fontawesome.com/1cb0bb75dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="shubham.css">
+
+</head>
+<body>
+<div id="shcontainer">
+    <div id="shc1"> <p><a href="" style="text-decoration: none;color:#3665f3;">Tell us what you think</a></p></div>
+    <div id="shc2">
+        <img onclick="window.location.href='index.html'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1200px-EBay_logo.svg.png" alt="">
+    </div>
+    <div id="shc3">
+        <div id="shc31">
+            <div><p>i</p></div>
+        </div>
+        <div id="shc32">
+    <p>To buy and sell on <a href="index.html"><b>www.ebay.com</b></a> or other eBay sites internationally, 
+    existing users can login using their credentials or new
+    users can register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in.</p>
+        </div>
+    </div>
+
+<div id="shc4">
+    <h1> Hello    </h1>
+</div>
+<div id="shc5">
+<h3>Sign in to ebay or <a href="register.html">create an account</a></h3>
+
+</div>
+
+<div id="shc6">
+
+<div id="shc61">
+    <input type="text" >
+    <button style=" background-color:#3665f3;color:white; border:1px solid #3665f3;"><h2><b>Continue</b></h2></button>
+    <hr>
+    <button style=" background-color:#3665f3;color:white; border:1px solid #3665f3;display: flex;">
+        <i class="fa-brands fa-facebook-square" style="margin-top: 10px;font-size: 40px;margin-left: 10px;"></i>
+        <h2 style="margin-left:70px"><b>Continue with facebook</b></h2>
+    </button>
+
+    <button style="display:flex">
+        <i class="fa-brands fa-google" style="margin-top: 10px;font-size: 30px;margin-left: 10px;"></i>
+        <h2 style="margin-left:80px"><b>Continue with Google</b></h2>
+    </button>
+
+    <button style="display:flex">
+        <i class="fa-brands fa-apple"  style="margin-top: 10px;font-size: 30px;margin-left: 10px;"></i>
+        <h2 style="margin-left:90px"><b>Continue with Apple</b></h2></button>
+</div>
+
+
+
+</div>
+<div id="shc7">
+    <input type="checkbox" name="" id="">
+    <p>Stay signed in</p>
+    
+</div>
+<div id="shc8">
+    <p>Using a public or shared device?
+        Uncheck to protect your account.</p><br>
+        
+</div>
+<div id="shc9" >
+    <a href="">Learn more</a>
+</div>
+<hr>
+<div id="shc10">
+    <p>Copyright © 1995-2022 eBay Inc. All Rights Reserved.
+        Accessibility, User Agreement, Privacy, Cookies, Do not sell my personal information and AdChoice</p>
+</div>
+
+<!-- conatiner div end here -->
+</div> 
+
+</body>
+</html>
+<script>
+
+let logindata = JSON.parse(localStorage.getItem("loginData"))
+
+console.log(logindata[0].name)
+
+let signEmail = document.querySelector("#shc61 > input[type=text]")
+
+let continuebtn = document.querySelector("#shc61 > button:nth-child(2)")
+continuebtn.addEventListener("click",(event)=>{
+event.preventDefault()
+let flag = false;
+if(logindata[0].email === signEmail.value)
+{
+    flag = true;
+    localStorage.removeItem("flagforindex");
+    localStorage.setItem("flagforindex" , flag);
+    alert("Welcome in eBay");
+    window.location.href= "index.html";
+}
+else{
+    localStorage.removeItem("flagforindex")
+    localStorage.setItem("flagforindex" , flag);
+    alert("Incorrect Email ID");
+
+}
+
+})
+
+</script>
