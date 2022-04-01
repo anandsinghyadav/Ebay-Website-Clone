@@ -41,11 +41,11 @@ h2 {
 
 }
 
-p {
+/* p {
     margin-top: 10px;
     font-size: 18px;
     margin-bottom: 45px;
-}
+} */
 
 button {
     /* margin-top: 45px ; */
@@ -206,7 +206,57 @@ a {
 
     /* text-align: center; */
     font-size: 14px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     height: 350;
     width: 32%;
+}
+#scode2 {
+    display: flex;
+    overflow-x: scroll;
+    height: 230px;
+    width: 100%;
+    gap: 30px;
+}
+
+
+
+.r50 {
+   display: grid;
+    width: 450px;
+
+
+    /* border: 1px solid black; */
+}
+#code56 {
+    display: flex;
+    overflow-x: scroll;
+    height: 290px;
+    width: 100%;
+    gap: 30px;
+    border-radius: 10px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+
+
+.r1 {
+
+
+ 
+    width: 500px;
+    height: 250px;
+
+    /* border: 1px solid black; */
+}
+.u1{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding: 30px 0px 0px 30px;
+}
+.stop25{
+    border-radius: 3%;
+
 }
