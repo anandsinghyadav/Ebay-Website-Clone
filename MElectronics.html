@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="style/MElectronics.css">
+    <link rel="stylesheet" href="style/MSmartwatch.css">
 </head>
 
 <body>
@@ -265,14 +266,20 @@
                     <h2>Shop By Category</h2>
                 </div>
                 <div id="pmitemImages">
-                    <div class="mitemImages">
-                        <img src="https://i.ebayimg.com/thumbs/images/g/vIMAAOSw8KJb0x0n/s-l225.webp" alt="">
-                        Cell Phones, Smart Watches & Accessories
-                    </div>
-                    <div class="mitemImages">
-                        <img src="https://i.ebayimg.com/thumbs/images/g/EVMAAOSwCnVb0x1D/s-l225.webp" alt="">
-                        Smart Watches
-                    </div>
+                    <a href="MCellPhonesSmartWatchesAccessories.html">
+                        <div class="mitemImages">
+                            <img src="https://i.ebayimg.com/thumbs/images/g/vIMAAOSw8KJb0x0n/s-l225.webp" alt="">
+                            Cell Phones, Smart Watches & Accessories
+                        </div>
+                    </a>
+
+                    <a href="MSmartWatches2.html">
+                        <div class="mitemImages">
+                            <img src="https://i.ebayimg.com/thumbs/images/g/EVMAAOSwCnVb0x1D/s-l225.webp" alt="">
+                            Smart Watches
+                        </div>
+                    </a>
+
                     <div class="mitemImages">
                         <img src="https://i.ebayimg.com/thumbs/images/g/C9IAAOSwv-xb0x1g/s-l225.webp" alt="">
                         Video Games & Consoles
@@ -435,34 +442,11 @@
             </div>
         </div>
         <div>
-            <footer>
-                <div></div>
-                <h2></h2>
-                <div>
 
-                </div>
-                <div id="pfooterdiv">
-                    <div id="footerdiv">
-                        <div>About</div>
-                        <div>eBay</div>
-                        <div>Announcements</div>
-                        <div>Community</div>
-                        <div>Security</div>
-                        <div>CenterSeller</div>
-                        <div>Information</div>
-                        <div>CenterPolicies</div>
-                        <div>AffiliatesHelp &
-                            ContactSite Map</div>
-                    </div>
-                    <div>
-                        <a href="">Copyright ©</a> 1995-2022 eBay Inc. All Rights Reserved. <a
-                            href="">Accessibility,</a>
-                        <a href="">User</a><a href="">Agreement,</a><a href="">Privacy,</a><a href="">Cookies,</a>
-                        <a href="">Do not sell my personal information and AdChoice</a>
-                    </div>
-                </div>
-            </footer>
         </div>
+    </div>
+    <div id="footerpart">
+
     </div>
 
 </body>
@@ -474,6 +458,16 @@
         mcategoryul[a].style.display = "block";
         i = a;
     }
+</script>
+<script type="module">
+
+
+
+    import { footer } from "./footer2/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
 </script>
 
 </html>

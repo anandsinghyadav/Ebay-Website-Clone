@@ -45,6 +45,11 @@
     width: 143px;
 }
 
+.mitemImages:hover {
+    border: 1px solid gray;
+    background-color: lavender;
+}
+
 .mitemImages>img {
     max-width: 138px;
     /* display: block; */
@@ -62,7 +67,7 @@
     color: #333333;
 }
 
-#footerdiv {
+/* #footerdiv {
     margin: auto;
     display: flex;
     gap: 15px;
@@ -72,7 +77,7 @@
     padding: 50px;
     height: 200px;
     border: 1px #333333 solid;
-}
+} */
 
 #mscrollleft {
     position: relative;
