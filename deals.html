@@ -260,7 +260,7 @@
     } */
     #normal {
       display: flex;
-    
+
       height: 50px;
       width: 96%;
       margin: auto;
@@ -288,7 +288,6 @@
     .dropdown {
       position: relative;
       display: inline-block;
- 
     }
 
     .dropdown-content {
@@ -314,7 +313,7 @@
       justify-content: space-between;
     }
 
-    .dropdown-content a:hover {
+    .dropdown-content button:hover {
       background-color: #ddd;
     }
 
@@ -322,10 +321,17 @@
       display: block;
     }
     .dropdown:hover {
-     
-      background-color:white;
+      background-color: white;
       /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    }
+    .btn999 {
+      border: none;
+      display: block;
+      width: 200px;
+      text-align: left;
+      background-color: white;
+      padding: 8px;
     }
   </style>
   <body>
@@ -337,18 +343,22 @@
           <div class="dropdown-content">
             <div class="dropdown-flex">
               <div>
-                <a href="#">Exclusive Top Graded Cards</a>
-                <a href="#">Clothing  & Accesories</a>
-                <a href="#">SmartPhones ,SmartWatches & Headphones</a> </a>
-                <a href="#">Videogames and consoles</a>
-                <a href="#">Fashion For Men</a>
+                <button class="btn999" onclick="fn1(`Cards`)">
+                  Exclusive Top Graded Cards
+                </button>
+                <button class="btn999">Clothing & Accesories</button>
+                <button class="btn999">
+                  SmartPhones ,SmartWatches & Headphones
+                </button>
+                <button class="btn999">Videogames and consoles</button>
+                <button class="btn999">Fashion For Men</button>
               </div>
               <div>
-                <a href="#">Fashion for Women</a>
-                <a href="#">Toys for Collectibles</a>
-                <a href="#">Home and Garden</a>
-                <a href="#">Laptops, computers & Tablets</a>
-                <a href="#">Health & Beauty</a>
+                <button class="btn999">Fashion for Women</button>
+                <button class="btn999">Toys for Collectibles</button>
+                <button class="btn999">Home and Garden</button>
+                <button class="btn999">Laptops, computers & Tablets</button>
+                <button class="btn999">Health & Beauty</button>
               </div>
             </div>
           </div>
@@ -358,18 +368,18 @@
           <div class="dropdown-content">
             <div class="dropdown-flex">
               <div>
-                <a href="#">Cell Phones</a>
-                <a href="#">Laptops & Netbooks</a>
-                <a href="#">Cameras & Photo</a>
-                <a href="#">TV,Video & Home Audio</a>
-                <a href="#">iPads,Tablets &eReaders</a>
+                <button class="btn999">Cell Phones</button>
+                <button class="btn999">Laptops & Netbooks</button>
+                <button class="btn999">Cameras & Photo</button>
+                <button class="btn999">TV,Video & Home Audio</button>
+                <button class="btn999">iPads,Tablets &eReaders</button>
               </div>
               <div>
-                <a href="#">Video Games & Consoles</a>
-                <a href="#">Phone Cases & Accessories</a>
-                <a href="#">Vehicle Electronics & GPS</a>
-                <a href="#">Memory Drives &Storage</a>
-                <a href="#">Printers & Printer Supplies</a>
+                <button class="btn999">Video Games & Consoles</button>
+                <button class="btn999">Phone Cases & Accessories</button>
+                <button class="btn999">Vehicle Electronics & GPS</button>
+                <button class="btn999">Memory Drives &Storage</button>
+                <button class="btn999">Printers & Printer Supplies</button>
               </div>
             </div>
           </div>
@@ -379,19 +389,18 @@
           <div class="dropdown-content">
             <div class="dropdown-flex">
               <div>
-                <a href="#">Fine Jewelry</a>
-                <a href="#">Fashion Jewelry</a>
-                <a href="#">Beauty</a>
-                <a href="#">Health</a>
-                <a href="#">Men's Shoes & Accessories</a>
-
+                <button class="btn999">Fine Jewelry</button>
+                <button class="btn999">Fashion Jewelry</button>
+                <button class="btn999">Beauty</button>
+                <button class="btn999">Health</button>
+                <button class="btn999">Men's Shoes & Accessories</button>
               </div>
               <div>
-                <a href="#">Women's Shoes &Accessories</a>
-                <a href="#">Handbags and Accessories</a>
-                <a href="#">Men's Clothing</a>
-                <a href="#">Women's Clothing</a>
-                <a href="#">Kid's Stuff</a>
+                <button class="btn999">Women's Shoes &Accessories</button>
+                <button class="btn999">Handbags and Accessories</button>
+                <button class="btn999">Men's Clothing</button>
+                <button class="btn999">Women's Clothing</button>
+                <button class="btn999">Kid's Stuff</button>
               </div>
             </div>
           </div>
@@ -401,18 +410,18 @@
           <div class="dropdown-content">
             <div class="dropdown-flex">
               <div>
-                <a href="#">Bedding</a>
-                <a href="#">Sporting Goods</a>
-                <a href="#">Major Appliances</a>
-                <a href="#">Yard,Garden & Outdoor Living</a>
-                <a href="#">Cycling</a>
+                <button class="btn999">Bedding</button>
+                <button class="btn999">Sporting Goods</button>
+                <button class="btn999">Major Appliances</button>
+                <button class="btn999">Yard,Garden & Outdoor Living</button>
+                <button class="btn999">Cycling</button>
               </div>
               <div>
-                <a href="#">Home Improvement</a>
-                <a href="#">Kitchen,Dining & Bar</a>
-                <a href="#">Toys</a>
-                <a href="#">Outdoor Sports</a>
-                <a href="#">Tools</a>
+                <button class="btn999">Home Improvement</button>
+                <button class="btn999">Kitchen,Dining & Bar</button>
+                <button class="btn999">Toys</button>
+                <button class="btn999">Outdoor Sports</button>
+                <button class="btn999">Tools</button>
               </div>
             </div>
           </div>
@@ -422,17 +431,17 @@
           <div class="dropdown-content">
             <div class="dropdown-flex">
               <div>
-                <a href="#">Coins</a>
-                <a href="#">Collectibles</a>
-                <a href="#">Toys</a>
-                <a href="#">Musical Instruments & Gear</a>
-                <a href="#">Travel</a>
+                <button class="btn999">Coins</button>
+                <button class="btn999">Collectibles</button>
+                <button class="btn999">Toys</button>
+                <button class="btn999">Musical Instruments & Gear</button>
+                <button class="btn999">Travel</button>
               </div>
               <div>
-                <a href="#">Sports Fan Shop</a>
-                <a href="#">Office Furniture & Supplies</a>
-                <a href="#">Automotive</a>
-                <a href="#">Business & Industrial</a>
+                <button class="btn999">Sports Fan Shop</button>
+                <button class="btn999">Office Furniture & Supplies</button>
+                <button class="btn999">Automotive</button>
+                <button class="btn999">Business & Industrial</button>
               </div>
             </div>
           </div>
@@ -589,7 +598,10 @@
           />
         </div>
         <div class="content">
-          <p>Adidas Men's Sweatshirt Adicolor Classic 3-Stripes Crew Casual Pullover Sweater</p>
+          <p>
+            Adidas Men's Sweatshirt Adicolor Classic 3-Stripes Crew Casual
+            Pullover Sweater
+          </p>
           <h3>US $99.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
@@ -605,7 +617,10 @@
           />
         </div>
         <div class="content">
-          <p>Adidas Men's Sweatshirt Adicolor Classic 3-Stripes Crew Casual Pullover Sweater</p>
+          <p>
+            Adidas Men's Sweatshirt Adicolor Classic 3-Stripes Crew Casual
+            Pullover Sweater
+          </p>
           <h3>US $79.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
@@ -659,7 +674,10 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Adidas Women's Sweatshirt Adicolor Essentials Fleece Casual Pullover Sweater</p>
+          <p>
+            Adidas Women's Sweatshirt Adicolor Essentials Fleece Casual Pullover
+            Sweater
+          </p>
           <h3>US $79.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
@@ -745,7 +763,10 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Booba Plush Doll Night Light Cartoon Character Huggable Kids Toy CHOP</p>
+          <p>
+            Booba Plush Doll Night Light Cartoon Character Huggable Kids Toy
+            CHOP
+          </p>
           <h3>US $39.99</h3>
           <div style="display: flex">
             <strike>US $65.00 |</strike>
@@ -815,7 +836,7 @@
           />
         </div>
         <div class="content">
-          <p>KT Tape Performance+ Chafe Safe Anti-Chafing </p>
+          <p>KT Tape Performance+ Chafe Safe Anti-Chafing</p>
           <h3>US $99.99</h3>
           <div style="display: flex">
             <strike>US $105.00 |</strike>
@@ -831,7 +852,9 @@
           />
         </div>
         <div class="B_content_div">
-          <p>Performa Daily Pill Container Case - Dishwasher safe and BPA-free</p>
+          <p>
+            Performa Daily Pill Container Case - Dishwasher safe and BPA-free
+          </p>
           <h3>US $9.99</h3>
           <div style="display: flex">
             <strike>US $25.00 |</strike>
@@ -847,7 +870,9 @@
           />
         </div>
         <div class="content">
-          <p>Performa Daily Pill Container Case - Dishwasher safe and BPA-free</p>
+          <p>
+            Performa Daily Pill Container Case - Dishwasher safe and BPA-free
+          </p>
           <h3>US $299.99</h3>
           <div style="display: flex">
             <strike>US $725.00 |</strike>
@@ -1090,46 +1115,52 @@
   // };
 
   let obj = {
-        title: "VGA 6FT Monitor SVGA Projector Cable Computer Extension 1080P Full HD",
-        link: "https://www.ebay.com/itm/234144237084?hash=item368415861c:g:c5cAAOSwP8VhG87p",
-        condition: "Pre-Owned",
-        price: {
-        raw: "$3.45",
-        extracted: 3.45
-        },
-        top_rated: true,
-        returns: "Free returns",
-        extensions: [
-        "Buy It Now"
-        ],
-        thumbnail: "https://i.ebayimg.com/thumbs/images/g/c5cAAOSwP8VhG87p/s-l225.jpg"
-        }
+    title:
+      "VGA 6FT Monitor SVGA Projector Cable Computer Extension 1080P Full HD",
+    link: "https://www.ebay.com/itm/234144237084?hash=item368415861c:g:c5cAAOSwP8VhG87p",
+    condition: "Pre-Owned",
+    price: {
+      raw: "$3.45",
+      extracted: 3.45,
+    },
+    top_rated: true,
+    returns: "Free returns",
+    extensions: ["Buy It Now"],
+    thumbnail:
+      "https://i.ebayimg.com/thumbs/images/g/c5cAAOSwP8VhG87p/s-l225.jpg",
+  };
 
+  let hardCodedPayment = document.querySelectorAll(".hardCodedPayment");
 
- let hardCodedPayment = document.querySelectorAll(".hardCodedPayment");
+  for (let i in hardCodedPayment) {
+    hardCodedPayment[i].addEventListener("click", function () {
+      let str = hardCodedPayment[i].innerHTML;
+      obj.price.raw = str.split("$")[1].substring(0, 4);
+      let str2 = str.split(`src="`)[1].split(`.jpg`)[0] + `.jpg`; //.substring(0,str.trim(`src="`)[1].indexOf(`"`))
+      obj.thumbnail = str2;
 
- for(let i in hardCodedPayment){
-   hardCodedPayment[i].addEventListener("click",function(){
-       let str = hardCodedPayment[i].innerHTML
-       obj.price.raw =  str.split("$")[1].substring(0,4)
-      let str2 =  str.split(`src="`)[1].split(`.jpg`)[0]+`.jpg` //.substring(0,str.trim(`src="`)[1].indexOf(`"`))
-      obj.thumbnail = str2 ;
+      let str3 = str.split(`src="`)[1].split(`<p>`)[1].split(`</p>`)[0];
 
-      let str3 = str.split(`src="`)[1].split(`<p>`)[1].split(`</p>`)[0]
+      obj.title = str3;
 
-      obj.title = str3 ;
+      data.push(obj);
 
-      data.push(obj)
-     
-      localStorage.setItem("Database",JSON.stringify(data))
+      localStorage.setItem("Database", JSON.stringify(data));
       // console.log('str2:', str2)
+    });
+  }
 
-   })
- }
+  // let btn999 = document.querySelectorAll(".btn999");
 
+  // for (let i in btn999) {
+  //   btn999[i].addEventListener("click", function () {
+  //     let one = btn999[i].innerHTML;
+  //     console.log("one:", one + "375687");
+  //   });
+  // }
 
- 
-
-
-
+  function fn1(str) {
+    localStorage.setItem("search_term", str);
+    window.location.href = "watches.html";
+  }
 </script>
