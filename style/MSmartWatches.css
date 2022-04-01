@@ -73,3 +73,19 @@
     height: 200px;
     border: 1px #333333 solid;
 }
+
+#mscrollleft {
+    position: relative;
+    top: 100px;
+    background-color: blanchedalmond;
+    display: inline;
+}
+
+#mscrollright {
+    position: relative;
+    top: 100px;
+    left: 900px;
+    background-color: blanchedalmond;
+    display: inline;
+
+}

@@ -264,6 +264,10 @@
                 <div>
                     <h2>Shop By Category</h2>
                 </div>
+                <div id="mscrollleft">left</div>
+                <div id="mscrollright">right</div>
+
+
                 <div id="pmitemImages">
                     <div class="mitemImages">
                         <img src="https://i.ebayimg.com/thumbs/images/g/vIMAAOSw8KJb0x0n/s-l225.webp" alt="">
@@ -474,6 +478,30 @@
         mcategoryul[a].style.display = "block";
         i = a;
     }
+    let eee;
+    let slider = document.querySelector("#pmitemImages");
+    document.querySelector("#mscrollright").addEventListener("click", function () {
+        //document.querySelector("#pmitemImages").scrollBy(100, 0);
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(5, 0);
+        }, 5);
+    });
+    document.querySelector("#mscrollleft").addEventListener("click", function () {
+        //document.querySelector("#pmitemImages").scrollBy(-100, 0);
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(-5, 0);
+        }, 5);
+    });
 </script>
 
 </html>
