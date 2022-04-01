@@ -28515,6 +28515,7 @@ let data = [
     
     
     function TakeData(value) {
+        // value = value.trim();
       var searchData = data.filter(function (elem) {
         return (elem.title + "")
           .toUpperCase()
