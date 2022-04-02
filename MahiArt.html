@@ -249,16 +249,21 @@
         name.setAttribute("id", "name")
 
         price = document.createElement("p")
-        if (el.price.raw) {
-            price.innerText = el.price.raw;
-        } else {
-            price.innerText = el.price.to.raw;
+        try {
+            if (el.price.raw) {
+                price.innerText = el.price.raw;
+            } else {
+                price.innerText = el.price.to.raw;
+            }
+        } catch (error) {
+            console.log(error);
         }
+
 
         price.setAttribute("id", "price")
 
         sprice = document.createElement("p")
-        sprice.innerText = el.shipping;
+        sprice.innerText = el.shipping || " ";
         sprice.setAttribute("id", "sprice")
 
         sold = document.createElement("p")

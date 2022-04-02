@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="style/MElectronics.css">
     <link rel="stylesheet" href="style/MSmartwatch.css">
+    <style>
+        #wwwww {
+            color: green;
+        }
+    </style>
 </head>
 
 <body>
@@ -70,7 +75,7 @@
                     </ul>
 
                 </div> -->
-                <div class="mcategory" onclick="mcategoryclicked(0)">
+                <div id="wwwww" class="mcategory" onclick="mcategoryclicked(0)">
                     <div>
                         Cell Phone & Smartphone Parts
                     </div>
@@ -87,7 +92,7 @@
 
 
                 </div>
-                <div class="mcategory" onclick="mcategoryclicked(1)">
+                <div id="wwwww" class="mcategory" onclick="mcategoryclicked(1)">
                     <div>
                         Cell Phone Accessories
                     </div>
@@ -109,7 +114,7 @@
                     </ul> -->
 
                 </div>
-                <div class="mcategory" onclick="mcategoryclicked(2)">
+                <div id="wwwww" class="mcategory" onclick="mcategoryclicked(2)">
                     <div>
                         Cell Phones & Smartphones
                     </div>
@@ -144,7 +149,7 @@
 
                     </ul>
                 </div>
-                <div class="mcategory" onclick="mcategoryclicked(4)">
+                <div id="wwwww" class="mcategory" onclick="mcategoryclicked(4)">
                     <div>
                         Mixed Lots
                     </div>
@@ -183,7 +188,7 @@
                         <li>Smart Speakers, Hubs &</li>
                     </ul>
                 </div>
-                <div class="mcategory" onclick="mcategoryclicked(6)">
+                <div id="wwwww" class="mcategory" onclick="mcategoryclicked(6)">
                     <div>
                         PDAs
                     </div>
@@ -241,7 +246,7 @@
 
 
                 </div>
-                <div class="mcategory" onclick="mcategoryclicked(9)">
+                <div id="wwwww" class="mcategory" onclick="mcategoryclicked(9)">
                     <div>
                         Smart Watches
                     </div>
@@ -359,6 +364,38 @@
     var x = footer()
 
     document.getElementById("footerpart").innerHTML = x
+</script>
+<script>
+    let arrscript2 = document.querySelectorAll("ul");
+    console.log(arrscript2);
+    for (let i = 0; i < arrscript2.length; i++) {
+        for (let j = 0; j < arrscript2[i].children.length; j++) {
+            arrscript2[i].children[j].addEventListener("click", function () {
+                // console.log(arrscript2[i].children[j].innerText);
+                let searchTerm = arrscript2[i].children[j].innerText;
+                console.log(searchTerm);
+                localStorage.setItem("search_term", searchTerm);
+                window.location.href = "MahiArt.html";
+            });
+        }
+    }
+
+</script>
+<script>
+    let arrscript3 = document.querySelectorAll("#wwwww");
+    console.log(arrscript3);
+    for (let i = 0; i < arrscript3.length; i++) {
+        for (let j = 0; j < arrscript3[i].children.length; j++) {
+            arrscript3[i].children[j].addEventListener("click", function () {
+                // console.log(arrscript3[i].children[j].innerText);
+                let searchTerm = arrscript3[i].children[j].innerText;
+                console.log(searchTerm);
+                localStorage.setItem("search_term", searchTerm);
+                window.location.href = "MahiArt.html";
+            });
+        }
+    }
+
 </script>
 
 </html>
