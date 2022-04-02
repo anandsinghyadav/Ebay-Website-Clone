@@ -391,4 +391,21 @@
     }
 </script>
 
+<script>
+    let arrscript2 = document.querySelectorAll("ul");
+    console.log(arrscript2);
+    for (let i = 0; i < arrscript2.length; i++) {
+        for (let j = 0; j < arrscript2[i].children.length; j++) {
+            arrscript2[i].children[j].addEventListener("click", function () {
+                // console.log(arrscript2[i].children[j].innerText);
+                let searchTerm = arrscript2[i].children[j].innerText;
+                console.log(searchTerm);
+                localStorage.setItem("search_term", searchTerm);
+                window.location.href = "MahiArt.html";
+            });
+        }
+    }
+
+</script>
+
 </html>
