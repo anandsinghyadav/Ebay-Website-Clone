@@ -223,6 +223,10 @@ li:hover {
     font-weight: 500;
 }
 
+#csC {
+    cursor: pointer;
+}
+
 #cFil>p a:hover {
     text-decoration: underline;
 }
@@ -984,9 +988,10 @@ li:hover {
     font-size: 30px;
     font-weight: 600;
 }
-  #price0011 {
+
+#price0011 {
     font-size: 19px;
-} 
+}
 
 #priceCart1>p:nth-child(1) {
     font-size: 23px;
@@ -1690,4 +1695,107 @@ li:hover {
     border-radius: 20px;
     border: 1px solid #a7a1a1;
 
+}
+
+
+
+
+/*--------for fine print----------*/
+
+#wait01 {
+    width: 100%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wait01>img{
+    width: 700px;
+    height: 600px;
+    margin-top: -40px;
+    margin-left: -20px;
+}
+
+
+#count {
+    margin: auto;
+    text-align: center;
+    width: 30%;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+#completeForm {
+    border: 1px solid rgb(204, 200, 200);
+    width: 30%;
+    margin: auto;
+    font-family: 'poppins', sans-serif;
+    display: none;
+    margin-top: 100px;
+}
+
+#nameDiv {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d1cccc;
+    margin-top: 10px;
+}
+
+#nameDiv>p {
+    margin: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-weight: 500px
+}
+
+#itemDiv {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d1cccc;
+}
+
+#itemDiv>p {
+    margin: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-weight: 500px
+}
+
+#totalDiv {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #d1cccc;
+}
+
+#totalDiv>p {
+    margin: 10px 10px 10px 10px;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+#thankDiv {
+    text-align: center;
+    margin: auto;
+}
+
+#thankP {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#orderNo {
+    font-weight: 900;
+}
+
+#conB {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#continueS {
+    padding: 12px 25px;
+    border-radius: 20px;
+    background-color: #3665F3;
+    border: none;
+    color: white;
+    font-weight: 600;
 }

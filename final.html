@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebay Final</title>
+    <link rel="stylesheet" href="./collectiblesAndArt.css">
+</head>
+
+<body>
+
+
+    <div id="wait01"><img
+            src="https://cdn.dribbble.com/users/225707/screenshots/2958729/attachments/615202/jelly-fluid-loader-attachment.gif"
+            alt=""></div>
+
+    <div id="count"></div>
+    <div id="completeForm">
+        <div id="thankDiv">
+            <p id="thankP">Thank you!</p>
+            <p>Your order has placed, and translator will start shortly..</p>
+            <p>Your order number is <span id="orderNo">342342</span></p>
+        </div>
+
+        <div id="nameDiv">
+            <p>Name</p>
+            <p id="fullN">Anand Singh Yadav</p>
+        </div>
+
+        <div id="itemDiv">
+            <p>Itme</p>
+            <p id="AI">6 items</p>
+        </div>
+
+        <div id="totalDiv">
+            <p>Total</p>
+            <p id="AT">US $ 98.00</p>
+        </div>
+
+        <div id="conB">
+            <button id="continueS" onclick="goBack()">Continue Shopping</button>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    let i = 0;
+    let flag = false;
+    var x = setInterval(function () {
+
+
+        //document.getElementById("count").innerHTML = i;
+
+        if (i == 5) {
+            flag = true;
+            clearInterval(x);
+        }
+        i++;
+        if (flag == true) {
+            document.getElementById("completeForm").style.display = "block";
+            document.getElementById("wait01").style.display = "none";
+            document.getElementById("count").style.display = "none";
+        }
+
+
+    }, 1000);
+
+
+
+    let fn = JSON.parse(localStorage.getItem("fullName"));
+
+    document.getElementById("fullN").innerHTML = fn;
+
+    let A = JSON.parse(localStorage.getItem("count"));
+
+    document.getElementById("AI").innerHTML = A + " " + "items";
+
+    let T = JSON.parse(localStorage.getItem("total"));
+
+    document.getElementById("AT").innerHTML = "US $"+T;
+
+
+
+
+
+
+
+
+
+    function goBack() {
+        window.location.href = "./index.html";
+    }
+
+</script>
