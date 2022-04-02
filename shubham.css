@@ -343,7 +343,6 @@ border-radius: 10px;
 background-color: #f7f7f7;
 margin-top: 40px;
 border: 1px solid rgb(131, 131, 131);
-
 }
 #shuc5 > p {
 margin-top: 30px;
@@ -482,6 +481,7 @@ font-size: 14px;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
 }
@@ -512,6 +512,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -546,6 +547,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -579,6 +581,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -613,6 +616,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -646,6 +650,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -680,6 +685,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -714,6 +720,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
@@ -747,6 +754,7 @@ display: flex;
     position: absolute;
     background-color: #ffffff;
     right:30px;
+    top:145px;
     text-align: center;
     border:1px solid rgb(238, 234, 234)
     
