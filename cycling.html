@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="moniCat.css">
+<style>
+    #right{
+        margin-top: 10%;
+    }
+    #div1{
+        /* border: 1px solid red; */
+
+    }
+    #appendhere{
+        /* border: 1px solid green; */
+        width: 100%;
+        margin-right: 7%;
+    }
+    #sizeDiv{
+        width: 93%;
+    }
+</style>
+
+<body>
+    <div id="pagediv">
+        <div id="div">abc</div>
+
+        <h1 id="name"></h1>
+        <div id="center">
+
+            <div id="left">
+                <h1>Cycling Equipment</h1>
+                <h4>Shop by Category</h4>
+                <p>Crafts</p>
+                <!-- dropdown menu -->
+
+                <div id="cat">
+
+
+                    <ul>
+                        <li class="hov">Cycling</li>
+                        <li class="hov">Bicycles</li>
+                        <li class="hov">Bicycle Frames</li>
+                        <li class="hov">Bicycle Tires, Tubes & Wheels</li>
+                        <li class="hov">Bicycle Components & Parts</li>
+                        <li class="hov">Bicycle Electronics</li>
+                        <li class="hov">Bicycle Maintenance & Tools</li>
+
+                        <li class="hov">Car & Truck Racks</li>
+                        <li class="hov">Cycling Clothing</li>
+                        <li class="hov">Sunglasses & Goggles</li>
+                        <li class="hov">Helmets & Protective Gear</li>
+                        <li class="hov">Other Cycling</li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <h2>Shop By Category</h2>
+                <div id="one">
+
+
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/eKEAAOSwT8ZdH5Rz/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Bicycle Component</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/Qh0AAOSwBOxdGb4b/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Bicycles</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/ZXAAAOSwFnFV-TSE/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Vintage Cycling</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/Y5oAAOSwCsBa6xBL/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Bicycle Frames</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/wr4AAOSwjL5ZJXsB/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Electric Bicycles</p>
+                    </div>
+
+
+
+                </div>
+
+                <div id="bottom">
+                    
+                    <h2>Shop by Brand</h2>
+
+                    <div id="b1">
+
+                                <div id="sizeDiv">
+                                    <div><p class="hov">Shimano</p></div>
+                                    <div><p class="hov">Specialized</p></div>
+                                    <div><p class="hov">Cine</p></div>
+                                    <div><p class="hov">Iwata</p></div>
+                                </div>
+
+                    </div>
+                    <div id="b2">
+
+                            <div id ="appendhere"></div>
+                        
+                
+
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footerpart"></div>
+
+</body>
+
+
+</html>
+
+<script type="module">
+
+
+
+import { footer } from "./footer/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+
+
+        
+
+<script>
+
+            
+
+    function addFun(value) {
+        
+        if (value == '1') {
+            localStorage.setItem("search_term", "Bicycle Component");
+
+            window.location.href = "Catcycle.html";
+        }
+        else if(value=='2')
+        {
+            localStorage.setItem("search_term", "Bicycles");
+            window.location.href = "Catcycle.html";
+        }
+        else if(value=='3')
+        {
+            localStorage.setItem("search_term", "Vintage Cycling");
+            window.location.href = "Catcycle.html";
+        }
+        else if(value=='4')
+        {
+            localStorage.setItem("search_term", "Bicycle Frames");
+            window.location.href = "Catcycle.html";
+        }
+        
+        else if(value=='5')
+        {
+            localStorage.setItem("search_term", "Electric Bicycles");
+            window.location.href = "Catcycle.html";
+        }
+
+    }
+
+
+var arr = []
+
+data = [{
+    img : "https://i.ebayimg.com/thumbs/images/g/qVoAAOSw5OVhweUp/s-l300.webp",
+    spn : "SPONSORED",
+    name : "REI Cycling Bike Jersey Tee T-Shirt 1/2 Zip Polyester Blue XL Extra Large KK14",
+    price : "$19.99",
+    sprice : "$58.00 shipping",
+    sold : "6 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/uvYAAOSwbYZXT-wD/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Cycling Winter Gloves Windproof Windstoper Thermal MTB Bike Glove DBX M to XL",
+    price : "$18.99",
+    sprice : "$8.00 shipping",
+    sold : "60+ sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/ReUAAOSwtO1iRKLf/s-l300.webp",
+    spn : "SPONSORED",
+    name : "MTB Helmet Mountain Bike Bicycle Dirt Bike Full Face Helmet with Goggles",
+    price : "$199.99",
+    sprice : "$8.00 shipping",
+    sold : "600+ sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/yesAAOSwVyRXT-2W/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Cycling Gloves Bike Full Fingers Autumn / Winter Windproof Bicycle Sports Gloves",
+    price : "$15.99",
+    sprice : "$8.00 shipping",
+    sold : "6 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/dQAAAOSwcRRiRITn/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Excellent L'eroica Ready Vintage Lyotard Model 65 Alloy Road Race Pedal Set",
+    price : "$45.99",
+    sprice : "$12.00 shipping",
+    sold : "65 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/Eg4AAOSwwFJbds~r/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Neptune Helm Chainwheel Sprocket for BMX Single Speed Fixie Bike Color Choice",
+    price : "$19.99",
+    sprice : "$8.00 shipping",
+    sold : "100+ sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/WW8AAOSws9FiJ~x9/s-l300.webp",
+    spn : "SPONSORED",
+    name : "100% SPEEDCRAFT Sunglasses -NEW- Premium Shield Lens + Warranty + Hard Case",
+    price : "$156.99",
+    sprice : "$9.00 shipping",
+    sold : "100+ sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/A9QAAOSwOMpiRKK5/s-l300.webp",
+    spn : "SPONSORED",
+    name : "SPEEDBALL Brayer, Cutter & Ink Lot, Huge SPEEDBALL Lot! Linoleum, Block Printing",
+    price : "$16.99",
+    sprice : "$9.00 shipping",
+    sold : "33 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/doEAAOSw8b1h-clm/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Northwave Extreme GT 2 Cycling Shoes - Grey (Sale Price)",
+    price : "$155.99",
+    sprice : "$5.00 shipping",
+    sold : "6 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/5WYAAOSwVH1fomgO/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Weight Lifting Gloves Cycling Fitness Gym Exercise Training Half Finger Gloves",
+    price : "$14.99",
+    sprice : "$44.00 shipping",
+    sold : "677 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/hUAAAOSwpRRWo-eQ/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Raceface Cinch bottom bracket tool -SRAM DUB/Zipp/Rotor BB crankset wrench BSA30",
+    price : "$15.99",
+    sprice : "$6.00 shipping",
+    sold : "65 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/LLwAAOSwUWBhpv0i/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Cool Gear EZ Freeze Sports Bottle with Ice Pack, Spout & Labeled Ounce 32 Oz NEW",
+    price : "$8.99",
+    sprice : "$5.00 shipping",
+    sold : "555 sold"
+
+}
+
+]
+
+arr.push(data)
+
+var dataArr = (arr[0])
+
+console.log(dataArr)
+
+
+dataArr.forEach(function(el){
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("id","div1")
+
+            div1.addEventListener("click",function(){
+
+            localStorage.setItem("Database",JSON.stringify(el))
+
+            window.location.href = "review.html"
+            })
+
+
+
+            let image = document.createElement("img")
+            image.src = el.img
+            image.setAttribute("id","artimage")
+
+            // let spn = document.createElement("p")
+            // spn.innerText = el.spn;
+            // spn.setAttribute("id","spn")
+
+            let name = document.createElement("p")
+            name.innerText = el.name;
+            name.setAttribute("id","name")
+
+            price = document.createElement("p")
+            price.innerText = el.price
+            price.setAttribute("id","price")
+
+            sprice = document.createElement("p")
+            sprice.innerText = el.sprice
+            sprice.setAttribute("id","sprice")
+
+            sold = document.createElement("p")
+            sold.innerText = el.sold
+            sold.setAttribute("id","sold")
+            
+
+            div1.append(image,name,price,sprice,sold)
+
+            document.getElementById("appendhere").append(div1)
+
+
+        });
+
+
+
+</script>
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="moniBeauty.css">
+</head>
+<style>
+    #bluetopdiv{
+        margin-top: 10%;
+        width: 350px;
+        height: 450px;
+        border: 1px solid green;
+        background-color: rgb(18,18,88)
+    }
+    #healthtop{
+        display: flex;
+    }
+    #healthimg{
+        height: 450px;
+        margin-top: 10%;
+        width: 835px;
+    }
+
+    #bluetopdiv>p,#bluetopdiv>h1{
+        color: rgb(29,203,202);
+        margin-left: 8%;
+        margin-top: 8%;
+    }
+    .dimg{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1.5%;
+    }
+
+
+</style>
+
+<body>
+    <div id="pagediv">
+        <div id="div">abc</div>
+
+        <!-- <div id="topdiv">
+            <h1>Beauty</h1>
+
+        </div> -->
+
+        <div id="center">
+
+            <div id="left">
+                <h1>Health</h1>
+                <h2>Shop by Category</h2>
+
+
+                <div id="cat">
+
+
+                    <ul>
+                        <li class="hov">Health & Beauty</li>
+                        <li class="hov">Health Care Products</li>
+                        <li class="hov">Massage</li>
+                        <li class="hov">Medical & Mobility</li>
+                        <li class="hov">Natural & Alternative Remedies</li>
+                        <li class="hov">Oral Care Products</li>
+
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <div id="healthtop">
+                <div id="bluetopdiv">
+                    <h1>Find your healthy new habit</h1>
+                    <p>Save on vitamins and supplements from top</p>
+                </div>
+                <img id="healthimg" src="https://i.ebayimg.com/thumbs/images/g/r68AAOSwBi5eBo2a/s-l960.webp"/>
+                </div>
+                
+                <div id="one">
+
+
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/~bQAAOSwe2xb0kaB/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Vitamins</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/KPIAAOSw96Zb0kaS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Dietary Supplements</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/mLsAAOSw48Vb0kae/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Aromatherapy</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/VbAAAOSw~29b0kaq/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Weight Management</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/etYAAOSwFYZb0ka2/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Energy Bars, Shakes</p>
+                    </div>
+
+
+
+                </div>
+
+                <div id="two">
+
+                    <div class="image" onclick="addFun('6')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/ySYAAOSwo2xb0kbO/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Herbal Remedies</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('7')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/wYYAAOSwFmFbhDrS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Light Therapy</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('8')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/GvsAAOSwKERb0kbn/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Sports Supplements</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('9')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/AYMAAOSw9~5b0kc4/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Massage Oils & Lotions</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('10')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/KNsAAOSwVFJb0kdP/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Homeopathic Remedies</p>
+                    </div>
+
+                </div>
+
+
+                <div id="bottom">
+
+                    <div id="b1">
+                    </div>
+
+                    <div id="sline"></div>
+                    <h2>Direct</h2>
+                    <div id="b2">
+                        <img class="dimg" src="https://i.ebayimg.com/thumbs/images/g/jykAAOSwuE9fk3JS/s-l225.webp"
+                        alt="" />
+                        <img class="dimg" src="https://i.ebayimg.com/thumbs/images/g/9qIAAOSwHI1ahMcY/s-l225.webp"
+                        alt="" />
+
+                        <img class="dimg" src="https://i.ebayimg.com/thumbs/images/g/Lg0AAOSwz1RcyIsk/s-l225.webp"
+                        alt="" />
+                        <img class="dimg" src="https://i.ebayimg.com/thumbs/images/g/GGoAAOSwCGVX6VcS/s-l225.webp"
+                        alt="" />
+
+                    </div>
+                    <div id="sline"></div>
+
+        
+
+                <div id="para">
+                    <p>When its time to give your health a helping hand, 
+                        everything you need is just a click away. 
+                        Sellers on eBay have all of the vital health 
+                        supplies and products to help you stay on top of 
+                        your wellness while striving for a fitter and more 
+                        healthful lifestyle. Cross everything off your
+                        must-have list without breaking the bank when you
+                        browse on eBay. From supplements to mobility
+                        equipment and eyeglass accessories, its never
+                        been easier to grab all of the essentials.
+
+                    </p>
+                        
+                    <p>
+                        Start down the path to a healthier you with natural and 
+                        alternative remedies. Sellers on eBay have an assortment of 
+                        options that include acupuncture supplies, herbal resins,
+                        light therapy devices, and neti pots. Theres also a large 
+                        selection of salon and spa equipment for professionals to 
+                        stock up their shops. Find just the right hydraulic barber
+                        chairs, scissors, styling capes, and rolling makeup cases 
+                        to complete your collection. If youre starting a fitness 
+                        journey, then grab important weight management supplies like 
+                        scales, dietary supplements, and weight loss kits. Find the
+                        right vitamins, protein shakes, and energy bars that you can 
+                        grab before you head out the door in the morning..</p>   
+                        
+
+                        <p>
+                            Keep your eyesight crystal clear with vision care products 
+                            from sellers on eBay. Whether you need a cute contact lens
+                            case, eyeglass frames, prescription glasses, or replacement 
+                            lenses, youll find products that keep your day in focus. 
+                            Make sure your smile is ready to brighten any room with
+                            oral care supplies like mouthwash, toothpaste, electric
+                            toothbrushes, and more. If you have a specific medical
+                            condition, then stock up on essentials like braces and 
+                            supports, diabetic aids, inhalers, and orthotics.
+                            You can even find positioning equipment like foam seat
+                            cushions, adjustable leg supports, and medical air
+                            mattresses for a more comfortable daily routine. 
+                            From basics to specific products, discovering the
+                            healthy lifestyle supplies you need is simple to do on eBay. 
+                            
+                        </p> 
+
+                        <div id="sline"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footerpart"></div>
+
+</body>
+
+<!-- <script src="./footer/footer.js"></script> -->
+
+</html>
+
+<script type="module">
+
+
+
+import { footer } from "./footer/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+<script>
+
+
+
+    function addFun(value) {
+        // console.log("done");
+        // localStorage.setItem("category",JSON.stringify(value))
+
+        // window.location.href=`${value}.html`;
+        if (value == '1') {
+            localStorage.setItem("search_term", "Vitamins");
+
+            window.location.href = "Cathealth.html";
+        }
+        else if(value=='2')
+        {
+            localStorage.setItem("search_term", "Dietary Supplements");
+            window.location.href = "Cathealth.html";
+        }
+        else if(value=='3')
+        {
+            localStorage.setItem("search_term", "Aromatherapy");
+            window.location.href = "Cathealth.html";
+        }
+        else if(value=='4')
+        {
+            localStorage.setItem("search_term", "Weight Management");
+            window.location.href = "Cathealth.html";
+        }
+        
+        else if(value=='5')
+        {
+            localStorage.setItem("search_term", "Energy Bars, Shakes");
+            window.location.href = "Cathealth.html";
+        }
+        
+        else if(value=='6')
+        {
+            localStorage.setItem("search_term", "Light Therapy");
+            window.location.href = "Cathealth.html";
+        }
+        else if(value=='7')
+        {
+            localStorage.setItem("search_term", "Shaving & Hair Removal");
+            window.location.href = "Cathealth.html";
+        }
+        
+        else if(value=='8')
+        {
+            localStorage.setItem("search_term", "Sports Supplements");
+            window.location.href = "Cathealth.html";
+        }
+        
+        else if(value=='9')
+        {
+            localStorage.setItem("search_term", "Massage Oils & Lotions");
+            window.location.href = "Cathealth.html";
+        }
+        
+        else if(value=='10')
+        {
+            localStorage.setItem("search_term", "Homeopathic Remedies");
+            window.location.href = "Cathealth.html";
+        }
+        
+
+
+    }
+
+
+</script>
