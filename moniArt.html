@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/1cb0bb75dc.js" crossorigin="anonymous"></script>
 </head>
 <link rel="stylesheet" href="moniCat.css">
 <style>
@@ -20,8 +22,53 @@
 </style>
 
 <body>
+    
+    <div id="sc1">
+        <div id="sc11">
+        <h4 id="sc111">Hi! <a href="signin.html">Sign in</a> or <a href="register.html">register</a></h4>
+        <h4 > <a href="" style="color:black; text-decoration: none; ">Daily Deals</a></h4>
+        <h4><a href="" style="color:black;  text-decoration: none;">Help & Contact</a></h4>
+        
+        </div>
+        <div id="sc12">
+        <h4>Sell </h4>
+        <h4>Watchlist <i class="fa-solid fa-angle-down"></i></h4>
+        <div id="helloMouse">
+            <h4 onclick="window.location.href='signin.html'">My eBay<i class="fa-solid fa-angle-down"></i></h4>
+            <div id="absolute_My_eBay">
+            <a href=""><p>Summary</p></a> 
+            <a href=""><p>Recently Viewed</p></a>
+            <a href=""> <p> Bids/Offers</p></a>
+            <a href=""><p>Watchlist</p></a>
+            <a href=""><p>Purchase History</p></a>
+            <a href=""><p>Buy Again</p></a>
+            <a href=""><p>Selling</p></a>
+            <a href=""><p>Saved Searches</p></a>
+            <a href=""><p>Saved Sellers</p></a>
+            <a href=""><p>Messages</p></a>
+                
+            </div>
+        </div>
+        <div style="padding:5%" id="sc121">
+            <i style="font-size:25px" class="fa-solid fa-bell" ></i>
+        <div id="sc122">
+        <h1>You are all caught up!</h1>
+        </div>
+        
+        </div>
+        <div style="padding:5%" id="sc13">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div id="sc131">
+                <h1>Your cart is empty</h1>
+                <h3>Time to start shopping!</h3>
+            </div>
+        </div>
+        </div>
+        
+            </div>
+            <hr style="margin-top:-1%">
     <div id="pagediv">
-        <div id="div">abc</div>
+    
 
         <h1 id="name"></h1>
         <div id="center">
@@ -410,6 +457,20 @@ dataArr.forEach(function(el){
             slider.scrollBy(-10, 0);
         }, 5);
     };
+
+
+    
+    let flagfornav = JSON.parse(localStorage.getItem("flagforindex")) 
+    let logindata = JSON.parse(localStorage.getItem("loginData"))
+    let namefornav = logindata[0].name
+
+
+
+    console.log(flagfornav)
+    if(flagfornav == true)
+    {console.log(namefornav)
+    document.querySelector("#sc111").textContent = namefornav
+    }
 
 </script>
 
