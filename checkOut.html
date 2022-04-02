@@ -36,11 +36,11 @@
 
                             </thead>
 
-                               <tbody id="tB11">
+                            <tbody id="tB11">
 
 
 
-                                  </tbody>
+                            </tbody>
                         </table>
                         <!-- <div id="CoutImg"></div>
                         <div id="CoutAll">
@@ -147,7 +147,7 @@
                     <p id="zip">zip</p>
                     <p id="emailAdd">emailAdd</p>
                     <p id="phone">phone</p>
-                </div>  
+                </div>
 
                 <!-- making payment gateway -->
                 <div id="payCa">
@@ -198,7 +198,7 @@
                         <button id="canBtn">Cancel</button>
 
                     </div>
-                   
+
                     <div id="otp11">
                         <input id="yesOTP" type="number" placeholder="Enter OTP">
                         <button id="submit" onclick="submitFun()">Submit</button>
@@ -249,7 +249,7 @@
                     <p>US $ 4.09</p>
                 </div>
 
-                <div id="csC">Confirm and Pay</div>
+                <div id="csC" onclick="yesConfirm()">Confirm and Pay</div>
             </div>
         </div>
 
@@ -268,7 +268,7 @@
     let tB = document.getElementById('tB11');
 
     function displayCart(cardD) {
-      
+
         //console.log(cardD);
         // for (let i = 0; i < cardD.length; i++) {
         //console.log(cardD[i].title);
@@ -312,8 +312,8 @@
             qty.innerText = "Qty:";
 
             let h3 = document.createElement('h3');
-             h3.innerText = ele.qty;
-             h3.id = "RaQty"
+            h3.innerText = ele.qty;
+            h3.id = "RaQty"
             // h3 = "qty";
             // h3.class = "qty123";
 
@@ -329,10 +329,10 @@
             let price = document.createElement('p');
 
             if (ele.price.raw) {
-                price.innerText = "US $"+ (+ele.price.raw.trim().substring(1, ele.price.raw.length))*ele.qty;
+                price.innerText = "US $" + (+ele.price.raw.trim().substring(1, ele.price.raw.length)) * ele.qty;
             }
             else {
-                price.innerText = "US $"+(+ele.price.to.raw.trim().substring(1, ele.price.to.raw.length))*ele.qty;
+                price.innerText = "US $" + (+ele.price.to.raw.trim().substring(1, ele.price.to.raw.length)) * ele.qty;
             }
 
             price.id = "price0011";
@@ -341,7 +341,7 @@
 
             shipping.innerText = ele.shipping;
             shipping.id = "shipping";
-          
+
             divPrice.append(price, shipping);
 
             col4.append(divPrice);
@@ -374,127 +374,140 @@
     }
 
 
-// cart operations
+    // cart operations
 
-// let bas = document.getElementById("#price001");
+    // let bas = document.getElementById("#price001");
 
-// let final01 =[];
+    // let final01 =[];
 
-// for(let i=0;i<bas.length;i++)
-// {
-//     final01.push(+ bas[i].innerText.substring(1, bas[i].innerText.length));
-// }
+    // for(let i=0;i<bas.length;i++)
+    // {
+    //     final01.push(+ bas[i].innerText.substring(1, bas[i].innerText.length));
+    // }
 
-// console.log(final01);
-
-
-
-
-function myDone()
-{
-    
-    document.getElementById("country").innerText = "Country:"+" "+document.querySelector("#selectAc").value;
-    document.getElementById("fullName").innerText = "Full Name:"+" "+document.querySelector("#firstName").value+" "+document.querySelector("#lastName").value;
-
-    document.getElementById("streetAdd").innerText = "Street Address:"+" "+document.querySelector("#streetA1").value+" "+document.querySelector("#streetA2").value;
-
-    document.getElementById("city").innerText = "City:"+" "+document.querySelector("#cityName").value;
-      
-    document.getElementById("state").innerText = "State:"+" "+document.querySelector("#stateName").value;
-    document.getElementById("zip").innerText = "Zip:"+" "+document.querySelector("#zipCode").value;
-
-    document.getElementById("emailAdd").innerText = "Email Address:"+" "+document.querySelector("#email").value;
-
-    document.getElementById("phone").innerText = "Phone:"+" "+document.querySelector("#mobile").value;
-     
-
-    document.getElementById("shipC").style.display = "none";
-    document.getElementById("hiddenAdd").style.display = "block";
-
-    
-
-}
-
-// <div id="otp11">
-//                         <input id="yesOTP" type="number" placeholder="Enter OTP">
-//                         <button id="submit" onclick="submitFun()">Submit</button>
-
-function done()
-{
-    document.getElementById("otp11").style.display = "block";
-}
+    // console.log(final01);
 
 
 
 
-function submitFun()
-{
-    let ot = document.getElementById("yesOTP").value;
-    if(ot=="1234")
-    {
-        document.getElementById("otp11").style.display = "none";
-        document.getElementById("hiddenAdd").style.display = "none";
-        document.getElementById("cardOps").style.display = "none";
-        alert("Payment Successful, Click on Confirm and Pay to complete the process");
-       
-    }
-    else{
-        alert("Invalid OTP");
+    function myDone() {
+
+        document.getElementById("country").innerText = "Country:" + " " + document.querySelector("#selectAc").value;
+        document.getElementById("fullName").innerText = "Full Name:" + " " + document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
+            
+        let bName =  document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
+        localStorage.setItem('fullName', JSON.stringify(bName));
+
+        document.getElementById("streetAdd").innerText = "Street Address:" + " " + document.querySelector("#streetA1").value + " " + document.querySelector("#streetA2").value;
+
+        document.getElementById("city").innerText = "City:" + " " + document.querySelector("#cityName").value;
+
+        document.getElementById("state").innerText = "State:" + " " + document.querySelector("#stateName").value;
+        document.getElementById("zip").innerText = "Zip:" + " " + document.querySelector("#zipCode").value;
+
+        document.getElementById("emailAdd").innerText = "Email Address:" + " " + document.querySelector("#email").value;
+
+        document.getElementById("phone").innerText = "Phone:" + " " + document.querySelector("#mobile").value;
+
+
+        document.getElementById("shipC").style.display = "none";
+        document.getElementById("hiddenAdd").style.display = "block";
+
+
+
     }
 
-}
-    
-   
+    // <div id="otp11">
+    //                         <input id="yesOTP" type="number" placeholder="Enter OTP">
+    //                         <button id="submit" onclick="submitFun()">Submit</button>
 
-
-
-
-let addingKey = JSON.parse(localStorage.getItem("Database")) || [];
-
-
-
-let sum = 0;
-for (let i = 0; i <addingKey.length;i++ ) {
-    
-
-    if(addingKey[i].price.raw)
-    {
-        sum = sum + (+addingKey[i].price.raw.trim().substring(1,addingKey[i].price.raw.length))*addingKey[i].qty;
-
-    }
-    else{
-        sum = sum + (+addingKey[i].price.to.raw.trim().substring(1,addingKey[i].price.to.raw.length))*addingKey[i].qty;
+    function done() {
+        document.getElementById("otp11").style.display = "block";
     }
 
-}
 
 
 
+    function submitFun() {
+        let ot = document.getElementById("yesOTP").value;
+        if (ot == "1234") {
+            document.getElementById("otp11").style.display = "none";
+            document.getElementById("hiddenAdd").style.display = "none";
+            document.getElementById("cardOps").style.display = "none";
+            alert("Payment Successful, Click on Confirm and Pay to complete the process");
 
+        }
+        else {
+            alert("Invalid OTP");
+        }
 
-let sum2 = 0;
-
-  for(let i=0;i<addingKey.length;i++)
-  {
-      if(addingKey[i].shipping)
-      {
-       if(!(addingKey[i].shipping.includes("Free")))
-       {
-           sum2+=(+addingKey[i].shipping.trim().split("$")[1].split(" ")[0]);
-        
-       }
     }
-    
-  }
-
-
-  document.querySelector("#csF > p:nth-child(2)").innerText = "US $"+sum.toFixed(2);
-
-  document.querySelector("#csS > p:nth-child(2)").innerText = "US $"+sum2.toFixed(2);
-  document.querySelector("#csO > p:nth-child(2)").innerText = "US $"+(sum+sum2).toFixed(2);
 
 
 
 
+
+
+    let addingKey = JSON.parse(localStorage.getItem("Database")) || [];
+
+
+
+    let sum = 0;
+    for (let i = 0; i < addingKey.length; i++) {
+
+
+        if (addingKey[i].price.raw) {
+            sum = sum + (+addingKey[i].price.raw.trim().substring(1, addingKey[i].price.raw.length)) * addingKey[i].qty;
+
+        }
+        else {
+            sum = sum + (+addingKey[i].price.to.raw.trim().substring(1, addingKey[i].price.to.raw.length)) * addingKey[i].qty;
+        }
+
+    }
+
+
+
+
+
+    let sum2 = 0;
+
+    for (let i = 0; i < addingKey.length; i++) {
+        if (addingKey[i].shipping) {
+            if (!(addingKey[i].shipping.includes("Free"))) {
+                sum2 += (+addingKey[i].shipping.trim().split("$")[1].split(" ")[0]);
+
+            }
+        }
+
+    }
+
+
+    document.querySelector("#csF > p:nth-child(2)").innerText = "US $" + sum.toFixed(2);
+
+    document.querySelector("#csS > p:nth-child(2)").innerText = "US $" + sum2.toFixed(2);
+    document.querySelector("#csO > p:nth-child(2)").innerText = "US $" + (sum + sum2).toFixed(2);
+
+
+
+
+
+
+    function yesConfirm() {
+        window.location.href = "final.html";
+    }
+
+
+
+
+    let x = sum+sum2;
+    localStorage.setItem("total",x);
+
+    let c = addingKey.length;
+    localStorage.setItem("count",c);
+
+   //let finalNameG = document.getElementById("firstName").value;
+
+   //localStorage.setItem("finalName",finalNameG);
 
 </script>
