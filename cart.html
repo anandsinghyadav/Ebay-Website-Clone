@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="collectiblesAndArt.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+</body>
+
+<div id="cartContainer">
+
+    <div id="left">
+        <p id="sellerT">Seller <a href="">Thrift.books</a></p>
+        <div id="mahaLeft">
+
+            <table>
+                <thead>
+
+                </thead>
+                <tbody id="tB">
+
+                </tbody>
+            </table>
+
+        </div>
+
+        <p id="extraQ"><a href="">Extra 10% off 4 or more items </a></p>
+        <p id="offAdd">Add:<span id="offAdd">3</span> more to qualify</p>
+
+    </div>
+
+
+    <div id="right">
+        <div onclick="gosomeWhere()" id="rightCheck">Go to Checkout</div>
+        <div id="rightQ">
+            <p>Item (<span id="realQty">1</span>)</p>
+            <p id="realP">US $ 12.27</p>
+        </div>
+
+        <div id="rightS">
+            <p>Shipping</p>
+            <p id="shipCharge">Free</p>
+        </div>
+
+        <hr>
+
+        <div id="rightSub">
+            <p>Subtotal</p>
+            <p id="totalAmount">US $ 12.27</p>
+        </div>
+
+    </div>
+
+</div>
+
+</html>
+
+
+
+<script>
+
+
+
+
+    let addingKey = JSON.parse(localStorage.getItem("Database")) || [];
+
+
+
+    for (let i = 0; i < addingKey.length; i++) {
+        if (!(addingKey[i].qty)) {
+            addingKey[i].qty = 1;
+        }
+    }
+    localStorage.setItem("Database", JSON.stringify(addingKey));
+    localStorage.setItem("yourCart", JSON.stringify(addingKey));
+
+
+
+    let cartD = JSON.parse(localStorage.getItem('yourCart'));
+
+    let tbody = document.getElementById('tB');
+
+    let mahaLeft = document.getElementById('mahaLeft');
+
+    function displayCart(cardD) {
+
+        // for (let i = 0; i < cardD.length; i++) {
+        //console.log(cardD[i].title);
+        tbody.innerHTML = null;
+
+        cardD.forEach((ele, index) => {
+
+
+            let row = document.createElement('tr');
+
+
+            let col1 = document.createElement('td');
+
+            let divImg = document.createElement('div');
+            divImg.id = 'cartImg';
+            let img = document.createElement('img');
+            img.src = ele.thumbnail;
+            divImg.append(img);
+            col1.append(divImg);
+
+
+            let col2 = document.createElement('td');
+
+            let divTitle = document.createElement('div');
+            divTitle.id = 'cartTDiv';
+            let title = document.createElement('p');
+            title.id = 'cartT';
+            let acc = document.createElement('p');
+            acc.id = 'cartAcc';
+            acc.innerText = "Accepeted";
+            title.innerText = ele.title;
+            divTitle.append(title, acc);
+            col2.append(divTitle);
+
+            let col3 = document.createElement('td');
+
+            let divQty = document.createElement('div');
+            divQty.id = "sQ";
+
+            let qty = document.createElement('p');
+            qty.innerText = "Qty";
+
+            let select = document.createElement('select');
+            select.innerHTML = `<option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>`;
+
+            select.id = "qty";
+            select.class = "qty123";
+
+
+
+            divQty.append(qty, select);
+            col3.append(divQty);
+
+            col4 = document.createElement('td');
+
+            let divPrice = document.createElement('div');
+            divPrice.id = "priceCart";
+            let price = document.createElement('p');
+
+            if (ele.price.raw) {
+                price.innerText = ele.price.raw;
+            }
+            else {
+                price.innerText = ele.price.to.raw;
+            }
+
+            price.id = "price001";
+
+            let shipping = document.createElement('p');
+
+            shipping.innerText = ele.shipping;
+            shipping.id = "shipping";
+            let rem = document.createElement('button');
+            rem.innerText = "Remove";
+            rem.id = "remove";
+            rem.addEventListener('click', () => {
+
+                remove(ele, index);
+
+            })
+            let saved = document.createElement('button');
+            saved.innerText = "Save it";
+            saved.id = "savedBtn"
+            let divbtn = document.createElement('div');
+            divbtn.id = "divbtn";
+            divbtn.append(saved, rem);
+            divPrice.append(price, shipping, divbtn);
+
+            col4.append(divPrice);
+
+            row.append(col1, col2, col3, col4);
+
+            tB.append(row);
+
+
+        });
+
+    }
+    displayCart(cartD);
+
+
+
+    let krr = document.querySelectorAll('#price001');
+
+    let arrPriceList = [];
+
+    for (let j = 0; j < krr.length; j++) {
+        arrPriceList.push(+ krr[j].innerText.substring(1, krr[j].innerText.length));
+    }
+
+    //console.log(arrPriceList);
+
+    let sum = 0;
+    for (let i = 0; i < arrPriceList.length; i++) {
+        sum += arrPriceList[i];
+    }
+
+
+
+    let krr2 = document.querySelectorAll('#qty');
+
+    let arr001 = arrPriceList.concat([]);
+
+    for (let i = 0; i < krr2.length; i++) {
+
+        krr2[i].addEventListener('change', () => {
+
+            addingKey[i].qty = +krr2[i].value;
+
+            localStorage.setItem("Database", JSON.stringify(addingKey));
+            localStorage.setItem("yourCart", JSON.stringify(addingKey));
+
+            krr[i].innerText = "US $ " + (arrPriceList[i] * (+krr2[i].value)).toFixed(2);
+            sum = sum - arr001[i];
+            arr001[i] = arrPriceList[i] * (+krr2[i].value);
+            sum = sum + arr001[i];
+            document.querySelector("#realP").innerText = "US $" + " " + sum.toFixed(2);
+            document.querySelector("#totalAmount").innerText = "US $" + " " + sum.toFixed(2);
+        })
+    }
+
+
+
+
+
+    function remove(ele, index) {
+
+        cartD.splice(index, 1);
+        localStorage.setItem('yourCart', JSON.stringify(cartD));
+        localStorage.setItem('Database', JSON.stringify(cartD));
+        location.reload();
+
+        //  cartD.splice(index,1);
+        // localStorage.setItem('yourCart', JSON.stringify(cartD));
+
+        //displayCart(cartD);
+
+    }
+
+
+
+
+    function gosomeWhere() {
+        window.location.href = "checkout.html";
+
+    }
+
+    document.querySelector("#realP").innerText = "US $" + " " + sum.toFixed(2);
+    document.querySelector("#totalAmount").innerText = "US $" + " " + sum.toFixed(2);
+
+
+  let sum2 =0;
+  for(let i=0;i<addingKey.length;i++)
+  {
+      if(addingKey[i].shipping)
+      {
+       if(!(addingKey[i].shipping.includes("Free")))
+       {
+           sum2+=(+addingKey[i].shipping.trim().split("$")[1].split(" ")[0]);
+        
+       }
+    }
+    
+  }
+
+ 
+  document.getElementById("shipCharge").innerText = "US $" + " " + sum2.toFixed(2);
+
+
+  document.querySelector("#totalAmount").innerText = "US $" + " " + (sum+sum2).toFixed(2);
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- let finalDiv = document.createElement('div');
+
+let divS = document.createElement('div');
+
+let pn = document.createElement('div');
+pn.id = "pN";
+
+let im = document.createElement('img');
+im.src = cardD[i].thumbnail;
+divS.append(im);
+divS.Id = "oneI";
+
+//let pn = document.createElement('p');
+let p1 = document.createElement('p');
+p1.innerText = cartD[i].title;
+p1.id = "yesPL"
+
+
+let p2 = document.createElement('p');
+p2.innerText = "acceptable";
+p2.id = "acceptable";
+pn.append(p1, p2);
+
+let divSelect = document.createElement('div');
+divSelect.id = "selectQ";
+
+let divAp = document.createElement('div');
+divAp.id = "sQ";
+
+let p = document.createElement('p');
+p.innerText = "Qty";
+
+let select = document.createElement('select');
+select.id = "qty";
+select.onchange = "qtyChange1()";
+select.innerHTML = `<option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>`;
+
+
+divAp.append(p, select);
+
+let pUs = document.createElement('p');
+pUs.innerText = "USPS Media Mall";
+pUs.id = "usps";
+
+divSelect.append(divAp, pUs);
+
+let divPrice = document.createElement('div');
+divPrice.id = "priceCart";
+
+let p3 = document.createElement('p');
+p3.innerText = cartD[0].price.raw;
+
+let p4 = document.createElement('p');
+p4.innerText = cartD[0].shipping;
+
+divPrice.append(p3, p4);
+
+finalDiv.append(divS, pn, divSelect, divPrice);
+
+mahaLeft.append(finalDiv);
+ -->

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="collectiblesAndArt.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="./data.js"></script>
 </head>
 
 <body>
@@ -89,7 +90,8 @@
                     <p><a href="">Comics</a></p>
                 </div>
             </div>
-
+            <div onclick="rightOne()" id="rightArC"><i class="fas fa-angle-left"></i></div>
+            <div onclick="leftOne()" id="leftArC"><i class="fas fa-angle-right"></i></div>
             <div id="proGrader">
                 <h2>Shop by Professional Grader</h2>
                 <div>
@@ -114,14 +116,48 @@
 
 </html>
 
+<script>
+    
+    let eee;
+    let slider = document.querySelector("#comicSlider");
+        function rightOne()
+        {
+       
+        console.log("yes");
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(10, 0);
+        }, 5);
+    };
+    
+        function leftOne()
+       {
+    
+        console.log("yes");
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(-10, 0);
+        }, 5);
+    };
+
+</script>
+
+
 <script type="module">
+
+    let data = await JSON.parse(localStorage.getItem("items"));
+
     var comic = document.getElementById("comicData");
 
-    import { comicFunction, appendData } from "./components/Amain.js";
-
-    let data = await comicFunction("http://localhost:3000/posts/?q=antiques");
-
-    console.log(data);
+    import appendData from "./components/Amain.js";
 
     appendData(data, comic);
 
