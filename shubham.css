@@ -104,13 +104,16 @@ font-family: Arial, Helvetica, sans-serif;
 text-align: end;
 font-size: 18px;
 }
+
 #shc2 > img {
-height: 5%;
+height: 100%;
 }
 #shc2 {
 margin-top: -0.5%;
 margin-left: 1%;
-/* border: 1px solid black; */
+border: 1px solid black;
+height:100px;
+width: 10%;
 }
 #shc3 {
 height: 190px;
