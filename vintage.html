@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="collectiblesAndArt.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script src="./data.js"></script>
+    <script src="./script/data.js"></script>
 </head>
 
 <body>
@@ -77,7 +77,7 @@
                     <img src="https://i.ebayimg.com/thumbs/images/g/YOsAAOSw1Fhe7xmX/s-l225.webp" alt="">
                     <p><a href="vintage.html">Wholesale Vintage Clothing</a></p>
                 </div>
-              
+
             </div>
             <div onclick="rightOne()" id="rightArC"><i class="fas fa-angle-left"></i></div>
             <div onclick="leftOne()" id="leftArC"><i class="fas fa-angle-right"></i></div>
@@ -109,12 +109,11 @@
 </html>
 
 <script>
-    
+
     let eee;
     let slider = document.querySelector("#comicSlider");
-        function rightOne()
-        {
-       
+    function rightOne() {
+
         console.log("yes");
         eee = 100;
         let s = setInterval(() => {
@@ -126,9 +125,8 @@
         }, 5);
     };
 
-        function leftOne()
-       {
-    
+    function leftOne() {
+
         console.log("yes");
         eee = 100;
         let s = setInterval(() => {
