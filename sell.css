@@ -294,3 +294,9 @@ justify-content: space-around;
     padding: 50px 0px 30px 30px ;
 
 }
+.chamka
+{
+    display: none;
+    width: 100%;
+    font-size: small;
+}

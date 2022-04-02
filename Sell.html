@@ -36,6 +36,7 @@
             <ul><button class="but003">Tips for listing</button></ul>
             <ul><button class="but003">FAQ</button></ul>
             <ul><button class="but003">My eBay</button></ul>
+            <ul><button class="chamka">List an item</button></ul>
 
         </div>
 
@@ -447,32 +448,4 @@
 
 </html>
 
-<script>
-
-    document.querySelector("#rightdata > ul:nth-child(2) > button").addEventListener("click", function () {
-        window.scrollBy(0, 908)
-    })
-
-    document.querySelector("#rightdata > ul:nth-child(1) > button").addEventListener("click", function () {
-        window.scrollBy(0, 557)
-
-    })
-    document.querySelector("#rightdata > ul:nth-child(3) > button").addEventListener("click", function () {
-        window.scroll(0, 1200)
-    })
-
-
-    let faqinner = document.querySelectorAll(".faq2");
-
-    let faqmain = document.querySelectorAll(".faqclass");
-    for (let i = 0; i < faqmain.length; i++) {
-        faqmain[i].addEventListener("click", function () {
-
-
-            faqinner[i].style.display = "flex";
-
-        })
-    }
-
-
-</script>
+<script src="./sell.js"></script>
