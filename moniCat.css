@@ -289,3 +289,92 @@ padding-bottom: 15px;
 #one>div{
 margin-left: 5%;
 }
+
+
+body {
+    margin: 0%;
+    }
+    #sc1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    margin: auto;
+    }
+    #sc11 {
+    margin-top: -10px;
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    }
+    #sc12 {
+    margin-top: -0.5%;
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    /* height:20px; */
+    /* border: 1px solid black; */
+    
+    }
+    #sc12 > div:nth-child(5) > i {
+    font-size: 130%;
+    margin-left: -2%;
+    /* border: 1px solid black */
+    }
+    #sc12 > div:nth-child(4) > i {
+    font-size: 20px;
+    margin-left: -10px;
+    }
+    #absolute_My_eBay {
+    position: absolute;
+    top: 50px;
+    right: 65px;
+    background-color: #ffffff;
+    display: none;
+    height:380px;
+    width: 200px;
+    border:1px solid rgb(238, 234, 234)
+    }
+    #helloMouse:hover #absolute_My_eBay {
+    display: block;
+    transition: transform(5s);
+    
+    }
+    #absolute_My_eBay >a{
+        color: black;
+        text-decoration: none;
+        
+    }
+    #absolute_My_eBay >a>p{
+    margin-left: 10px;
+    }
+    #sc122{
+        position: absolute;
+        height:300px;
+        width: 480px;
+        background-color: #ffffff;
+        right:30px;
+        text-align: center;
+        display: none;
+        border:1px solid rgb(238, 234, 234)
+    }
+    #sc121:hover #sc122 {
+    display: block;
+    }
+    #sc122>h1{
+    margin-top: 120px;
+    color: #d4d3d3;
+    }
+    #sc131{
+        position: absolute;
+        height:150px;
+        width:300px;
+        background-color: #ffffff;
+        right:30px;
+        text-align: center;
+        color: #cec7c7;
+        display: none;
+        border:1px solid rgb(238, 234, 234)
+    }
+    #sc13:hover #sc131{
+    display: block;
+    }
