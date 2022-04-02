@@ -1,5 +1,6 @@
 body {
 margin: 0%;
+font-size: 14px;    ;
 }
 #sc1 {
 display: flex;
@@ -10,16 +11,19 @@ margin: auto;
 #sc11 {
 margin-top: -10px;
 display: flex;
-width: 27%;
+width: 30%;
 justify-content: space-around;
+font-size: 13px;
 }
 #sc12 {
-margin-top: -0.5%;
+margin-top: -0.7%;
 display: flex;
-width: 27%;
+width: 28%;
 justify-content: space-around;
 /* height:20px; */
 /* border: 1px solid black; */
+font-size: 13px;
+
 
 }
 #sc12 > div:nth-child(5) > i {
@@ -37,7 +41,7 @@ top: 30px;
 right: 65px;
 background-color: #ffffff;
 display: none;
-height:380px;
+height:300px;
 width: 200px;
 border:1px solid rgb(238, 234, 234)
 }
@@ -94,89 +98,109 @@ display: block;
 
 
 
-body {
-margin: 0%;
-}
+
 #shconatainer {
 font-family: Arial, Helvetica, sans-serif;
 }
 #shc1 {
 text-align: end;
-font-size: 18px;
+/* font-size: 18px; */
+margin-top: -0.5%;
 }
 
 #shc2 > img {
 height: 100%;
+width: 100%;
 }
 #shc2 {
 margin-top: -0.5%;
 margin-left: 1%;
-border: 1px solid black;
-height:100px;
-width: 10%;
+/* border: 1px solid black; */
+height:48px;
+width: 8%;
 }
 #shc3 {
-height: 190px;
+height: 150px;
 width: 28%;
 background-color: #3665f3;
 display: flex;
 margin: auto;
 margin-top: 3%;
-/* border: 1px solid green; */
+/* border: 1px solid red; */
+/* font-size: 10px; */
 
 }
 #shc31 > div {
-height: 30px;
+height: 25px;
 background-color: white;
-width: 30px;
+width: 25px;
 text-align: center;
-margin-top: 80px;
+margin-top: 60px;
 border-radius: 50%;
 margin-left: 15px;
+border: 1px solid #3665f3;
+
 }
 #shc31 > div > p {
-padding-top: 5px;
+margin-top:5px;
   /* padding-left: -20px; */
 color: #3665f3;
 }
 #shc32 {
 margin-top: 18px;
-font-size: 18px;
+/* font-size: 18px; */
 margin-left: 10px;
 color: white;
-font-family: sans-serif;
+/* font-family: sans-serif; */
 width: 80%;
+/* border: 1px solid red; */
+
 }
 #shc4 {
 margin-left: 46%;
+/* border: 1px solid red; */
+font-size: 25px;
+height:30px;
+width:100px;
+margin-top: -1.5%;
 }
-#shc4 > h1 {
-font-size: 50px;
-margin-top: 10px;
-}
+
 
 #shc5 {
 margin-left: 41%;
-margin-top: -2%;
+/* margin-top: -2%; */
+/* border: 1px solid red; */
+
 }
 #shc6 {
 margin: auto;
 height: 500px;
-width: 28%;
+width: 26%;
+/* border: 1px solid red; */
+
 }
 #shc61 > input {
 width: 98%;
-border-radius: 10px;
-height: 50px;
+border-radius: 7px;
+height: 37px;
 margin-top: 20px;
 background-color: #f7f7f7;
 font: 20px;
+border: 1px solid rgb(131, 131, 131);
+
 }
+
 #shc61 > button {
 width: 100%;
 border-radius: 30px;
-height: 60px;
+height: 45px;
 margin-top: 20px;
+/* border: 1px solid red; */
+/* justify-content: center; */
+}
+#shc61 > button>h2{
+margin-top: 2.2%;
+font-size: 18px;
 }
 #shc61 > hr {
 margin-top: 40px;
@@ -185,24 +209,30 @@ margin-bottom: 40px;
 #shc7 {
 display: flex;
 margin-left: 43%;
-margin-top: -30px;
+margin-top: -8%;
 width: 10%;
 height: 40px;
+/* border: 1px solid red; */
+
 }
 #shc7 > input {
-margin-top: 20px;
+margin-top: 16px;
 margin-left: 30px;
 }
 #shc8 {
 display: flex;
 margin-left: 42%;
 margin-top: -20px;
-width: 15%;
-height: 80px;
+width: 16%;
+height: 70px;
+/* border: 1px solid red; */
+
 }
 #shc9 {
 margin-left: 46%;
 margin-top: -20px;
+/* border: 1px solid red; */
+
 }
 #shc10 {
 margin-left: 20%;
@@ -269,6 +299,7 @@ margin-top: -20px;
 #shuc4 > input {
 margin-top: 20px;
 font-size: 20px;
+
 }
 #shuc4 > i {
 margin-top: 15px;
@@ -284,6 +315,8 @@ height: 45px;
 width: 45%;
 border-radius: 10px;
 background-color: #f7f7f7;
+border: 1px solid rgb(131, 131, 131);
+
 }
 #shuc5 > input[type="text"]:nth-child(2) {
 height: 45px;
@@ -291,6 +324,8 @@ width: 45%;
 border-radius: 10px;
 margin-left: 5%;
 background-color: #f7f7f7;
+border: 1px solid rgb(131, 131, 131);
+
 }
 #shuc5 > input[type="email"]:nth-child(3) {
 height: 45px;
@@ -298,6 +333,8 @@ width: 98%;
 border-radius: 10px;
 background-color: #f7f7f7;
 margin-top: 40px;
+border: 1px solid rgb(131, 131, 131);
+
 }
 #shuc5 > input[type="password"]:nth-child(4) {
 height: 45px;
@@ -305,6 +342,8 @@ width: 98%;
 border-radius: 10px;
 background-color: #f7f7f7;
 margin-top: 40px;
+border: 1px solid rgb(131, 131, 131);
+
 }
 #shuc5 > p {
 margin-top: 30px;
@@ -331,15 +370,18 @@ margin-top: 2%;
 
 #sc2 {
 display: flex;
-height: 100px;
+height: 85px;
 margin-top: -1%;
+/* border:1px solid red; */
 }
 
 #sc21 {
-height: 61%;
+height: 55%;
 width: 9%;
 margin-left: 3%;
-margin-top: 1%;
+margin-top: 1.4%;
+/* border:1px solid red; */
+
 }
 #sc21 > img {
 height: 100%;
@@ -354,7 +396,7 @@ display: flex;
 margin-left: 1%;
 /* border: 1px solid red; */
 
-font-size: 18px;
+font-size: 14px;
 }
 #sc22 > i {
 margin-top: 50%;
@@ -368,26 +410,30 @@ width: 60%;
 border: 3px solid black;
 margin: 1.4% 0% 0% 1.5%;
 display: flex;
+/* border:1px solid red; */
+
 }
 #sc23 > i {
-font-size: 25px;
+font-size: 22px;
 margin-top: 1%;
 }
 #sc23 > input {
-height: 80%;
+height: 70%;
 width: 80%;
 border: transparent;
 padding:5px;
 font-size:22px;
+/* border:1px solid green; */
+
 }
 #sc23 >div> button {
 height: 98%;
 width: 92%;
 margin-left: -5px;
 border: transparent;
-padding: 20px;
+/* padding: 20px; */
 background-color: transparent;
-font-size: 18px;
+font-size: 14px;
 /* border: 1px solid red; */
 
 }
@@ -400,14 +446,14 @@ font-size: 18px;
 
 }
 #sc2>button{
-    height: 55px;
+    height: 54%;
     width:13%;
     background-color: #3665f3;
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     border: transparent;
-    margin: 25px 0px 0px 10px;
-border: 1px solid red;
+    margin: 1.5% 0% 0% 0.5%;
+/* border: 1px solid red; */
     
 }
 #sc3{
