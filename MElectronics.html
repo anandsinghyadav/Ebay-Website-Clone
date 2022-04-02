@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Cameras & Photo</li>
                         <li>Binoculars & Telescopes</li>
                         <li>Camcorders</li>
@@ -54,7 +54,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Cell Phones, Smart Watches & Accessories</li>
                         <li>Cell Phone Accessories</li>
                         <li>Cell Phone Screens</li>
@@ -77,7 +77,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         </li>
                         <li>See all in Computers, Tablets & Network Hardware</li>
                         <li>3D Printers & Supplies</li>
@@ -112,7 +112,7 @@
                     <div>^</div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li> See all in Gaming</li>
                         <li>Cheats & Strategy Guides</li>
                         <li>Consoles</li>
@@ -134,7 +134,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Home Surveillance Systems</li>
                         <li>CCTV Systems</li>
                         <li>Dummy Cameras</li>
@@ -151,7 +151,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Major Appliances</li>
                         <li>Dishwashers</li>
                         <li>Major Appliances Parts</li>
@@ -169,7 +169,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Portable Audio</li>
                         <li>Audio Player Docks & Mini Speakers</li>
                         <li>Boomboxes</li>
@@ -193,7 +193,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Smart Home Devices</li>
                         <li>Home Surveillance Systems</li>
                         <li>Other Smart Home Electronics</li>
@@ -208,7 +208,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in TV, Video & Home Audio Electronics</li>
                         <li>Home Audio Systems</li>
                         <li>Media Streamers</li>
@@ -226,7 +226,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Vehicle Electronics</li>
                         <li>Car Alarms & Security</li>
                         <li>Car Audio</li>
@@ -248,7 +248,7 @@
                     <div></div>
                 </div>
                 <div class="mcategoryul">
-                    <ul>
+                    <ul class="ul1111">
                         <li>See all in Virtual Reality</li>
                         <li>Other Virtual Reality Accessories</li>
                         <li>Smartphone VR Headsets</li>
@@ -463,11 +463,27 @@
 
 
 
-    import { footer } from "./footer2/footer.js"
+    import { footer } from "./Mfooter2/footer.js";
 
-    var x = footer()
+    var x = footer();
 
-    document.getElementById("footerpart").innerHTML = x
+    document.getElementById("footerpart").innerHTML = x;
+</script>
+<script>
+    let arrscript2 = document.querySelectorAll(".ul1111");
+    console.log(arrscript2);
+    for (let i = 0; i < arrscript2.length; i++) {
+        for (let j = 0; j < arrscript2[i].children.length; j++) {
+            arrscript2[i].children[j].addEventListener("click", function () {
+                // console.log(arrscript2[i].children[j].innerText);
+                let searchTerm = arrscript2[i].children[j].innerText;
+                console.log(searchTerm);
+                localStorage.setItem("search_term", "phones");
+                window.location.href = "MahiArt.html";
+            });
+        }
+    }
+
 </script>
 
 </html>
