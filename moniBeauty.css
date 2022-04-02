@@ -162,7 +162,7 @@ li {
 }
 
 #sline{
-    width: 100%;
+    width: 90%;
     border: 0.5px solid rgb(125, 125, 141);
     
 }
@@ -174,7 +174,7 @@ li {
 
 }
 #para>p{
-    width: 100%;
+    width: 90%;
     font-family: "Market Sans", Arial, sans-serif;
 
 }

@@ -6,48 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <link rel="stylesheet" href="moniCat.css">
 <style>
-    #appendhere{
-        /* border: 1px solid red; */
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 15px; 
-        width: 100%; 
-    }
-    #sold{
-        color:red
-    }
-    #artimage{
-        width: 100%;
-        height: 250px;
-        
-    }
-    #b2{
+    #sizeDiv{
+        /* border: 1px solid green; */
         width: 90%;
-        /* border: 1px solid red; */
-    }
-    #div1{
-        /* border: 0.01px solid rgb(125, 125, 141); */
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-        box-sizing: border-box;
-        padding: 3%;
-    }
-    #price{
-        font-weight: bold;
-
-    }
-    #sprice{
-        color: rgb(100, 96, 96)
-    }
-    #spn{
-        font-size: 10px;
-        font-family: "Market Sans", Arial, sans-serif;
-    }
-    #name{
-        height: 120px;
-        font-size: 20px;
     }
     
 </style>
@@ -122,8 +89,32 @@
                     </div>
 
 
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/RMkAAOSwdpxhbTTt/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Print</p>
+                    </div>
+
+                    
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/A4YAAOSwkRhZW0z1/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Painting</p>
+                    </div>
 
                 </div>
+
+
+
+                
+                <div onclick="rightOne()" id="rightArC"><i class="fas fa-angle-right"></i></div>
+                <div onclick="leftOne()" id="leftArC"><i class="fas fa-angle-left"></i></div>
+
+
+
+
+
+
 
                 <div id="bottom">
                     
@@ -325,10 +316,7 @@ data = [{
 
 }
 
-
 ]
-
-// console.log(data)
 
 arr.push(data)
 
@@ -341,6 +329,19 @@ dataArr.forEach(function(el){
 
             var div1 = document.createElement("div")
             div1.setAttribute("id","div1")
+
+            var arr = []
+
+            div1.addEventListener("click",function(){
+
+            arr.push(el)
+
+            localStorage.setItem("Database",JSON.stringify(arr))
+
+            window.location.href = "review.html"
+            })
+
+
 
 
             let image = document.createElement("img")
@@ -374,8 +375,41 @@ dataArr.forEach(function(el){
 
 
         });
+</script>
 
 
+
+<script>
+    
+    let eee;
+    let slider = document.querySelector("#one");
+        function rightOne()
+        {
+    
+        console.log("yes");
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(10, 0);
+        }, 5);
+    };
+
+        function leftOne()
+    {
+    
+        console.log("yes");
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(-10, 0);
+        }, 5);
+    };
 
 </script>
 
