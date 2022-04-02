@@ -25,11 +25,11 @@
     <a href=""><p>Summary</p></a> 
     <a href=""><p>Recently Viewed</p></a>
     <a href=""> <p> Bids/Offers</p></a>
-    <a href=""><p>Watchlist</p></a>
+    <a href="watchlist.html"><p>Watchlist</p></a>
     <a href=""><p>Purchase History</p></a>
     <a href=""><p>Buy Again</p></a>
     <a href=""><p>Selling</p></a>
-    <a href=""><p>Saved Searches</p></a>
+    <a href="saved.html"><p>Saved Searches</p></a>
     <a href=""><p>Saved Sellers</p></a>
     <a href=""><p>Messages</p></a>
         
@@ -109,32 +109,34 @@
 </div>
 
 <div id="sc43">
-    <a href=""><p>Electronics</p></a>
+    <a href=""><p onclick="MElectronics.html">Electronics</p></a>
 
     <div id="sc431">
         <div>
             <h3>Most popular categories</h3>
             <hr>
-            <a href=""><p>Cell phones and accessories</p></a>
-            <a href=""><p>Video games and consoles</p></a>
-            <a href=""><p>Computers and tablets</p></a>
-            <a href=""><p>Cameras and photos</p></a>
-            <a href=""><p>Camera drones</p></a>
-            <a href=""><p>Asian Brands</p></a>
-            <a href=""><p>Smart home</p></a>
+            <a href=""><p class="shubham11">Cell phones and accessories</p></a>
+            <a href=""><p class="shubham11">Video games and consoles</p></a>
+            <a href=""><p class="shubham11">Computers and tablets</p></a>
+            <a href=""><p class="shubham11">Cameras and photos</p></a>
+            <a href=""><p class="shubham11">Camera drones</p></a>
+            <a href=""><p class="shubham11">Asian Brands</p></a>
+            <a href=""><p class="shubham11">Smart home</p></a>
         </div>
 
 
+
+        
         <div>
             <h3>More categories</h3>
             <hr>
-            <a href=""><p>Apple</p></a>
-            <a href=""><p>Samsung</p></a>
-            <a href=""><p>Xiaomi</p></a>
-            <a href=""><p>Portable audio and headphones</p></a>
-            <a href=""><p>Smart watches</p></a>
-            <a href=""><p>Deals</p></a>
-            <a href=""><p>Sell on eBay</p></a>
+            <a href=""><p class="shubham11">Apple</p></a>
+            <a href=""><p class="shubham11">Samsung</p></a>
+            <a href=""><p class="shubham11">Xiaomi</p></a>
+            <a href=""><p class="shubham11">Portable audio and headphones</p></a>
+            <a href=""><p class="shubham11">Smart watches</p></a>
+            <a href=""><p class="shubham11">Deals</p></a>
+            <a href=""><p class="shubham11">Sell on eBay</p></a>
         </div>
         <div>
             <img src="https://ir.ebaystatic.com/cr/v/c1/NAO-45026-19392.jpeg" alt="">
@@ -537,7 +539,19 @@
 
 
     }
+// ms part
+    let arrscript23 = document.querySelectorAll(".shubham11");
+    console.log(arrscript23);
+    for (let i = 0; i < arrscript23.length; i++) {
+        arrscript23[i].addEventListener("click", function () {
+            // console.log(arrscript23[i].children[j].innerText);
+            let searchTerm = arrscript23[i].innerText;
+            console.log(searchTerm);
+            localStorage.setItem("search_term", searchTerm);
+            window.location.href = "MahiArt.html";
+        });
 
+    }
     // nav bar start here
 
 
