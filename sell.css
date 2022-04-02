@@ -260,3 +260,37 @@ padding: 30px 0px 0px 30px;
     border-radius: 3%;
 
 }
+
+.faq > hr{
+
+color: gray;    
+}
+.faqclass
+{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: sans-serif;
+    padding: 10px ;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+
+}
+.faq2{
+min-height: 100px;   
+display: none;
+justify-items: center;
+flex-direction: column;
+justify-content: space-around;
+}
+.faq2 >p{
+ padding-left: 30px;
+ margin-bottom: 50px;
+ color: gray;
+}
+#fcode123{
+    font-family: sans-serif;
+    padding: 50px 0px 30px 30px ;
+
+}
