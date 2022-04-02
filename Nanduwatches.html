@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="script/data.js"></script>
+  <style>
+    body {
+      /* position: relative; */
+      background-color: #f6f6f6;
+    }
+    #ShowData {
+      display: grid;
+      width: 96%;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(auto, 300px);
+      grid-gap: 10px;
+      margin: auto;
+      justify-content: center;
+    }
+    #ShowData > div {
+      border: 1px solid Grey;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #ShowData > div :nth-of-type(1) {
+      margin-left: 20px;
+    }
+  </style>
+  <body>
+    <div id="ShowData"></div>
+  </body>
+</html>
+<script>
+  let showData = document.querySelector("#ShowData");
+
+  let ApnaData = JSON.parse(localStorage.getItem("items"));
+  console.log("ApnaData:", ApnaData);
+
+  let appendApnaData = (data) => {
+    data.forEach((elem) => {
+      let div = document.createElement("div");
+
+      div.addEventListener("click", () => {
+        storeData(elem);
+      });
+
+      let imgD = document.createElement("div");
+
+      let img = document.createElement("img");
+
+      img.src = elem.thumbnail;
+
+      imgD.append(img);
+
+      let content_div = document.createElement("div");
+
+      let info = document.createElement("p");
+
+      info.innerText = elem.title;
+
+      let price = document.createElement("h3");
+
+      if (elem.price.raw === undefined) {
+        price.innerText = elem.price.to.raw;
+      } else {
+        price.innerText = elem.price.raw;
+      }
+
+      content_div.append(info, price);
+
+      div.append(imgD, content_div);
+
+      showData.append(div);
+    });
+  };
+
+  appendApnaData(ApnaData);
+
+  let data1 = [];
+  let storeData = (elem) => {
+    data1.push(elem);
+    localStorage.setItem("Database", JSON.stringify(data1));
+    window.location.href = "review.html";
+  };
+</script>

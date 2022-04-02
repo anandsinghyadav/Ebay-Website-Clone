@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="moniCat.css">
+<style>
+    #sizeDiv{
+        /* border: 1px solid green; */
+        width: 90%;
+    }
+    
+</style>
+
+<body>
+    <div id="pagediv">
+        <div id="div">abc</div>
+
+        <h1 id="name"></h1>
+        <div id="center">
+
+            <div id="left">
+                <h1>Art Supplies</h1>
+                <h4>Shop by Category</h4>
+                <p>Crafts</p>
+                <!-- dropdown menu -->
+
+                <div id="cat">
+
+
+                    <ul>
+                        <li class="hov">Art Supplies</li>
+                        <li class="hov">Art Supplies</li>
+                        <li class="hov">Painting Supplies</li>
+                        <li class="hov">Drawing & Lettering</li>
+                        <li class="hov">Printmaking</li>
+                        <li class="hov">Collage supplies</li>
+                        <li class="hov">Art instruction books and media</li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <h2>Shop By Category</h2>
+                <div id="one">
+
+
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/jIMAAOSwuTxV-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Painting Supplies</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/G1AAAOSw9r1V-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Drawing & Lettering</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/piQAAOSwNP5dU~2R/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Printmaking</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/0vMAAOSwEetV-ohV/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Collage Supplies</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/eOUAAOSwQPlV-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Instruction Books and Media</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/RMkAAOSwdpxhbTTt/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Print</p>
+                    </div>
+
+                    
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/A4YAAOSwkRhZW0z1/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Painting</p>
+                    </div>
+
+                </div>
+
+
+
+                
+                <div onclick="rightOne()" id="rightArC"><i class="fas fa-angle-right"></i></div>
+                <div onclick="leftOne()" id="leftArC"><i class="fas fa-angle-left"></i></div>
+
+
+
+
+
+
+
+                <div id="bottom">
+                    
+                    <h2>Shop by Brand</h2>
+
+                    <div id="b1">
+
+                                <div id="sizeDiv">
+                                    <div><p class="hov">Unbranded</p></div>
+                                    <div><p class="hov">Winsor & Newton</p></div>
+                                    <div><p class="hov">Copic</p></div>
+                                    <div><p class="hov">Iwata</p></div>
+                                </div>
+
+                    </div>
+                    <div id="b2">
+
+                            <div id ="appendhere"></div>
+                        
+                
+
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footerpart"></div>
+
+</body>
+
+
+</html>
+
+<script type="module">
+
+
+
+import { footer } from "./footer/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+
+
+        
+
+<script>
+
+            
+
+    function addFun(value) {
+        
+        if (value == '1') {
+            localStorage.setItem("search_term", "Painting Supplies");
+
+            window.location.href = "CatArt.html";
+        }
+        else if(value=='2')
+        {
+            localStorage.setItem("search_term", "Drawing & Lettering");
+            window.location.href = "CatArt.html";
+        }
+        else if(value=='3')
+        {
+            localStorage.setItem("search_term", "Printmaking");
+            window.location.href = "CatArt.html";
+        }
+        else if(value=='4')
+        {
+            localStorage.setItem("search_term", "Collage Supplies");
+            window.location.href = "CatArt.html";
+        }
+        
+        else if(value=='5')
+        {
+            localStorage.setItem("search_term", "Instruction Books and Media");
+            window.location.href = "CatArt.html";
+        }
+
+    }
+
+
+var arr = []
+
+data = [{
+    img : "https://i.ebayimg.com/thumbs/images/g/wAIAAOSwxmJf5~HB/s-l300.webp",
+    spn : "SPONSORED",
+    name : "XDT#2815 Hake Paint Brush Painting Brushes 3Pc Hog Bristle 0.75in+1in+1.5in",
+    price : "$19.99",
+    sprice : "$8.00 shipping",
+    sold : "65 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/Z3EAAOSwFhNhUN0I/s-l300.webp",
+    spn : "SPONSORED",
+    name : "XDT#2815 Hake Paint Brush Painting Brushes 3Pc Hog Bristle 0.75in+1in+1.5ink",
+    price : "$18.99",
+    sprice : "$8.00 shipping",
+    sold : "600 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/OjUAAOSwrL9hg8QF/s-l300.webp",
+    spn : "SPONSORED",
+    name : "LOT Spray Paint Can CAPS! Mixed Nozzle Tips NY Thins Outline Rusto Dots",
+    price : "$199.99",
+    sprice : "$8.00 shipping",
+    sold : "66 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/PAAAAOSwMTZWQ~UI/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Rippler Airbrush Stencil Template Airsick",
+    price : "$15.99",
+    sprice : "$8.00 shipping",
+    sold : "666 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/TroAAOSwG2Rh95QV/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Angelus Acrylic Leather Paint Waterproof Sneaker Paint 1oz - 82 Colors Available",
+    price : "$18.99",
+    sprice : "$12.00 shipping",
+    sold : "655 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/PAAAAOSwMTZWQ~UI/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Createx Airbrush Colors 2oz Water Based Airbrush Paint Choose Your Color",
+    price : "$19.99",
+    sprice : "$8.00 shipping",
+    sold : "65 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/UJYAAOSwcTlboJ7w/s-l300.webp",
+    spn : "SPONSORED",
+    name : "COPIC Sketch Marker Pen Color Series Double-Ended Markers! NEW! Various!",
+    price : "$15.99",
+    sprice : "$9.00 shipping",
+    sold : "1 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/A9QAAOSwOMpiRKK5/s-l300.webp",
+    spn : "SPONSORED",
+    name : "SPEEDBALL Brayer, Cutter & Ink Lot, Huge SPEEDBALL Lot! Linoleum, Block Printing",
+    price : "$16.99",
+    sprice : "$9.00 shipping",
+    sold : "33 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/djMAAOSw9HtiNmIN/s-l300.webp",
+    spn : "SPONSORED",
+    name : "12 Color Metallic Ready to Pour Acrylic Pouring Paint Set High Flow 2oz Bottles",
+    price : "$155.99",
+    sprice : "$5.00 shipping",
+    sold : "67 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/gAoAAOSwn-VhCr53/s-l300.webp",
+    spn : "SPONSORED",
+    name : "AMMO by MIG Acrylic Real Colors Paint",
+    price : "$14.99",
+    sprice : "$44.00 shipping",
+    sold : "677 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/wzUAAOSwHhRb9aG3/s-l300.webp",
+    spn : "SPONSORED",
+    name : "American Crafts Color Pour Art 8oz Pre-Mixed Gray Pouring Fluid Paint Bottle",
+    price : "$15.99",
+    sprice : "$66.00 shipping",
+    sold : "655 sold"
+
+},
+{
+    img : "https://i.ebayimg.com/thumbs/images/g/kUIAAOSwsINiJlRC/s-l300.webp",
+    spn : "SPONSORED",
+    name : "Pouring Masters Midnight Black Metallic Pearl 32oz (Quart) Acrylic Pouring Paint",
+    price : "$16.99",
+    sprice : "$55.00 shipping",
+    sold : "555 sold"
+
+}
+
+]
+
+arr.push(data)
+
+var dataArr = (arr[0])
+
+console.log(dataArr)
+
+
+dataArr.forEach(function(el){
+
+            var div1 = document.createElement("div")
+            div1.setAttribute("id","div1")
+
+            var arr = []
+
+            div1.addEventListener("click",function(){
+
+            arr.push(el)
+
+            localStorage.setItem("Database",JSON.stringify(arr))
+
+            window.location.href = "review.html"
+            })
+
+
+
+
+            let image = document.createElement("img")
+            image.src = el.img
+            image.setAttribute("id","artimage")
+
+            let spn = document.createElement("p")
+            spn.innerText = el.spn;
+            spn.setAttribute("id","spn")
+
+            let name = document.createElement("p")
+            name.innerText = el.name;
+            name.setAttribute("id","name")
+
+            price = document.createElement("p")
+            price.innerText = el.price
+            price.setAttribute("id","price")
+
+            sprice = document.createElement("p")
+            sprice.innerText = el.sprice
+            sprice.setAttribute("id","sprice")
+
+            sold = document.createElement("p")
+            sold.innerText = el.sold
+            sold.setAttribute("id","sold")
+            
+
+            div1.append(image,spn,name,price,sprice,sold)
+
+            document.getElementById("appendhere").append(div1)
+
+
+        });
+</script>
+
+
+
+<script>
+    
+    let eee;
+    let slider = document.querySelector("#one");
+        function rightOne()
+        {
+    
+        console.log("yes");
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(10, 0);
+        }, 5);
+    };
+
+        function leftOne()
+    {
+    
+        console.log("yes");
+        eee = 100;
+        let s = setInterval(() => {
+            eee--;
+            if (eee < 1) {
+                clearInterval(s);
+            }
+            slider.scrollBy(-10, 0);
+        }, 5);
+    };
+
+</script>
+

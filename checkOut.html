@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="collectiblesAndArt.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div id="checkOutDiv">
+        <div id="MoutF">
+            <div id="CoutF">
+                <img id="ebayLogC"
+                    src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/743/cached.offlinehbpl.hbpl.co.uk/news/OMC/C4941228-0088-CE02-C297F73A64991AF9.jpg"
+                    alt="">
+                <p>Checkout</p>
+            </div>
+            <p>How do you like our checkout? <a href="">Give us feedback</a></p>
+        </div>
+
+        <!-- div for showing data  -->
+        <div id="cMain">
+            <div id="cMainLeft">
+                <div id="yesC">
+                    <p id="Pr">Review items and shipping</p>
+                    <p id="Sn">Seller : thrift.books</p>
+                    <div id="cmLeft">
+                        <table>
+                            <thead>
+
+                            </thead>
+
+                            <tbody id="tB11">
+
+
+
+                            </tbody>
+                        </table>
+                        <!-- <div id="CoutImg"></div>
+                        <div id="CoutAll">
+                            <p id="cTitle">title</p>
+                            <p id="cPrice">price</p>
+                            <select name="" id="qtyS">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <p id="rQ">Quantity</p>
+                            <p id="Dc">Delivery</p>
+                            <input type="checkbox">
+                            <span class="cCs">Estimated delivery: Apr 5 – Apr 9</span>
+                            <p class="cC">USPS Media Mail</p>
+                            <p id="Ac">Free</p>
+                            <input id="cInput" type="checkbox">
+
+                            <span class="cCs">Estimated delivery:Apr 5 – Apr 9</span>
+                            <p class="cC">USPS Media Mail</p>
+                            <p id="Ac">US $ 14.99</p>
+                        </div> -->
+                    </div>
+
+                </div>
+                <!-- making ship blog -->
+                <div id="shipC">
+                    <p id="shipAn">Ship to</p>
+
+                    <div id="addC">
+                        <select name="" id="selectAc">
+                            <option value="India">India</option>
+                            <option value="">United States</option>
+                            <option value="">Algeria</option>
+                            <option value="">Canada</option>
+                            <option value="">United Kingdom</option>
+                            <option value="">Colombia</option>
+                            <option value="">Chine</option>
+                            <option value="">Germany</option>
+                            <option value="">Greece</option>
+                            <option value="">Ukrain</option>
+                            <option value="">Thailand</option>
+                        </select>
+
+                        <div id="addC1">
+                            <input id="firstName" type="text" placeholder="First name">
+                            <input id="lastName" type="text" placeholder="Last name">
+                        </div>
+
+                        <div id="addC2">
+                            <input id="streetA1" type="text" placeholder="Street address">
+                            <input id="streetA2" type="text" placeholder="Street address2(optional)">
+                        </div>
+
+                        <div id="addC3">
+                            <input id="cityName" type="text" placeholder="City">
+                            <input id="stateName" type="text" placeholder="State/Province/Region">
+                            <input id="zipCode" type="text" placeholder="Zipcode">
+                        </div>
+
+                        <div id="addC4">
+                            <input id="email" type="text" placeholder="Email">
+                            <input id="confirmEmail" type="text" placeholder="Confirm email">
+                        </div>
+
+
+                        <div id="addC5">
+                            <select name="" id="selectCon">
+                                <option value="">India +91</option>
+                                <option value="">Pakistan +92</option>
+                                <option value="">Sri Lanka +94</option>
+                                <option value="">Nepal +977</option>
+                                <option value="">Bangladesh +880</option>
+                                <option value="">China +86</option>
+                                <option value="">Japan +81</option>
+                                <option value="">Korea +82</option>
+                                <option value="">Russia +7</option>
+                                <option value="">United States +1</option>
+                                <option value="">Algeria +213</option>
+                                <option value="">Canada +1</option>
+                                <option value="">United Kingdom +44</option>
+
+                            </select>
+                            <input id="mobile" type="text" placeholder="Phone number (required)">
+                        </div>
+
+                        <div id="cDone" onclick="myDone()">Done</div>
+
+
+
+                    </div>
+                </div>
+
+                <div id="hiddenAdd">
+                    <p>Ship to</p>
+                    <p id="country">India</p>
+                    <p id="fullName">Full name</p>
+                    <p id="streetAdd">streetAdd</p>
+                    <p id="city">city</p>
+                    <p id="state">state</p>
+                    <p id="zip">zip</p>
+                    <p id="emailAdd">emailAdd</p>
+                    <p id="phone">phone</p>
+                </div>
+
+                <!-- making payment gateway -->
+                <div id="payCa">
+                    <p id="PTa">Pay with</p>
+                    <div id="cardsDiv" onclick="openCard()">
+                        <div id="cardS">
+                            <input type="checkbox" id="checkOn">
+                            <div id="Cards1">
+                                <p class="Ap">Add new card</p>
+                                <div id="CardI">
+                                    <div class="yesAc"><img
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Visa.svg/1200px-Visa.svg.png"
+                                            alt=""></div>
+
+                                    <div class="yesAc">
+                                        <img src="https://vectorlogo4u.com/wp-content/uploads/2020/10/mastercard-logo-01.png"
+                                            alt="">
+                                    </div>
+
+                                    <div class="yesAc">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToh2UtL5QUUFU0oAtU-Oss9T4J6zIUcdrvv4bWfcc0Howun6YS6Mj8XAnbLBNWjfVxQy8&usqp=CAU"
+                                            alt="">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div id="DownR"><i class="fas fa-angle-down"></i></div>
+                    </div>
+
+                    <div id="cardOps">
+                        <div id="cardOps1">
+                            <i class="fas fa-lock"></i>
+                            <p>Your Payment is secure your Card detail will not share with seller</p>
+                        </div>
+                        <div id="addB1">
+                            <input id="cardNumber" type="text" placeholder="Card Number">
+                            <input id="valid" type="text" placeholder="Valid Thru">
+                            <input id="cvv" type="text" placeholder="Cvv">
+                        </div>
+                        <div id="addB2">
+                            <input id="first" type="text" placeholder="First name">
+                            <input id="last" type="text" placeholder="Last name">
+                        </div>
+
+                        <button id="doneBtn" onclick="done()">Done</button>
+                        <button id="canBtn">Cancel</button>
+
+                    </div>
+
+                    <div id="otp11">
+                        <input id="yesOTP" type="number" placeholder="Enter OTP">
+                        <button id="submit" onclick="submitFun()">Submit</button>
+                    </div>
+
+
+                    <div id="payPal">
+                        <div id="payPal1">
+                            <input type="checkbox" name="">
+                            <div><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcT5ACBaHFS40ZWYv_tuN5ZMwV-cNkEPybj93JqEW_vqxUMv5rn257x_HR_sEi97zFub8&usqp=CAU"
+                                    alt=""></div>
+                        </div>
+                        <div id="DownR"><i class="fas fa-angle-down"></i></div>
+
+                    </div>
+
+                    <div id="CashOn">
+                        <div>
+                            <input type="checkbox">
+                            <p>Cash on Delivery</p>
+                        </div>
+                        <div id="DownR"><i class="fas fa-angle-down"></i></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div id="cMainRight">
+
+                <div id="csF">
+                    <p>Subtotal</p>
+                    <p>US $ 4.09</p>
+                </div>
+                <div id="csS">
+                    <p>Shipping</p>
+                    <p>Free</p>
+                </div>
+                <hr>
+                <div id="csO">
+                    <p>Order Total</p>
+                    <p>US $ 4.09</p>
+                </div>
+
+                <div id="csC" onclick="yesConfirm()">Confirm and Pay</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    let cardD = JSON.parse(localStorage.getItem('Database')) || [];
+
+
+    let tB = document.getElementById('tB11');
+
+    function displayCart(cardD) {
+
+        //console.log(cardD);
+        // for (let i = 0; i < cardD.length; i++) {
+        //console.log(cardD[i].title);
+        tB.innerHTML = null;
+
+        cardD.forEach((ele, index) => {
+
+
+            let row = document.createElement('tr');
+
+
+            let col1 = document.createElement('td');
+
+            let divImg = document.createElement('div');
+            divImg.id = 'cartImg1';
+            let img = document.createElement('img');
+            img.src = ele.thumbnail;
+            divImg.append(img);
+            col1.append(divImg);
+
+
+            let col2 = document.createElement('td');
+
+            let divTitle = document.createElement('div');
+            divTitle.id = 'cartTDiv';
+            let title = document.createElement('p');
+            title.id = 'cartT';
+            let acc = document.createElement('p');
+            acc.id = 'cartAcc';
+            acc.innerText = "Accepeted";
+            title.innerText = ele.title;
+            divTitle.append(title, acc);
+            col2.append(divTitle);
+
+            let col3 = document.createElement('td');
+
+            let divQty = document.createElement('div');
+            divQty.id = "sQ";
+
+            let qty = document.createElement('p');
+            qty.innerText = "Qty:";
+
+            let h3 = document.createElement('h3');
+            h3.innerText = ele.qty;
+            h3.id = "RaQty"
+            // h3 = "qty";
+            // h3.class = "qty123";
+
+
+
+            divQty.append(qty, h3);
+            col3.append(divQty);
+
+            col4 = document.createElement('td');
+
+            let divPrice = document.createElement('div');
+            divPrice.id = "priceCart1";
+            let price = document.createElement('p');
+
+            if (ele.price.raw) {
+                price.innerText = "US $" + (+ele.price.raw.trim().substring(1, ele.price.raw.length)) * ele.qty;
+            }
+            else {
+                price.innerText = "US $" + (+ele.price.to.raw.trim().substring(1, ele.price.to.raw.length)) * ele.qty;
+            }
+
+            price.id = "price0011";
+
+            let shipping = document.createElement('p');
+
+            shipping.innerText = ele.shipping;
+            shipping.id = "shipping";
+
+            divPrice.append(price, shipping);
+
+            col4.append(divPrice);
+
+            row.append(col1, col2, col3, col4);
+
+            tB.append(row);
+
+
+        });
+
+    }
+
+    displayCart(cardD);
+
+
+    var flag = true;
+    function openCard() {
+
+        if (flag == true) {
+            document.getElementById("checkOn").checked = true;
+            document.getElementById("cardOps").style.display = "block";
+            flag = false;
+        }
+        else {
+            document.getElementById("checkOn").checked = false;
+            document.getElementById("cardOps").style.display = "none";
+            flag = true;
+        }
+    }
+
+
+    // cart operations
+
+    // let bas = document.getElementById("#price001");
+
+    // let final01 =[];
+
+    // for(let i=0;i<bas.length;i++)
+    // {
+    //     final01.push(+ bas[i].innerText.substring(1, bas[i].innerText.length));
+    // }
+
+    // console.log(final01);
+
+
+
+
+    function myDone() {
+
+        document.getElementById("country").innerText = "Country:" + " " + document.querySelector("#selectAc").value;
+        document.getElementById("fullName").innerText = "Full Name:" + " " + document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
+            
+        let bName =  document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
+        localStorage.setItem('fullName', JSON.stringify(bName));
+
+        document.getElementById("streetAdd").innerText = "Street Address:" + " " + document.querySelector("#streetA1").value + " " + document.querySelector("#streetA2").value;
+
+        document.getElementById("city").innerText = "City:" + " " + document.querySelector("#cityName").value;
+
+        document.getElementById("state").innerText = "State:" + " " + document.querySelector("#stateName").value;
+        document.getElementById("zip").innerText = "Zip:" + " " + document.querySelector("#zipCode").value;
+
+        document.getElementById("emailAdd").innerText = "Email Address:" + " " + document.querySelector("#email").value;
+
+        document.getElementById("phone").innerText = "Phone:" + " " + document.querySelector("#mobile").value;
+
+
+        document.getElementById("shipC").style.display = "none";
+        document.getElementById("hiddenAdd").style.display = "block";
+
+
+
+    }
+
+    // <div id="otp11">
+    //                         <input id="yesOTP" type="number" placeholder="Enter OTP">
+    //                         <button id="submit" onclick="submitFun()">Submit</button>
+
+    function done() {
+        document.getElementById("otp11").style.display = "block";
+    }
+
+
+
+
+    function submitFun() {
+        let ot = document.getElementById("yesOTP").value;
+        if (ot == "1234") {
+            document.getElementById("otp11").style.display = "none";
+            document.getElementById("hiddenAdd").style.display = "none";
+            document.getElementById("cardOps").style.display = "none";
+            alert("Payment Successful, Click on Confirm and Pay to complete the process");
+
+        }
+        else {
+            alert("Invalid OTP");
+        }
+
+    }
+
+
+
+
+
+
+    let addingKey = JSON.parse(localStorage.getItem("Database")) || [];
+
+
+
+    let sum = 0;
+    for (let i = 0; i < addingKey.length; i++) {
+
+
+        if (addingKey[i].price.raw) {
+            sum = sum + (+addingKey[i].price.raw.trim().substring(1, addingKey[i].price.raw.length)) * addingKey[i].qty;
+
+        }
+        else {
+            sum = sum + (+addingKey[i].price.to.raw.trim().substring(1, addingKey[i].price.to.raw.length)) * addingKey[i].qty;
+        }
+
+    }
+
+
+
+
+
+    let sum2 = 0;
+
+    for (let i = 0; i < addingKey.length; i++) {
+        if (addingKey[i].shipping) {
+            if (!(addingKey[i].shipping.includes("Free"))) {
+                sum2 += (+addingKey[i].shipping.trim().split("$")[1].split(" ")[0]);
+
+            }
+        }
+
+    }
+
+
+    document.querySelector("#csF > p:nth-child(2)").innerText = "US $" + sum.toFixed(2);
+
+    document.querySelector("#csS > p:nth-child(2)").innerText = "US $" + sum2.toFixed(2);
+    document.querySelector("#csO > p:nth-child(2)").innerText = "US $" + (sum + sum2).toFixed(2);
+
+
+
+
+
+
+    function yesConfirm() {
+        window.location.href = "final.html";
+    }
+
+
+
+
+    let x = sum+sum2;
+    localStorage.setItem("total",x);
+
+    let c = addingKey.length;
+    localStorage.setItem("count",c);
+
+   //let finalNameG = document.getElementById("firstName").value;
+
+   //localStorage.setItem("finalName",finalNameG);
+
+</script>

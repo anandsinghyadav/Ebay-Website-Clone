@@ -7,87 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="./sell.css">
     <style>
-        * {
-            margin: 0%;
-        }
 
-        #navbar {
-            display: flex;
-            width: 100%;
-            height: 70px;
-            background-color: white;
-            color: white;
-        }
-
-
-
-        #part1 {
-            width: 100%;
-            height: 490px;
-            background-image: url("https://i.ebayimg.com/00/s/NDk2WDE0NDA=/z/PasAAOSwqARfysBP/$_57.JPG");
-            background-repeat: no-repeat;
-            position: relative;
-
-        }
-
-        #part1>div {
-
-            width: 31%;
-            height: 260px;
-            max-height: 300px;
-            border-radius: 5px;
-            background-color: whitesmoke;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            margin-right: 2.5%;
-            margin-bottom: 10%;
-            /* text-align: center; */
-
-        }
-
-        #innerdiv>div {
-            padding: 20px 20px 0px 40px;
-        }
-
-        h2 {
-            font-size: 35px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-        }
-
-        p {
-            margin-top: 10px;
-            font-size: 18px;
-            margin-bottom: 45px;
-        }
-
-        button {
-            /* margin-top: 45px ; */
-            width: 100%;
-            border-radius: 20px;
-            background-color: royalblue;
-            border: 0px;
-            height: 35px;
-            color: white;
-
-
-        }
-        #part2{
-            padding-left: 30px;
-
-        }
     </style>
 
 </head>
 
 <body>
-    <div id="navbar">
-        navbar data
+
+
+    <div id="header">
+        <div id="leftdata">
+
+            <ul><img id="logo"
+                    src="data:image/png;base64,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"
+                    alt=""></ul>
+            <ul><a href="" style="color: black; font-weight:bold;font-size: 20px;">Selling</a></ul>
+
+
+
+        </div>
+
+        <div id="rightdata">
+
+            <ul><button class="but003">The basics</button></ul>
+            <ul><button class="but003">Business selling</button></ul>
+            <ul><button class="but003">Tips for listing</button></ul>
+            <ul><button class="but003">FAQ</button></ul>
+            <ul><button class="but003">My eBay</button></ul>
+
+        </div>
+
     </div>
 
-
+    <!-- -------------- -->
     <div id="part1">
 
 
@@ -96,18 +50,309 @@
 
             <div>
                 <h2>Make money selling on eBay</h2>
-                <p>Sell your items fast—millions of buyers are waiting.</p>
-                <a href=""> <button>List an item</button></a>
+                <p style="margin-top: 10px;font-size: 18px;margin-bottom: 45px;">Sell your items fast—millions of buyers
+                    are waiting.</p>
+                <a href="./List_an_Item.html"> <button>List an item</button></a>
             </div>
         </div>
     </div>
+    <!-- ----------------------------------------------------- -->
+    <div id="part2" style="padding-top:25px ;">
 
-    <div id="part2">
 
-        <h2>Learn the basics</h2>
+        <h1>Learn the basics</h1>
         <p>Here's what you need to know to start selling.</p>
+        <div id="scode2">
+
+
+
+            <div class="jcb">
+                <div class="r50">
+                    <h3 id="no"> 1</h3>
+                    <br>
+                    <h3>List your item</h3>
+                    <br>
+                    <p style="font-size: 15px; color: gray;">You can list new or used items and pay a final value fee
+                        only when it sells.`
+                        <a href="" style="color: blue;  text-decoration: underline;">Learn more about <br> fees .</a>
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="jcb">
+
+                <div class="r50">
+                    <h3 id="no"> 2</h3>
+                    <br>
+                    <h3>Get seller protection</h3>
+                    <br>
+                    <p style="font-size: 15px; color: gray;">You’re protected by policies, monitoring, and <br> our
+                        customer service team.</p>
+
+
+                </div>
+
+            </div>
+            <div class="jcb">
+
+
+                <div class="r50">
+                    <h3 id="no"> 3</h2>
+                        <br>
+
+                        <h3>Choose when you get paid</h3>
+                        <br>
+                        <p style="font-size: 15px; color: gray; "> You can schedule either daily or weekly <br> payouts,
+                            and we'll deposit your earnings <br>
+                            directly
+                            into your bank
+                            account. </p>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="jcb">
+
+
+                <div class="r50">
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+        <br>
+        <br>
     </div>
 
+    </div>
+    <!-- ---------------------------------------------- -->
+    <div id="part4">
+        <div>
+            <h1>Selling as a business? We make <br> it easy</h1> <br>
+            <p>We’ve got powerful tools to help you manage your inventory and orders, track your sales, and build your
+                brand.</p> <br>
+            <a href=""> <button id="a4" style="background-color: white; color: blue;">Learn more </button></a>
+
+        </div>
+        <div id="part4img">
+
+            <img style="width:100%;
+            height: 100%; border-radius: 6px;"
+                src="https://i.ebayimg.com/00/s/NjY3WDE2MDA=/z/74IAAOSw7K9gY8N0/$_57.JPG" alt="">
+
+        </div>
+
+
+    </div>
+    <div id="part5" style="padding-left: 18px;">
+        <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        ">Create a great listing</h1> <br>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color:gray;">Here’s five ways to set yourself up for success.</p> <br>
+
+
+        <div id="code56">
+            <div class="stop25" style="background-color: bisque;color: maroon;">
+                <div class="r1">
+                    <h3 class="u1">Write a standout title</h3>
+                    <br>
+                    <br>
+                    <ul>
+                        <li>We’ll recommend search terms that buyers often use, so be sure br
+                            to add these in the title.</li>
+                        <li>Avoid all caps and focus on specific details like brand, model, <br> size, and color.</li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="stop25" style="background-color: rgb(255, 244, 229); color: saddlebrown;">
+
+                <div class="r1">
+                    <h3 class="u1">Take high-quality photos</h3>
+                    <br>
+                    <br>
+                    <ul>
+                        <li>Snap your items from multiple angles in a well-lit place, and <br> capture any blemishes for
+                            transparency.</li>
+                        <li>On the eBay app, you can clean up your images and add a white <br> background.</li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="stop25" style="background-color:paleturquoise ; color: midnightblue;">
+
+
+                <div class="r1">
+                    <h3 class="u1">Pick a purchase format</h3>
+                    <br>
+                    <br>
+                    <ul>
+                        <li>If you want to sell your item quickly, Buy it Now is probably the <br> best format for you.
+                        </li>
+                        <li>Otherwise, if you want to try your luck and shoot for the best <br> possible price, choose
+                            Auction.</li>
+                    </ul>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="stop25" style="background-color:mistyrose ; color: indigo;">
+
+                <div class="r1">
+                    <h3 class="u1">Set the right price</h3>
+                    <br>
+                    <br>
+                    <ul>
+                        <li>We will recommend a price based on recent sales of similar items. </li>
+                        <li>You can even watch how other sellers are pricing their items, or <br> use Best Offer to
+                            negotiate and sell faster.</li>
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="stop25" style="background-color: rgb(58, 236, 153);color: rgb(32, 95, 60);">
+
+                <div class="r1">
+                    <h3 class="u1">Ship with ease</h3>
+                    <br>
+                    <br>
+                    <ul>
+                        <li>We provide recommendations for delivery, but to save on <br> shipping, use an eBay delivery
+                            label.</li>
+                        <li>Plus, if you’re selling locally, you can also offer Local Pickup.</li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+    <!-- ------------last div---- -->
+    <div id="lsdiv">
+        <div>
+            <h2>You've got this. <br> We've got your back.</h2> <br>
+            <button><a href="" style="color: white;">List an item</a></button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- ---------footer part----- -->
+    <footer>
+
+        <div id="footer">
+
+            <div id="F1">
+
+                <ul style="list-style-type:none;font-size: small ; color: gray;">
+                    <h3>Selling on eBay</h3>
+                    <br>
+                    <li> <a href="">Seller Center</a> </li>
+                    <li> <a href="">Sell for charity</a> </li>
+                    <li> <a href="">Business tools</a> </li>
+
+
+
+                </ul>
+
+            </div>
+            <div id="F2">
+
+                <ul style="list-style-type:none;font-size: small;color: gray;">
+                    <h3>Support</h3>
+                    <br>
+                    <li> <a href="">Customer service</a> </li>
+                    <li> <a href="">Seller policies</a> </li>
+                    <li> <a href="">Community</a> </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        <div id="flast">
+
+            <div>
+                <p style="font-size: small; padding-left:40px ;">Copyright © 1995-2022 eBay Inc. All Rights Reserved. <a
+                        href="" style="color:gray;"> Accessibility, User Agreement, Privacy,
+                        Cookies, Do not sell my personal information and AdChoice</a></p>
+
+            </div>
+
+            <div id="fm">
+
+                <img src="https://ir.ebaystatic.com/rs/v/acxp0mbuba3zva1qr31idsmitmi.png" alt="">
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
 </body>
 
 </html>
+
+<script>
+
+    document.querySelector("#rightdata > ul:nth-child(2) > button").addEventListener("click", function () {
+        window.scrollBy(0, 908)
+    })
+
+    document.querySelector("#rightdata > ul:nth-child(1) > button").addEventListener("click", function () {
+        window.scrollBy(0, 557)
+
+    })
+    document.querySelector("#rightdata > ul:nth-child(3) > button").addEventListener("click",function()
+    {
+        window.scroll(0,1200)
+    })
+ 
+
+
+</script>
