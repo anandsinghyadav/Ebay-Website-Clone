@@ -499,6 +499,33 @@
 </body>
 </html>
 <script>
+    let shubham001 = document.querySelector("#sc23 > input[type=text]")
+
+    shubham001.addEventListener("keypress", function (event){
+        if(event.code == "Enter")
+        {
+            localStorage.setItem("search_term",shubham001.value);
+            window.location.href = "MahiArt.html";
+
+        }
+
+
+        
+    })
+
+    document.querySelector("#sc2 > button").addEventListener("click", function (event){
+        
+        
+            localStorage.setItem("search_term",shubham001.value)
+            window.location.href="MahiArt.html"
+        
+
+
+        
+    })
+
+</script>
+<script>
     
 
 
@@ -568,4 +595,4 @@
     {console.log(namefornav)
     document.querySelector("#sc111").textContent = namefornav
     }
-</script>   
+</script>
