@@ -329,10 +329,10 @@
             let price = document.createElement('p');
 
             if (ele.price.raw) {
-                price.innerText = "US $" + (+ele.price.raw.trim().substring(1, ele.price.raw.length)) * ele.qty;
+                price.innerText = "US $" + ((+ele.price.raw.trim().substring(1, ele.price.raw.length)) * ele.qty).toFixed(2);
             }
             else {
-                price.innerText = "US $" + (+ele.price.to.raw.trim().substring(1, ele.price.to.raw.length)) * ele.qty;
+                price.innerText = "US $" + ((+ele.price.to.raw.trim().substring(1, ele.price.to.raw.length)) * ele.qty).toFixed(2);
             }
 
             price.id = "price0011";
@@ -394,8 +394,8 @@
 
         document.getElementById("country").innerText = "Country:" + " " + document.querySelector("#selectAc").value;
         document.getElementById("fullName").innerText = "Full Name:" + " " + document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
-            
-        let bName =  document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
+
+        let bName = document.querySelector("#firstName").value + " " + document.querySelector("#lastName").value;
         localStorage.setItem('fullName', JSON.stringify(bName));
 
         document.getElementById("streetAdd").innerText = "Street Address:" + " " + document.querySelector("#streetA1").value + " " + document.querySelector("#streetA2").value;
@@ -500,11 +500,11 @@
 
 
 
-    let x = sum+sum2;
-    localStorage.setItem("total",x);
+    let x = sum + sum2;
+    localStorage.setItem("total", x);
 
     let c = addingKey.length;
-    localStorage.setItem("count",c);
+    localStorage.setItem("count", c);
 
    //let finalNameG = document.getElementById("firstName").value;
 
