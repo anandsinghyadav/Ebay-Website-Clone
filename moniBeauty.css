@@ -13,6 +13,8 @@
 
 #center {
     display: flex;
+    /* border: 1px solid green; */
+    justify-content: center;
 }
 
 .image {
@@ -31,7 +33,7 @@
     width: 100%;
 }
 
-#one,
+
 #two {
     margin-top: 5%;
 
@@ -40,6 +42,19 @@
     display: flex;
     gap: 5%
 }
+#one{
+
+    margin-top: 5%;
+
+    /* padding-bottom: 15px; */
+
+    margin-right: 5%;
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 5%;
+}
+
+
 
 #bottom {
     /* border: 1px solid black; */
@@ -48,7 +63,7 @@
 #b2 {
     display: flex;
     margin-top: 5%;
-  
+
     margin-right: 5%;
     /* border: 1px solid black; */
     display: flex;
@@ -71,7 +86,7 @@
 
 #b1 {
     display: flex;
- 
+
     margin-top: 5%;
 
 }
@@ -169,8 +184,8 @@ li {
 
 #para{
    /* border: 1px solid green; */
-   margin-left: 3%;
-   line-height: 40px;
+margin-left: 3%;
+line-height: 40px;
 
 }
 #para>p{
@@ -181,6 +196,67 @@ li {
 #cat > ul{
     width: 300px;
 }
+
+#rightArC {
+
+    position: absolute;
+    right: 0;
+    font-size: 50px;
+    margin-right: 15%;
+    margin-top: -20px;
+    width: 40px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: rgb(224, 220, 220);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+#leftArC {
+
+    position: absolute;
+    left: 0;
+    font-size: 50px;
+    margin-left: 20%;
+    margin-top: -180px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 220, 220);
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 5px;
+}
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px rgb(255, 255, 255); 
+border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+background: rgb(184, 184, 184); 
+border-radius: 50px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+background: #5a5959; 
+}
+
+
+/* #one>div{
+margin-left: 5%;
+} */
 body {
     margin: 0%;
     }
