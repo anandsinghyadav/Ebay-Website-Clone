@@ -442,4 +442,17 @@ import { footer } from "./footer/footer.js"
     }
 
 
+    let flagfornav = JSON.parse(localStorage.getItem("flagforindex")) 
+    let logindata = JSON.parse(localStorage.getItem("loginData"))
+    let namefornav = logindata[0].name
+
+
+
+    console.log(flagfornav)
+    if(flagfornav == true)
+    {console.log(namefornav)
+    document.querySelector("#sc111").textContent = namefornav
+    }
+
+
 </script>
