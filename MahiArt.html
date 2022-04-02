@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style/MahiArt.css">
+<script src="MSdata.js"></script>
+<style>
+    #appendhere {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        width: 100%;
+    }
+
+    #sold {
+        color: red
+    }
+
+    #artimage {
+        width: 100%;
+        height: 250px;
+
+    }
+
+    #b2 {
+        width: 90%;
+        /* border: 1px solid red; */
+    }
+
+    #div1 {
+        /* border: 0.01px solid rgb(125, 125, 141); */
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        box-sizing: border-box;
+        padding: 3%;
+    }
+
+    #price {
+        font-weight: bold;
+
+    }
+
+    #sprice {
+        color: rgb(100, 96, 96)
+    }
+
+    #spn {
+        font-size: 10px;
+        font-family: "Market Sans", Arial, sans-serif;
+    }
+
+    #name {
+        height: 120px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div id="pagediv">
+        <div id="div">abc</div>
+
+        <h1 id="name"></h1>
+        <div id="center">
+
+            <div id="left">
+                <h1>Art Supplies</h1>
+                <h4>Shop by Category</h4>
+                <p>Crafts</p>
+                <!-- dropdown menu -->
+
+                <div id="cat">
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <h2>Shop By Category</h2>
+                <div id="one">
+
+
+                    <!-- <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/jIMAAOSwuTxV-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Painting Supplies</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/G1AAAOSw9r1V-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Drawing & Lettering</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/piQAAOSwNP5dU~2R/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Printmaking</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/0vMAAOSwEetV-ohV/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Collage Supplies</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/eOUAAOSwQPlV-ohS/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Instruction Books and Media</p>
+                    </div> -->
+
+
+
+                </div>
+
+                <div id="bottom">
+
+                    <h2>limited time deals</h2>
+
+                    <div id="b1">
+
+                        <div id="sizeDiv">
+                            <div>
+                                <p class="hov">perfect choice</p>
+                            </div>
+                            <div>
+                                <p class="hov">elected</p>
+                            </div>
+                            <div>
+                                <p class="hov">see</p>
+                            </div>
+                            <div>
+                                <p class="hov">free coupen</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="b2">
+
+                        <div id="appendhere"></div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div id="footerpart"></div>
+
+</body>
+
+
+</html>
+
+<script type="module">
+
+
+
+    import { footer } from "./footer/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+
+
+
+
+<script>
+
+
+
+    function addFun(value) {
+
+        if (value == '1') {
+            localStorage.setItem("search_term", "Painting Supplies");
+
+            window.location.href = "CatArt.html";
+        }
+        else if (value == '2') {
+            localStorage.setItem("search_term", "Drawing & Lettering");
+            window.location.href = "CatArt.html";
+        }
+        else if (value == '3') {
+            localStorage.setItem("search_term", "Printmaking");
+            window.location.href = "CatArt.html";
+        }
+        else if (value == '4') {
+            localStorage.setItem("search_term", "Collage Supplies");
+            window.location.href = "CatArt.html";
+        }
+
+        else if (value == '5') {
+            localStorage.setItem("search_term", "Instruction Books and Media");
+            window.location.href = "CatArt.html";
+        }
+
+    }
+
+    //localStorage.setItem("search_term", "mobile");
+    var arr = JSON.parse(localStorage.getItem("items"));
+    console.log(arr);
+
+    // console.log(data)
+
+
+
+    var dataArr = arr;
+
+    console.log(dataArr)
+
+
+    dataArr.forEach(function (el) {
+
+        var div1 = document.createElement("div")
+        div1.setAttribute("id", "div1")
+
+
+        let image = document.createElement("img")
+        image.src = el.thumbnail
+        image.setAttribute("id", "artimage")
+
+        let spn = document.createElement("p")
+        spn.innerText = el.spn;
+        spn.setAttribute("id", "spn")
+
+        let name = document.createElement("p")
+        name.innerText = el.title;
+        name.setAttribute("id", "name")
+
+        price = document.createElement("p")
+        if (el.price.raw) {
+            price.innerText = el.price.raw;
+        } else {
+            price.innerText = el.price.to.raw;
+        }
+
+        price.setAttribute("id", "price")
+
+        sprice = document.createElement("p")
+        sprice.innerText = el.shipping;
+        sprice.setAttribute("id", "sprice")
+
+        sold = document.createElement("p")
+        if (el.extensions) {
+            sold.innerText = el.extensions[el.extensions.length - 1];
+        } else {
+            sold.innerText = "";
+        }
+
+        sold.setAttribute("id", "sold")
+
+
+        div1.append(image, spn, name, price, sprice, sold)
+
+        document.getElementById("appendhere").append(div1)
+
+
+    });
+
+
+
+</script>
