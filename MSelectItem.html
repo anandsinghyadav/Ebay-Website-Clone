@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style/MSmartwatch.css">
+<style>
+
+
+</style>
+
+<body>
+    <div id="pagediv">
+        <div id="div">abc</div>
+
+
+        <h1 id="name"></h1>
+        <div id="center">
+
+            <div id="left">
+                <h4>Shop by Category</h4>
+
+                <!-- dropdown menu -->
+
+                <div id="cat">
+
+
+                    <ul>
+                        <li class="hov" id="namehere"></li>
+                        <li class="hov">Childern's Fragrances</li>
+                        <li class="hov">Women's Fragrances</li>
+                        <li class="hov">Unisex Fragrances</li>
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <h2>Shop By Category</h2>
+                <div id="one">
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/NtEAAOSwgY1fsjRE/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Dior</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/LQAAAOSwWSZfsjRh/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Giorgio Armani</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/SMkAAOSwXwBfsjQv/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Calvin Klein</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/0akAAOSw9wVfsjRR/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Versace</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/7oUAAOSw~OVW0vOT/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Dolce & Gabba</p>
+                    </div>
+
+
+
+                </div>
+
+                <div id="bottom">
+
+                    <h2>Shop by Size Type</h2>
+
+                    <div id="b1">
+
+                        <div id="sizeDiv">
+                            <div>
+                                <p class="hov">Regular Size</p>
+                            </div>
+                            <div>
+                                <p class="hov">Tester</p>
+                            </div>
+                            <div>
+                                <p class="hov">Travel Size</p>
+                            </div>
+                            <div>
+                                <p class="hov">Sample Size</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="b2">
+
+                        <h1></h1>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <div id="footerpart"></div>
+
+</body>
+
+
+</html>
+
+<script type="module">
+
+
+
+    import { footer } from "./footer2/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+<script>
+
+    var getName = localStorage.getItem("search_term")
+
+    console.log(getName)
+
+    document.getElementById("name").innerText = getName
+
+    document.getElementById("namehere").innerText = getName
+
+
+</script>
+
+<script src="./monidata.js">
+
+</script>

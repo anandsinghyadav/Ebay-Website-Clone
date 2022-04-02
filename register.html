@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1cb0bb75dc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="shubham.css">
+</head>
+<body>
+    <div id="shuconatainer">
+<div id="shuc1">
+    <img onclick="window.location.href='index.html'" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1200px-EBay_logo.svg.png" alt="">
+    <h3>Already a member? <a href="signin.html">Sing in</a></h3>
+</div>
+
+
+<div id="shuc2">
+    <div id="shuc21">
+        <div><p>i</p></div>
+
+    </div>
+    <div id="shuc22">
+<p>To buy and sell on <a href="index.html" style="text-decoration: none;"><b>www.ebay.com</b></a> or other eBay sites internationally, 
+    existing users can login using their credentials or new
+    users can register an eBay account on ebay.in. Kindly note you can no longer buy or sell on eBay.in.</p>
+    </div>
+</div>
+
+<div id="shuc3">
+    <h1>
+        Create an account
+    </h1>
+    
+</div>
+<div id="shuc4">
+    <input type="radio">
+    <spam><p>Personal account</p></spam> 
+    <input type="radio">
+    <p>Business account</p>
+    <i class="fa-solid fa-circle-info"></i>
+</div>
+
+<form id="shuc5">
+    <input type="text" placeholder="Frist name">
+    <input type="text" placeholder="Last name">
+    <input type="email" name="" id="" placeholder="Email">
+    <input type="password" placeholder="Password" required>
+    <p>By clicking Register,
+you agree that you have read and accepted our <a href="">User Agreement</a>,
+    <a href="">User Privacy Notice</a>, <a href="">Rules and Policies</a>.</p>
+        <button type="submit">
+            <h2><b> Register</b></h2>
+        </button>
+</form>
+<hr>
+<div id="shuc6">
+    <p>Copyright © 1995-2022 eBay Inc. All Rights Reserved.
+    Accessibility, User Agreement, Privacy, Cookies, Do not sell my personal information and AdChoice</p>
+</div>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+document.querySelector("#shuc5").addEventListener("submit", (event)=>{
+
+event.preventDefault()
+var name = document.querySelector("#shuc5 > input[type=text]:nth-child(1)").value
+
+let email = document.querySelector("#shuc5 > input[type=email]:nth-child(3)").value
+let password = document.querySelector("#shuc5 > input[type=password]:nth-child(4)").value
+console.log(name,email,password)
+
+
+let obj={
+name,
+email,
+password
+}
+console.log(obj)
+let arr = []
+
+
+localStorage.removeItem("loginData")
+arr.push(obj)
+localStorage.setItem("loginData", JSON.stringify(arr));
+window.location.href ="index.html"
+
+alert("Registeration Succuesfully ")
+})
+</script>

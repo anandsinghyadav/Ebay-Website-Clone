@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+
+
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="moniCat.css">
+<style>
+ 
+</style>
+
+<body>
+    <div id="pagediv">
+        <div id="div">abc</div>
+
+        
+        <h1 id="nameTitle"></h1>
+        <div id="center">
+
+            <div id="left">
+                <h4>Shop by Category</h4>
+                <p>Art Supplies</p>
+                <!-- dropdown menu -->
+
+                <div id="cat">
+
+
+                    <ul>
+                        <li class="hov" id="namehere"></li>
+                        <li class="hov">Airbrushing Supplies</li>
+                        <li class="hov">Artists Brushes</li>
+                        <li class="hov">Canvas & Canvas Boards</li>
+
+                        <li class="hov">Easels</li>
+                        <li class="hov">Encaustic Painting</li>
+                        <li class="hov">Paint</li>
+
+                        <li class="hov">Paint by Numbers Kits</li>
+                        <li class="hov">Paint Mediums & Varnishes</li>
+                        <li class="hov">Primers & Sealers</li>
+
+                        <li class="hov">Painting Tools & Accessories</li>
+                        <li class="hov">Paint Mediums & Varnishes</li>
+                        <li class="hov">Other Painting Supplies</li>
+
+                    </ul>
+
+
+
+
+                </div>
+            </div>
+
+            <div id="right">
+                <h2>Shop By Category</h2>
+                <div id="one">
+
+
+                    <div class="image" onclick="addFun('2')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/GSUAAOSwlndZJXh7/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Cranksets</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('1')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/o7sAAOSwzqFY-GhU/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Trek</p>
+                    </div>
+
+
+                    <div class="image" onclick="addFun('3')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/nGsAAOSwjL5ZJXh7/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Lights & Reflectors</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('4')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/C5YAAOSwqG5dH5ST/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Tires</p>
+                    </div>
+
+                    <div class="image" onclick="addFun('5')">
+                        <img class="img" src="https://i.ebayimg.com/thumbs/images/g/NNkAAOSwG~Re8Iks/s-l225.webp"
+                            alt="" />
+                        <p class="hov">Towbar Mount</p>
+                    </div>
+
+
+
+                </div>
+
+                <div id="bottom">
+                    
+                    <h2>Shop by Size Type</h2>
+
+                    <div id="b1">
+
+                                <div id="sizeDiv">
+                                    <div><p class="hov">Regular Size</p></div>
+                                    <div><p class="hov">Tester</p></div>
+                                    <div><p class="hov">Travel Size</p></div>
+                                    <div><p class="hov">Sample Size</p></div>
+                                </div>
+
+                    </div>
+
+                    <div id="b2">
+                        <div id="appendhere"></div>
+                        <h1></h1>
+
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footerpart"></div>
+
+</body>
+
+
+</html>
+
+<script type="module">
+
+
+
+import { footer } from "./footer/footer.js"
+
+    var x = footer()
+
+    document.getElementById("footerpart").innerHTML = x
+</script>
+
+<script>
+
+
+
+
+var getName = localStorage.getItem("search_term")
+
+var getItems = JSON.parse(localStorage.getItem("items"))
+
+// console.log(getName)
+var items = getItems[0]
+
+console.log(getItems)
+
+document.getElementById("nameTitle").innerText = getName
+
+document.getElementById("namehere").innerText = getName
+
+
+
+getItems.forEach(function(el){
+
+
+    // document.getElementById("appendhere")=null
+
+var div1 = document.createElement("div")
+div1.setAttribute("id","div1")
+
+
+var arr = []
+
+div1.addEventListener("click",function(){
+
+arr.push(el)
+
+localStorage.setItem("Database",JSON.stringify(arr))
+
+window.location.href = "review.html"
+})
+
+
+
+let image = document.createElement("img")
+image.src = el.thumbnail
+image.setAttribute("id","artimage")
+
+let spn = document.createElement("p")
+spn.innerText = el.location;
+spn.setAttribute("id","spn")
+
+if(el.location==undefined)
+{
+    spn.innerText = "from United States"
+}
+
+let name = document.createElement("p")
+name.innerText = el.title;
+name.setAttribute("id","name")
+
+
+price = document.createElement("p")
+price.innerText = el.price.raw
+price.setAttribute("id","price")
+
+if(el.price.raw==undefined)
+{
+    price.innerText = "$88"
+}
+
+
+sold = document.createElement("p")
+sold.innerText = el.extensions[1]
+sold.setAttribute("id","sold")
+
+if(el.extensions[1]==undefined)
+{
+    sold.innerText = "100+ sold"
+}
+
+console.log(name,price,image,spn)
+
+div1.append(image,name,price,sold,spn)
+
+document.getElementById("appendhere").append(div1)
+
+});
+</script>
+
+<script src="./monidata.js">
+
+</script>

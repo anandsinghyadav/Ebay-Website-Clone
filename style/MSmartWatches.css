@@ -22,8 +22,11 @@
 }
 
 #pmitemImages {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    overflow-x: scroll;
+    height: 220px;
+    width: 1000px;
+    gap: 30px;
 }
 
 .mcategoryul {
@@ -39,16 +42,17 @@
     font-size: 14px;
     font-family: sans-serif;
     height: 182px;
-    margin: 5px;
+    width: 143px;
 }
 
 .mitemImages:hover {
     border: 1px solid gray;
+    background-color: lavender;
 }
 
 .mitemImages>img {
     max-width: 138px;
-    display: block;
+    /* display: block; */
     margin: auto;
 }
 
@@ -63,13 +67,30 @@
     color: #333333;
 }
 
-/* #footerdiv{
+/* #footerdiv {
     margin: auto;
     display: flex;
     gap: 15px;
 }
-#pfooterdiv{
+
+#pfooterdiv {
     padding: 50px;
     height: 200px;
     border: 1px #333333 solid;
 } */
+
+#mscrollleft {
+    position: relative;
+    top: 100px;
+    background-color: blanchedalmond;
+    display: inline;
+}
+
+#mscrollright {
+    position: relative;
+    top: 100px;
+    left: 900px;
+    background-color: blanchedalmond;
+    display: inline;
+
+}
