@@ -86,7 +86,7 @@
 
 let logindata = JSON.parse(localStorage.getItem("loginData"))
 
-console.log(logindata[0].name)
+// console.log(logindata[0].name)
 
 let signEmail = document.querySelector("#shc61 > input[type=text]")
 
@@ -94,7 +94,10 @@ let continuebtn = document.querySelector("#shc61 > button:nth-child(2)")
 continuebtn.addEventListener("click",(event)=>{
 event.preventDefault()
 let flag = false;
-if(logindata[0].email === signEmail.value)
+if(logindata == undefined){
+alert("Invalide Email Id")
+}
+else if(logindata[0].email === signEmail.value)
 {
     flag = true;
     localStorage.removeItem("flagforindex");
