@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
+<style>
 
 
-    </style>
+</style>
 
 <head>
     <meta charset="UTF-8">
@@ -15,16 +15,19 @@
 </head>
 <link rel="stylesheet" href="moniCat.css">
 <style>
-    #div1{
+    #div1 {
         /* border: 1px solid red; */
     }
-    .image{
+
+    .image {
         /* border: 1px solid black; */
 
         height: 350px;
     }
 
-    
+    #div1>image {
+        max-width: 400px;
+    }
 </style>
 
 <body>
@@ -138,9 +141,9 @@
     </div>
 
     <div id="pagediv">
-    
 
-        
+
+
         <h1 id="nameTitle"></h1>
         <div id="center">
 
@@ -160,9 +163,9 @@
 
                         <li class="hov">Acupuncture</li>
                         <li class="hov">Magnetic Therapy</li>
- 
 
-                    
+
+
 
                         <li class="hov">Vitamins & Lifestyle Supplements</li>
                         <li class="hov">Weight Management</li>
@@ -218,17 +221,25 @@
                 </div>
 
                 <div id="bottom">
-                    
+
                     <h2>Shop by Size Brand</h2>
 
                     <div id="b1">
 
-                                <div id="sizeDiv">
-                                    <div><p class="hov">Jeunesse</p></div>
-                                    <div><p class="hov">Unicity</p></div>
-                                    <div><p class="hov">Ancient Nutrition</p></div>
-                                    <div><p class="hov">GNC</p></div>
-                                </div>
+                        <div id="sizeDiv">
+                            <div>
+                                <p class="hov">Jeunesse</p>
+                            </div>
+                            <div>
+                                <p class="hov">Unicity</p>
+                            </div>
+                            <div>
+                                <p class="hov">Ancient Nutrition</p>
+                            </div>
+                            <div>
+                                <p class="hov">GNC</p>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -237,13 +248,13 @@
                         <h1></h1>
 
                     </div>
-                    </div>
-
                 </div>
 
             </div>
 
         </div>
+
+    </div>
 
     </div>
 
@@ -255,10 +266,10 @@
 </html>
 
 <script type="module">
+    //append
 
 
-
-import { footer } from "./footer/footer.js"
+    import { footer } from "./footer/footer.js"
 
     var x = footer()
 
@@ -270,99 +281,96 @@ import { footer } from "./footer/footer.js"
 
 
 
-var getName = localStorage.getItem("search_term")
+    var getName = localStorage.getItem("search_term")
 
-var getItems = JSON.parse(localStorage.getItem("items"))
+    var getItems = JSON.parse(localStorage.getItem("items"))
 
-// console.log(getName)
-var items = getItems[0]
+    // console.log(getName) forEach
+    var items = getItems[0]
 
-console.log(getItems)
+    console.log(getItems)
 
-document.getElementById("nameTitle").innerText = getName
+    document.getElementById("nameTitle").innerText = getName
 
-document.getElementById("namehere").innerText = getName
-
-
-
-getItems.forEach(function(el){
-
-
-    // document.getElementById("appendhere")=null
-
-var div1 = document.createElement("div")
-div1.setAttribute("id","div1")
-
-var arr  = []
-
-div1.addEventListener("click",function(){
-
-    arr.push(el)
-
-    localStorage.setItem("Database",JSON.stringify(arr))
-
-    window.location.href = "review.html"
-})
+    document.getElementById("namehere").innerText = getName
 
 
 
-let image = document.createElement("img")
-image.src = el.thumbnail
-image.setAttribute("id","artimage")
-
-let spn = document.createElement("p")
-spn.innerText = el.location;
-spn.setAttribute("id","spn")
-
-if(el.location==undefined)
-{
-    spn.innerText = "from United States"
-}
-
-let name = document.createElement("p")
-name.innerText = el.title;
-name.setAttribute("id","name")
+    getItems.forEach(function (el) {
 
 
-price = document.createElement("p")
-price.innerText = el.price.raw
-price.setAttribute("id","price")
+        // document.getElementById("appendhere")=null
 
-if(el.price.raw==undefined)
-{
-    price.innerText = "$88"
-}
+        var div1 = document.createElement("div")
+        div1.setAttribute("id", "div1")
 
+        var arr = []
 
-sold = document.createElement("p")
-sold.innerText = el.extensions[1]
-sold.setAttribute("id","sold")
+        div1.addEventListener("click", function () {
 
-if(el.extensions[1]==undefined)
-{
-    sold.innerText = "100+ sold"
-}
+            arr.push(el)
 
-console.log(name,price,image,spn)
+            localStorage.setItem("Database", JSON.stringify(arr))
 
-div1.append(image,name,price,sold,spn)
-
-document.getElementById("appendhere").append(div1)
-
-});
+            window.location.href = "review.html"
+        })
 
 
 
-let flagfornav = JSON.parse(localStorage.getItem("flagforindex")) 
+        let image = document.createElement("img")
+        image.src = el.thumbnail
+        image.setAttribute("id", "artimage")
+
+        let spn = document.createElement("p")
+        spn.innerText = el.location;
+        spn.setAttribute("id", "spn")
+
+        if (el.location == undefined) {
+            spn.innerText = "from United States"
+        }
+
+        let name = document.createElement("p")
+        name.innerText = el.title;
+        name.setAttribute("id", "name")
+
+
+        price = document.createElement("p")
+        price.innerText = el.price.raw
+        price.setAttribute("id", "price")
+
+        if (el.price.raw == undefined) {
+            price.innerText = "$88"
+        }
+
+
+        sold = document.createElement("p")
+        sold.innerText = el.extensions[1]
+        sold.setAttribute("id", "sold")
+
+        if (el.extensions[1] == undefined) {
+            sold.innerText = "100+ sold"
+        }
+
+        console.log(name, price, image, spn)
+
+        div1.append(image, name, price, sold, spn)
+
+        document.getElementById("appendhere").append(div1)
+
+    });
+
+
+
+    let flagfornav = JSON.parse(localStorage.getItem("flagforindex"))
     let logindata = JSON.parse(localStorage.getItem("loginData"))
     let namefornav = logindata[0].name
 
 
 
     console.log(flagfornav)
-    if(flagfornav == true)
-    {console.log(namefornav)
-    document.querySelector("#sc111").textContent = namefornav
+    if (flagfornav == true) {
+        console.log(namefornav)
+        document.querySelector("#sc111").textContent = namefornav
     }
 </script>
 
@@ -374,11 +382,11 @@ let flagfornav = JSON.parse(localStorage.getItem("flagforindex"))
 <script>
     let cat = JSON.parse(localStorage.getItem('yourCart')) || 0;
 
-let xA = document.getElementById('cartData');
-xA.innerHTML = cat.length;
-xA.addEventListener('click', () => {
-    window.location.href = 'cart.html';
-});
+    let xA = document.getElementById('cartData');
+    xA.innerHTML = cat.length;
+    xA.addEventListener('click', () => {
+        window.location.href = 'cart.html';
+    });
     let shubham001 = document.querySelector("#sc23 > input[type=text]")
 
     shubham001.addEventListener("keypress", function (event) {
@@ -403,4 +411,38 @@ xA.addEventListener('click', () => {
 
     })
 
+</script>
+<script>
+    let catmm = document.querySelectorAll(".hov");
+
+    for (let i = 0; i < catmm.length; i++) {
+        catmm[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", catmm[i].innerText);
+            window.location.href = "MahiArt.html";
+        })
+    }
+    let catmm2 = document.querySelectorAll(".image");
+    for (let i = 0; i < catmm2.length; i++) {
+        catmm2[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", catmm2[i].children[1].innerText);
+            window.location.href = "MahiArt.html";
+        })
+    }
+</script>
+<script>
+    let catmm = document.querySelectorAll(".hov");
+
+    for (let i = 0; i < catmm.length; i++) {
+        catmm[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", catmm[i].innerText);
+            window.location.href = "MahiArt.html";
+        })
+    }
+    let catmm2 = document.querySelectorAll(".image");
+    for (let i = 0; i < catmm2.length; i++) {
+        catmm2[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", catmm2[i].children[1].innerText);
+            window.location.href = "MahiArt.html";
+        })
+    }
 </script>

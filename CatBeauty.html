@@ -10,19 +10,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
-        <script src="https://kit.fontawesome.com/1cb0bb75dc.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1cb0bb75dc.js" crossorigin="anonymous"></script>
+
+    <script src="./MSdata.js">
+
+    </script>
 </head>
 
 <link rel="stylesheet" href="moniCat.css">
 <style>
-    
-#one{
-      /* border: 1px solid green; */
-    width: 80%;
-    padding-bottom: 15px;
-}
-
-
+    #one {
+        /* border: 1px solid green; */
+        width: 80%;
+        padding-bottom: 15px;
+    }
 </style>
 
 <body>
@@ -142,7 +143,7 @@
 
 
     <div id="pagediv">
-    
+
 
         <h1 id="nameTitle"></h1>
 
@@ -384,17 +385,13 @@
     });
 </script>
 
-<script src="./monidata.js">
-
-</script>
 
 <script>
-    
+
     let eee;
     let slider = document.querySelector("#one");
-        function rightOne()
-        {
-    
+    function rightOne() {
+
         console.log("yes");
         eee = 100;
         let s = setInterval(() => {
@@ -406,9 +403,8 @@
         }, 5);
     };
 
-        function leftOne()
-    {
-    
+    function leftOne() {
+
         console.log("yes");
         eee = 100;
         let s = setInterval(() => {
@@ -421,14 +417,14 @@
     };
 
 
- 
+
 </script>
 
 
 <script>
 
 
-let cat = JSON.parse(localStorage.getItem('yourCart')) || 0;
+    let cat = JSON.parse(localStorage.getItem('yourCart')) || 0;
 
     let xA = document.getElementById('cartData');
     xA.innerHTML = cat.length;
@@ -459,4 +455,21 @@ let cat = JSON.parse(localStorage.getItem('yourCart')) || 0;
 
     })
 
+</script>
+<script>
+    let catmm = document.querySelectorAll(".hov");
+
+    for (let i = 0; i < catmm.length; i++) {
+        catmm[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", catmm[i].innerText);
+            window.location.href = "MahiArt.html";
+        })
+    }
+    let catmm2 = document.querySelectorAll(".image");
+    for (let i = 0; i < catmm2.length; i++) {
+        catmm2[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", catmm2[i].children[1].innerText);
+            window.location.href = "MahiArt.html";
+        })
+    }
 </script>
