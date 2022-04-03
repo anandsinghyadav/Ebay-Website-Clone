@@ -25,52 +25,123 @@
 </style>
 
 <body>
-
-    
     <div id="sc1">
         <div id="sc11">
-        <h4 id="sc111">Hi! <a href="signin.html">Sign in</a> or <a href="register.html">register</a></h4>
-        <h4 > <a href="" style="color:black; text-decoration: none; ">Daily Deals</a></h4>
-        <h4><a href="" style="color:black;  text-decoration: none;">Help & Contact</a></h4>
-        
+            <h4 id="sc111">Hi! <a href="signin.html">Sign in</a> or <a href="register.html">register</a></h4>
+            <h4> <a href="" style="color:black; text-decoration: none; ">Daily Deals</a></h4>
+            <h4><a href="" style="color:black;  text-decoration: none;">Help & Contact</a></h4>
+
         </div>
         <div id="sc12">
-        <h4>Sell </h4>
-        <h4>Watchlist <i class="fa-solid fa-angle-down"></i></h4>
-        <div id="helloMouse">
-            <h4 onclick="window.location.href='signin.html'">My eBay<i class="fa-solid fa-angle-down"></i></h4>
-            <div id="absolute_My_eBay">
-            <a href=""><p>Summary</p></a> 
-            <a href=""><p>Recently Viewed</p></a>
-            <a href=""> <p> Bids/Offers</p></a>
-            <a href=""><p>Watchlist</p></a>
-            <a href=""><p>Purchase History</p></a>
-            <a href=""><p>Buy Again</p></a>
-            <a href=""><p>Selling</p></a>
-            <a href=""><p>Saved Searches</p></a>
-            <a href=""><p>Saved Sellers</p></a>
-            <a href=""><p>Messages</p></a>
-                
+            <h4>Sell </h4>
+            <h4>Watchlist <i class="fa-solid fa-angle-down"></i></h4>
+            <div id="helloMouse">
+                <h4 onclick="window.location.href='signin.html'">My eBay<i class="fa-solid fa-angle-down"></i></h4>
+                <div id="absolute_My_eBay">
+                    <a href="">
+                        <p>Summary</p>
+                    </a>
+                    <a href="">
+                        <p>Recently Viewed</p>
+                    </a>
+                    <a href="">
+                        <p> Bids/Offers</p>
+                    </a>
+                    <a href="watchlist.html">
+                        <p>Watchlist</p>
+                    </a>
+                    <a href="">
+                        <p>Purchase History</p>
+                    </a>
+                    <a href="">
+                        <p>Buy Again</p>
+                    </a>
+                    <a href="">
+                        <p>Selling</p>
+                    </a>
+                    <a href="saved.html">
+                        <p>Saved Searches</p>
+                    </a>
+                    <a href="">
+                        <p>Saved Sellers</p>
+                    </a>
+                    <a href="">
+                        <p>Messages</p>
+                    </a>
+
+                </div>
+            </div>
+            <div style="padding:3.5%;" id="sc121">
+                <i class="fa-solid fa-bell"></i>
+                <div id="sc122">
+                    <h1>You are all caught up!</h1>
+                </div>
+
+            </div>
+            <div style="margin:5%;" id="sc13">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div id="sc131">
+                    <h1>Your cart is empty</h1>
+                    <h3>Time to start shopping!</h3>
+                </div>
+                <P id="cartData">3</P>
+
+            </div>
+
+        </div>
+
+    </div>
+    <hr style="margin-top:-1%; color: #f1ebeb;">
+
+
+
+
+    <!-- 
+            1st nav bar ends here
+        -->
+
+
+
+    <div id="sc2">
+        <div id="sc21" onclick="window.location.href='index.html'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1200px-EBay_logo.svg.png"
+                alt="">
+        </div>
+
+        <div id="sc22">
+            <p>
+                Shop by category
+            </p>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div id="sc23">
+            <i class="fa-solid fa-magnifying-glass" style="margin-left: 5px;"></i>
+            <input type="text" name="" id="">
+            <div>
+                <button name="" id="">
+                    All category
+                </button>
+                <i class="fa-solid fa-angle-down"></i>
             </div>
         </div>
-        <div style="padding:5%" id="sc121">
-            <i style="font-size:25px" class="fa-solid fa-bell" ></i>
-        <div id="sc122">
-        <h1>You are all caught up!</h1>
-        </div>
-        
-        </div>
-        <div style="padding:5%" id="sc13">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <div id="sc131">
-                <h1>Your cart is empty</h1>
-                <h3>Time to start shopping!</h3>
-            </div>
-        </div>
-        </div>
-        
-            </div>
-            <hr style="margin-top:-1%">
+
+        <button>
+            Search
+        </button>
+    </div>
+
+    <div id="sc3">
+        <hr>
+    </div>
+
+    
+
+
+
+
+
+
+
     <div id="pagediv">
     
 
@@ -304,5 +375,40 @@ let flagfornav = JSON.parse(localStorage.getItem("flagforindex"))
 </script>
 
 <script src="./monidata.js">
+
+</script>
+
+
+<script>
+    let cat = JSON.parse(localStorage.getItem('yourCart')) || 0;
+
+    let xA = document.getElementById('cartData');
+    xA.innerHTML = cat.length;
+    xA.addEventListener('click', () => {
+        window.location.href = 'cart.html';
+    });
+    let shubham001 = document.querySelector("#sc23 > input[type=text]")
+
+    shubham001.addEventListener("keypress", function (event) {
+        if (event.code == "Enter") {
+            localStorage.setItem("search_term", shubham001.value);
+            window.location.href = "MahiArt.html";
+
+        }
+
+
+
+    })
+
+    document.querySelector("#sc2 > button").addEventListener("click", function (event) {
+
+
+        localStorage.setItem("search_term", shubham001.value)
+        window.location.href = "MahiArt.html"
+
+
+
+
+    })
 
 </script>
