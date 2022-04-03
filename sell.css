@@ -31,6 +31,12 @@
 
 }
 
+#innerdiv:hover #subham{
+
+background-color: blue;
+}
+
+
 #innerdiv>div {
     padding: 20px 20px 0px 40px;
 }
@@ -306,4 +312,9 @@ justify-content: space-around;
     width: 150px;
     font-size: small;
 
+}
+
+
+#rightdata:hover .chamka{
+    background-color: blue;
 }
