@@ -1,6 +1,6 @@
 #pagediv {
     /* border: 3px solid blue; */
-    width: 90%;
+    width: 80%;
     font-family: "Market Sans", Arial, sans-serif;
     margin: auto;
 }
@@ -14,11 +14,13 @@
 #center {
     display: flex;
     justify-content: center;
-
+    width: 100%;
+    /* border: 1px solid yellow; */
 }
 
+
 .image {
-    width: 50%;
+    width: 40%;
     /* border: 1px solid black; */
     text-align: center;
     font-size: 25px;
@@ -28,27 +30,33 @@
 #right {
     /* border: 1px solid red; */
     
-    margin-left: 7%;
+    margin-left: 5%;
     margin-top: 5%;
+    width: 80%;
 
 }
 
 .img {
     width: 100%;
+    /* border: 1px solid green; */
 }
 
 h2 {
     /* margin-left: 5%; */
 }
+h1{
+    margin-left: -4%;
+}
 
 #one,
 #two {
     margin-top: 5%;
-    /* margin-left: 5%; */
+    /* margin-left: 8%; */
     margin-right: 5%;
     /* border: 1px solid black; */
     display: flex;
-    gap: 5%
+    gap: 3%;
+    width : 5%
 }
 
 #bottom {
@@ -58,7 +66,7 @@ h2 {
 #b2 {
     display: flex;
     margin-top: 5%;
-    /* margin-left: 5%; */
+    /* margin-left: 3%; */
     margin-right: 5%;
     /* border: 1px solid black; */
     display: flex;
@@ -68,16 +76,17 @@ h2 {
 
 .Image {
     /* border: 1px solid yellow; */
-    width: 15%;
+    width: 10%;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 
 }
 
 .img {
     /* border: 1px solid red; */
-    height: 50%;
+    height: 40%;
 }
+
 
 #b1 {
     display: flex;
@@ -89,6 +98,11 @@ h2 {
 #last {
     width: 70%;
     height: 50%;
+}
+#appendhere{
+    /* border: 1px solid green; */
+    width: 70%;
+    margin-left: -15%;
 }
 
 #topdiv {
@@ -146,7 +160,7 @@ li {
 #sizeDiv{
     display: flex;
     /* border: 1px solid red; */
-    width: 86%;
+    width: 95%;
 }
 #sizeDiv>div{
     margin-right: 2%;
@@ -173,6 +187,7 @@ li {
     text-align: left;
 
 }
+
 #cat > ul{
     width: 200px;
 }
@@ -181,7 +196,7 @@ li {
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 15px; 
+    gap: 10px; 
 
 }
 #sold{
@@ -248,7 +263,7 @@ li {
     position: absolute;
     left: 0;
     font-size: 50px;
-    margin-left: 20%;
+    margin-left: 25%;
     margin-top: -180px;
     width: 60px;
     height: 60px;
@@ -304,7 +319,7 @@ body {
     #sc11 {
     margin-top: -10px;
     display: flex;
-    width: 35%;
+    width: 42%;
     justify-content: space-around;
     }
     #sc12 {
@@ -360,6 +375,7 @@ body {
     }
     #sc121:hover #sc122 {
     display: block;
+  
     }
     #sc122>h1{
     margin-top: 120px;
