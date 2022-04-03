@@ -161,7 +161,7 @@
 
     <div></div>
     <div id="pmcontainer">
-        <h1>Electronics</h1>
+        <h1>Fashion</h1>
         <div id="mcontainer">
             <div id="msidebar">
                 <div class="mcategory" onclick="mcategoryclicked(0)">
@@ -592,6 +592,15 @@
     if (flagfornav == true) {
         console.log(namefornav)
         document.querySelector("#sc111").textContent = namefornav
+    }
+</script>
+<script>
+    let msms = document.querySelectorAll(".mitemImages");
+    for (let i = 0; i < msms.length; i++) {
+        msms[i].addEventListener("click", function () {
+            localStorage.setItem("search_term", msms[i].innerText);
+            window.location.href = "MahiArt.html";
+        });
     }
 </script>
 
