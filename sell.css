@@ -118,6 +118,12 @@ button {
     display: flex;
     justify-content: space-between;
     height: 70px;
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+    /* ---- */
+    position: fixed; 
+    background-color: white;
     /* border: 1px solid red; */
 
 
@@ -138,8 +144,8 @@ button {
 
 #logo {
 
-    width: 80px;
-    height: 20px;
+    width: 70px;
+    height: 25px;
 
 }
 
@@ -297,6 +303,7 @@ justify-content: space-around;
 .chamka
 {
     display: none;
-    width: 100%;
+    width: 150px;
     font-size: small;
+
 }
