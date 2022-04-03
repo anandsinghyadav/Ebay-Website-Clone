@@ -485,7 +485,10 @@
 
         div1.append(image, spn, name, price, sprice, sold)
         div1.addEventListener("click", function () {
-
+            let eeeeeeeeee = JSON.parse(localStorage.getItem("Database")) || [];
+            eeeeeeeeee.push(el);
+            localStorage.setItem("Database", JSON.stringify(eeeeeeeeee));
+            window.location.href = "review.html"
         });
 
         document.getElementById("appendhere").append(div1)
