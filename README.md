@@ -1,8 +1,9 @@
 <h1 align="center">  Ebay E-Commerce Website </h1>
 
-Ebay is an International E-Commerce Website Where you can buy and sell Everything.
+eBay is one of the oldest and most successful e-commerce websites on the Internet, but it doesn’t sell any items itself. Instead, it allows users to list items for sale, which other users can then bid on in auctions. Recently, eBay has also added options to buy items at face value, or submit price offers for them.
 
 ![IMG-20220606-WA0000_1654520149514](https://miro.medium.com/max/630/1*ZDiCjNAtffkbZHwItMee1g.png)
+
 
 <h1 align="center"> Team Members✍️ </h1>
 
@@ -33,7 +34,7 @@ Ebay is an International E-Commerce Website Where you can buy and sell Everythin
  
  
  
-<h1 align="center"> Technology Stack️ ✍️ </h1>
+<h1 align="center"> Tech Stack️ ✍️ </h1>
 
 
 <ul>
