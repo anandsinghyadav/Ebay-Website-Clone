@@ -4,7 +4,6 @@ Ebay is an International E-Commerce Website Where you can buy and sell Everythin
 
 ![IMG-20220606-WA0000_1654520149514](https://miro.medium.com/max/630/1*ZDiCjNAtffkbZHwItMee1g.png)
 
-
 <h1 align="center"> Team Members✍️ </h1>
 
 <ul>
